@@ -1,0 +1,190 @@
+﻿<Controls:MetroWindow x:Class="FitnessPal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:FitnessPal"
+        mc:Ignorable="d"
+        Title="FitnessPal" Height="550" Width="1200"
+        BorderThickness="0"
+        GlowBrush="Black"
+        ResizeMode="CanResizeWithGrip"
+        WindowTransitionsEnabled="False"
+        WindowStartupLocation="CenterScreen">
+
+    <Border Padding="10" Background="WhiteSmoke">
+        <TabControl Background="WhiteSmoke">
+            <!-- Zentrierung
+            <TabControl.Resources>
+                <Style TargetType="{x:Type TabPanel}">
+                    <Setter Property="HorizontalAlignment" Value="Center" />
+                </Style>
+            </TabControl.Resources> -->
+
+            <TabItem FontFamily="Verdana" Header="KalorienTracker" Background="AliceBlue">
+                <Border 
+                    
+                            CornerRadius="10"
+                            Padding="10,10,10,10">
+
+                    <!-- Tage -->
+                    <StackPanel TextBlock.TextAlignment="Center">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="0" Text="Montag" x:Name="Montag"/>
+                            <TextBlock VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="1" Text="Dienstag" x:Name="Dienstag"/>
+                            <TextBlock VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="2" Text="Mittwoch" x:Name="Mittwoch"/>
+                            <TextBlock VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="3" Text="Donnerstag" x:Name="Donnerstag"/>
+                            <TextBlock VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="4" Text="Freitag" x:Name="Freitag"/>
+                            <TextBlock VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="5" Text="Samstag" x:Name="Samstag"/>
+                            <TextBlock VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="6" Text="Sonntag" x:Name="Sonntag"/>
+
+
+                        </Grid>
+
+                        <!-- Leere Zeile -->
+                        <StackPanel TextBlock.TextAlignment="Center">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="143*"/>
+                                    <ColumnDefinition Width="143*"/>
+                                    <ColumnDefinition Width="143*"/>
+                                    <ColumnDefinition Width="143*"/>
+                                    <ColumnDefinition Width="144*"/>
+                                    <ColumnDefinition Width="143*"/>
+                                    <ColumnDefinition Width="41*"/>
+                                    <ColumnDefinition Width="103*"/>
+                                    <ColumnDefinition Width="143*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock x:Name="MondayCalories" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="0" Margin="0,10,0,9" />
+                                <TextBlock x:Name="TuesdayCalories" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="1" Margin="0,10,0,9" />
+                                <TextBlock x:Name="WednesdayCalories" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="2" Margin="0,10,0,9" />
+                                <TextBlock x:Name="ThursdayCalories" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="3" Margin="0,10,0,9" />
+                                <TextBlock x:Name="FridayCalories" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="4" Margin="0,10,0,9" />
+                                <TextBlock x:Name="SaturdayCalories" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="5" Margin="0,10,0,9" />
+                                <TextBlock x:Name="SundayCalories" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="6" Margin="0,10,0,9" Grid.ColumnSpan="2" />
+
+                            </Grid>
+                        </StackPanel>
+
+                        <!-- Heute Kalorien und manuelle Eingabe -->
+                        <StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <!-- Heutige Kalorien -->
+
+                                <Border
+                                                    CornerRadius="10"
+                                                    Padding="15, 100, 15, 15"
+                                                    Margin="0, 0, 0, 0"
+                                                    Grid.Column="0"
+                                                    >
+
+                                    <StackPanel>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <TextBlock VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.ColumnSpan="3" Text="Heutige Kalorien"/>
+                                            <TextBlock x:Name="CaloriesToday" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Row="1" Grid.Column="1" Margin="10" Text="0"/>
+                                            <TextBox Controls:TextBoxHelper.Watermark="Proteine" Grid.Row="2" Grid.Column="0" x:Name="ProteinBox" />
+                                            <TextBox Controls:TextBoxHelper.Watermark="Kohlenhydrate" Grid.Row="2" Grid.Column="1" x:Name="CarbBox"/>
+                                            <TextBox Controls:TextBoxHelper.Watermark="Fette" Grid.Row="2" Grid.Column="2" x:Name="FatBox"/>
+                                            <TextBlock Visibility="Hidden" FontSize="16" FontFamily="Verdana" Foreground="Red" Text="Werte richtig eintragen. Darf nichts leer sein!" x:Name="FalscheEingabe" Grid.Row="4" Grid.Column="0" Margin="5" Grid.ColumnSpan="3"/>
+                                        </Grid>
+                                    </StackPanel>
+                                </Border>
+
+                                <!-- Manuelle Eingabe -->
+                                <Border
+                                            CornerRadius="10"
+                                            Padding="15, 100, 15, 15"
+                                            Margin="0, 0, 0, 0"
+                                            Grid.Column="1">
+                                    <StackPanel>
+                                        <TextBlock VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.ColumnSpan="1" Text="Manuelle Kalorieneingabe" Margin="19.5"/>
+                                        <TextBox Controls:TextBoxHelper.Watermark="Kalorien" Grid.Column="2" x:Name="ManualCaloryBox" />
+                                    </StackPanel>
+                                </Border>
+
+                            </Grid>
+
+                        </StackPanel>
+
+                        <!-- Kalorien berechnen / Kalorien eintragen -->
+                        <StackPanel>
+                            <Border
+                                            Padding="15, 25, 15, 15"
+                                            Margin="150,0,500,20"
+                                            Grid.Column="2">
+
+                                <StackPanel>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Button Style="{DynamicResource SquareButtonStyle}" x:Name="CalculateCalories" Content="Kalorien berechnen" Grid.Row="0" Grid.Column="0" Click="CalculateCalories_Click" Grid.ColumnSpan="2"/>
+                                        <Button Style="{DynamicResource SquareButtonStyle}" x:Name="SubmitCaloriesToCurrentDay" Content="Heutige Kalorien eintragen" Grid.Row="1" Margin="0,10,0,0" Click="SubmitCaloriesToCurrentDay_Click" Grid.ColumnSpan="2"/>
+                                    </Grid>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </TabItem>
+            <TabItem FontFamily="Verdana" Header="Trainingsplan"
+                     Background="AliceBlue">
+
+
+
+            </TabItem>
+            <TabItem FontFamily="Verdana" Header="Ernährungsplan"
+                     Background="AliceBlue">
+
+            </TabItem>
+            <TabItem FontFamily="Verdana" Header="Fortschritt"
+                     Background="AliceBlue">
+
+            </TabItem>
+            <TabItem FontFamily="Verdana" Header="Lebensmittel"
+                     Background="AliceBlue">
+
+            </TabItem>
+        </TabControl>
+
+
+
+
+    </Border>
+
+</Controls:MetroWindow>
