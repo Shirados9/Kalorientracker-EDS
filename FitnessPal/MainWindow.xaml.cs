@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +25,11 @@ namespace FitnessPal
         public MainWindow()
         {
             InitializeComponent();
+            HighlightTodaysDay();
         }
+            
+
+        // ********************************KalorienTracker Code***********************************
 
         private void CalculateCalories_Click(object sender, RoutedEventArgs e)
         {
@@ -135,6 +140,64 @@ namespace FitnessPal
                     }
             }
         }
+
+
+        private void HighlightTodaysDay()
+        {
+            DayOfWeek dow = DateTime.Now.DayOfWeek;
+
+            switch (dow)
+            {
+                case DayOfWeek.Monday:
+                    {
+                        Montag.Foreground = Brushes.Blue;
+                        break;
+                    }
+                case DayOfWeek.Tuesday:
+                    {
+                        Dienstag.Foreground = Brushes.Blue;
+                        break;
+                    }
+                case DayOfWeek.Wednesday:
+                    {
+                        Mittwoch.Foreground = Brushes.Blue;
+                        break;
+                    }
+                case DayOfWeek.Thursday:
+                    {
+                        Donnerstag.Foreground = Brushes.Blue;
+                        break;
+                    }
+                case DayOfWeek.Friday:
+                    {
+                        Freitag.Foreground = Brushes.Blue;
+                        break;
+                    }
+                case DayOfWeek.Saturday:
+                    {
+                        Samstag.Foreground = Brushes.Blue;
+                        break;
+                    }
+                case DayOfWeek.Sunday:
+                    {
+                        Sonntag.Foreground = Brushes.Blue;
+                        break;
+                    }
+            }
+        }
+
+
+
+
+        // ********************************Trainingsplan Code***********************************
+
+
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
+            e.Handled = true;
+        }
+
 
     }
 }

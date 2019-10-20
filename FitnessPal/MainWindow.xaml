@@ -22,7 +22,7 @@
                 </Style>
             </TabControl.Resources> -->
 
-            <TabItem FontFamily="Verdana" Header="KalorienTracker" Background="AliceBlue">
+            <TabItem FontFamily="Verdana" Header="KalorienTracker" Background="WhiteSmoke">
                 <Border 
                     
                             CornerRadius="10"
@@ -53,7 +53,7 @@
 
                         </Grid>
 
-                        <!-- Leere Zeile -->
+                        <!-- Kalorien der Tage -->
                         <StackPanel TextBlock.TextAlignment="Center">
                             <Grid>
                                 <Grid.ColumnDefinitions>
@@ -78,6 +78,8 @@
 
                             </Grid>
                         </StackPanel>
+
+
                         <!-- heutige kalorien-->
                         <StackPanel>
                             <Grid>
@@ -106,6 +108,8 @@
                                 </Border>
                             </Grid>
                         </StackPanel>
+
+
                         <!-- heutige makros-->
                         <StackPanel>
                             <Grid>
@@ -158,13 +162,13 @@
                             </Grid>
                         </StackPanel>
 
-                        <!-- Heute Kalorien und manuelle Eingabe -->
+                        <!-- Makro Eingabe -->
                         <StackPanel>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <!-- Heutige Kalorien berechnung -->
+
 
                                 <Border
                                                     CornerRadius="10"
@@ -197,9 +201,9 @@
                             </Grid>
                         </StackPanel>
 
-                        
-                        
-                        
+
+
+                        <!-- manuelle kalorieneingabe -->
                         <StackPanel>
                             <Border
                                         Padding="15"
@@ -221,9 +225,9 @@
                                 </StackPanel>
                             </Border>
                         </StackPanel>
-                        
-                        
-                        
+
+
+
                         <!-- Kalorien berechnen / Kalorien eintragen -->
                         <StackPanel>
                             <Border
@@ -252,22 +256,83 @@
                     </StackPanel>
                 </Border>
             </TabItem>
-            <TabItem FontFamily="Verdana" Header="Trainingsplan"
-                     Background="AliceBlue">
 
+
+
+
+            <TabItem FontFamily="Verdana" Header="Trainingsplan"
+                     Background="WhiteSmoke">
+
+
+                <TabControl Background="WhiteSmoke">
+
+                    <!-- 30 Minuten Workout Plan-->
+                    <TabItem Header="30 Minuten Workout" FontFamily="Verdana" Padding="20">
+                        <Border
+                                    CornerRadius="10"
+                                    Padding="10"
+                                    >
+                            <!-- 3 Spalten - pro workout tag 1, 11 reihen, da 1 übung = 3 minuten und 10 übungen innerhalb 30min + 1 reihe für den tag-->
+                            <StackPanel>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+
+                                    <StackPanel Grid.Column="0" Grid.RowSpan="11">
+                                        <TextBlock Text="Tag 1" TextAlignment="Center" Padding="10"/>
+                                        <TextBlock Text="3x12 Bankdrücken"/>
+                                        <TextBlock>
+                                            <Hyperlink NavigateUri="https://www.youtube.com/watch?v=vthMCtgVtFw" RequestNavigate="Hyperlink_RequestNavigate"> 
+                                            Tutorial Anschauen
+                                            </Hyperlink>
+                                        </TextBlock>
+                                        <TextBlock Text="test"/>
+                                    </StackPanel>
+                                    
+                                    
+                              
+                                </Grid>
+                            </StackPanel>
+                            
+                        </Border>
+                    </TabItem>
+                    <TabItem Header="60 Minuten Workout" FontFamily="Verdana" Padding="20">
+
+                    </TabItem>
+                    <TabItem Header="90 Minuten Workout" FontFamily="Verdana" Padding="20">
+
+                    </TabItem>
+                </TabControl>
 
 
             </TabItem>
             <TabItem FontFamily="Verdana" Header="Ernährungsplan"
-                     Background="AliceBlue">
+                     Background="WhiteSmoke">
 
             </TabItem>
             <TabItem FontFamily="Verdana" Header="Fortschritt"
-                     Background="AliceBlue">
+                     Background="WhiteSmoke">
 
             </TabItem>
             <TabItem FontFamily="Verdana" Header="Lebensmittel"
-                     Background="AliceBlue">
+                     Background="WhiteSmoke">
 
             </TabItem>
         </TabControl>
@@ -276,22 +341,4 @@
 
 
     </Border>
-
-
-
-
-    <!--  Manuelle Eingabe
-    <Border
-                                            CornerRadius="10"
-                                            Padding="15, 100, 15, 15"
-                                            Margin="0, 0, 0, 0"
-                                            Grid.Column="1">
-        <StackPanel>
-            <TextBlock VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.ColumnSpan="1" Text="Manuelle Kalorieneingabe" Margin="19.5"/>
-            <TextBox Controls:TextBoxHelper.Watermark="Kalorien" Grid.Column="2" x:Name="ManualCaloryBox" />
-        </StackPanel>
-    </Border>
-    -->
-
-
 </Controls:MetroWindow>
