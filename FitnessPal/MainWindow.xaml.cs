@@ -34,10 +34,16 @@ namespace FitnessPal
 
         private void CalculateCalories_Click(object sender, RoutedEventArgs e)
         {
+            
+
             this.FalscheEingabe.Visibility = Visibility.Hidden;
             if (AlleLeer())
             {
                 CaloriesToday.Text = Convert.ToString(CalcCalories());
+                BerechneNaehrstoff(ProteinsToday, ProteinBox, ProteinsZiel, ProteinBar);
+                BerechneNaehrstoff(CarbsToday, CarbBox, CarbsZiel, CarbBar);
+                BerechneNaehrstoff(FatsToday, FatBox, FatsZiel, FatBar);
+
                 ProteinBox.Clear();
                 CarbBox.Clear();
                 FatBox.Clear();
@@ -51,6 +57,7 @@ namespace FitnessPal
             }
 
         }
+
         // Check ob alles leer
         private bool AlleLeer()
         {
@@ -60,6 +67,7 @@ namespace FitnessPal
             }
             return true;
         }
+
         // Nur Zahlen in Textboxen
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
@@ -67,7 +75,9 @@ namespace FitnessPal
             e.Handled = regex.IsMatch(e.Text);
         }
 
-        // Checkt ob einzelne Kästchen leer sind und ändert auf 0
+        /// <summary>
+        /// Kontrolliert ob einzelne Kästchen leer sind und trägt 0 ein
+        /// </summary>
         private void CheckKästchen()
         {
             if (String.IsNullOrWhiteSpace(ProteinBox.Text))
@@ -89,18 +99,50 @@ namespace FitnessPal
 
         }
 
-        // Rechnet Kalorien aus
+        /// <summary>
+        /// Rechnet Kalorien aus und gibt Kalorien zurück.
+        /// </summary>
+        /// <returns></returns>
         private double CalcCalories()
         {
             CheckKästchen();
             return Double.Parse(ProteinBox.Text) * (4.1) + Double.Parse(CarbBox.Text) * (4.1) + Double.Parse(FatBox.Text) * (9.3) + Double.Parse(ManualCaloryBox.Text) + Double.Parse(CaloriesToday.Text);
         }
 
+        /// <summary>
+        /// Berechnung der Nährstoffe für jene Klasse.
+        /// </summary>
+        /// <param name="naehrstoffOutput"></param>
+        /// <param name="naehrstoffInput"></param>
+        /// <param name="naehrstoffZiel"></param>
+        /// <param name="bar"></param>
+        private void BerechneNaehrstoff(TextBlock naehrstoffOutput, TextBox naehrstoffInput, TextBox naehrstoffZiel, ProgressBar bar)
+        {
+            double outputValue = double.Parse(naehrstoffOutput.Text);
+            double inputValue =  double.Parse(naehrstoffInput.Text);
+            double newOutput = outputValue + inputValue;
+
+            naehrstoffOutput.Text = Convert.ToString(newOutput);
+            bar.Value = BerechneBarProgress(newOutput, Double.Parse(naehrstoffZiel.Text));
+        }
+
+        /// <summary>
+        /// Berechnung des Fortschritts der Bar.
+        /// </summary>
+        /// <param name="wert"></param>
+        /// <param name="ziel"></param>
+        /// <returns></returns> Prozentwert der ProgressBar.
+        private double BerechneBarProgress(double wert, double ziel)
+        {         
+            double tmp = wert / ziel;
+            tmp *= 100;
+            return tmp; ;
+        }
+
         // Trägt Kalorien in heutigen Tag oben ein
         private void SubmitCaloriesToCurrentDay_Click(object sender, RoutedEventArgs e)
         {
             double CaloriesMonday, CaloriesTuesday, CaloriesWednesday, CaloriesThursday, CaloriesFriday, CaloriesSaturday, CaloriesSunday;
-
 
             DayOfWeek dow = DateTime.Now.DayOfWeek;
 
@@ -220,6 +262,8 @@ namespace FitnessPal
             e.Handled = true;
         }
 
+
+        // ********************************Fortschritt***********************************
 
     }
 }

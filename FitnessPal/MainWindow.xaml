@@ -133,6 +133,7 @@
                                     <StackPanel>
                                         <TextBlock FontSize="16" FontFamily="Verdana" Text=" Proteine"/>
                                         <TextBlock x:Name="ProteinsToday" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Text="0"/>
+                                        <ProgressBar Minimum="0" Maximum="100" Name="ProteinBar" />
                                         <!-- kann man hier sowas wie %d machen und sagen Text="0/%d" also 0 von 100(falls 100 das ziel ist?)-->
                                     </StackPanel>
 
@@ -145,6 +146,7 @@
                                     <StackPanel>
                                         <TextBlock FontSize="16" FontFamily="Verdana" Text=" Kohlenhydrate"/>
                                         <TextBlock x:Name="CarbsToday" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Text="0"/>
+                                        <ProgressBar Minimum="0" Maximum="100" Name="CarbBar" />
                                         <!-- siehe fette kommentar-->
                                     </StackPanel>
                                 </Border>
@@ -156,6 +158,7 @@
                                     <StackPanel>
                                         <TextBlock FontSize="16" FontFamily="Verdana" Text=" Fette"/>
                                         <TextBlock x:Name="FatsToday" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Text="0"/>
+                                        <ProgressBar Minimum="0" Maximum="100" Name="FatBar" />
                                         <!-- siehe fette kommentar-->
                                     </StackPanel>
                                 </Border>
@@ -257,9 +260,7 @@
                 </Border>
             </TabItem>
 
-
-
-
+            <!-- Trainingsplan -->
             <TabItem FontFamily="Verdana" Header="Trainingsplan"
                      Background="WhiteSmoke">
 
@@ -276,26 +277,26 @@
                             <StackPanel>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*"/>
-                                            <ColumnDefinition Width="*"/>
-                                            <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
                                     <Grid.RowDefinitions>
-                                            <RowDefinition Height="*"/>
-                                            <RowDefinition Height="*"/>
-                                            <RowDefinition Height="*"/>
-                                            <RowDefinition Height="*"/>
-                                            <RowDefinition Height="*"/>
-                                            <RowDefinition Height="*"/>
-                                            <RowDefinition Height="*"/>
-                                            <RowDefinition Height="*"/>
-                                            <RowDefinition Height="*"/>
-                                            <RowDefinition Height="*"/>
-                                            <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
 
                                     <!-- Trainingsplan Tag 1 -->
-                                    
+
                                     <Border BorderBrush="Black" BorderThickness="1" Grid.Column="0">
                                         <StackPanel>
                                             <TextBlock Text="Tag 1" TextAlignment="Center" Padding="10" FontFamily="Verdana" FontSize="16"/>
@@ -374,7 +375,7 @@
                                     </Border>
 
                                     <!-- Trainingsplan Tag 2 -->
-                                    
+
                                     <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Margin="10,0,10,0">
                                         <StackPanel>
                                             <TextBlock Text="Tag 2" TextAlignment="Center" Padding="10" FontFamily="Verdana" FontSize="16"/>
@@ -452,7 +453,7 @@
                                     </Border>
 
                                     <!-- Trainingsplan Tag 3 -->
-                                    
+
                                     <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2">
                                         <StackPanel>
                                             <TextBlock Text="Tag 3" TextAlignment="Center" Padding="10" FontFamily="Verdana" FontSize="16"/>
@@ -528,10 +529,10 @@
                                             </TextBlock>
                                         </StackPanel>
                                     </Border>
-                                    
+
                                 </Grid>
                             </StackPanel>
-                            
+
                         </Border>
                     </TabItem>
                     <TabItem Header="60 Minuten Workout" FontFamily="Verdana" Padding="20">
@@ -541,17 +542,25 @@
 
                     </TabItem>
                 </TabControl>
-
-
             </TabItem>
+            
+            <!-- Ernährungsplan -->
             <TabItem FontFamily="Verdana" Header="Ernährungsplan"
                      Background="WhiteSmoke">
 
             </TabItem>
+            
+            <!-- Fortschritt -->
             <TabItem FontFamily="Verdana" Header="Fortschritt"
                      Background="WhiteSmoke">
-
+                <StackPanel>
+                    <TextBox Controls:TextBoxHelper.Watermark="Protein-Ziel" x:Name="ProteinsZiel" PreviewTextInput="NumberValidationTextBox" Text="120"/>
+                    <TextBox Controls:TextBoxHelper.Watermark="Kohlenhydrat-Ziel" x:Name="CarbsZiel" PreviewTextInput="NumberValidationTextBox" Text="200"/>
+                    <TextBox Controls:TextBoxHelper.Watermark="Fett-Ziel" x:Name="FatsZiel" PreviewTextInput="NumberValidationTextBox" Text="80"/>
+                </StackPanel>
             </TabItem>
+            
+            <!-- Lebensmittel -->
             <TabItem FontFamily="Verdana" Header="Lebensmittel"
                      Background="WhiteSmoke">
 
