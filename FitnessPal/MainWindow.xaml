@@ -27,7 +27,11 @@
                     
                             CornerRadius="10"
                             Padding="10,10,10,10">
+
                     <!-- merge test kram-->
+
+
+
                     <!-- Tage -->
                     <StackPanel TextBlock.TextAlignment="Center">
                         <Grid>
@@ -171,7 +175,6 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-
 
                                 <Border
                                                     CornerRadius="10"
