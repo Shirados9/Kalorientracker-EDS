@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
+using System.Text.RegularExpressions;
 
 namespace FitnessPal
 {
@@ -24,17 +26,22 @@ namespace FitnessPal
         public MainWindow()
         {
             InitializeComponent();
+            HighlightTodaysDay();
         }
+            
+
+        // ********************************KalorienTracker Code***********************************
 
         private void CalculateCalories_Click(object sender, RoutedEventArgs e)
         {
             this.FalscheEingabe.Visibility = Visibility.Hidden;
-            if (CheckEingabe())
+            if (AlleLeer())
             {
                 CaloriesToday.Text = Convert.ToString(CalcCalories());
                 ProteinBox.Clear();
                 CarbBox.Clear();
                 FatBox.Clear();
+                ManualCaloryBox.Clear();
 
                 MessageBox.Show("Kalorien erfolgreich eingetragen");
             }
@@ -44,27 +51,52 @@ namespace FitnessPal
             }
 
         }
-        
-        // Checkt ob Eingabe < 0 oder leer
-        private bool CheckEingabe()
+        // Check ob alles leer
+        private bool AlleLeer()
         {
-            if (String.IsNullOrWhiteSpace(ProteinBox.Text) || String.IsNullOrWhiteSpace(CarbBox.Text) || String.IsNullOrWhiteSpace(FatBox.Text) || String.IsNullOrWhiteSpace(ManualCaloryBox.Text))
-            {
-                return false;
-            }
-            else if (Double.Parse(ProteinBox.Text) < 0 || Double.Parse(CarbBox.Text) < 0 || Double.Parse(FatBox.Text) < 0)
+            if (String.IsNullOrWhiteSpace(ProteinBox.Text) && String.IsNullOrWhiteSpace(CarbBox.Text) && String.IsNullOrWhiteSpace(FatBox.Text) && String.IsNullOrWhiteSpace(ManualCaloryBox.Text))
             {
                 return false;
             }
             return true;
         }
+        // Nur Zahlen in Textboxen
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        // Checkt ob einzelne Kästchen leer sind und ändert auf 0
+        private void CheckKästchen()
+        {
+            if (String.IsNullOrWhiteSpace(ProteinBox.Text))
+            {
+                ProteinBox.Text = "0";
+            }
+            if (String.IsNullOrWhiteSpace(CarbBox.Text))
+            {
+                CarbBox.Text = "0";
+            }
+            if (String.IsNullOrWhiteSpace(FatBox.Text))
+            {
+                FatBox.Text = "0";
+            }
+            if (String.IsNullOrWhiteSpace(ManualCaloryBox.Text))
+            {
+                ManualCaloryBox.Text = "0";
+            }
+
+        }
 
         // Rechnet Kalorien aus
         private double CalcCalories()
         {
+            CheckKästchen();
             return Double.Parse(ProteinBox.Text) * (4.1) + Double.Parse(CarbBox.Text) * (4.1) + Double.Parse(FatBox.Text) * (9.3) + Double.Parse(ManualCaloryBox.Text) + Double.Parse(CaloriesToday.Text);
         }
 
+        // Trägt Kalorien in heutigen Tag oben ein
         private void SubmitCaloriesToCurrentDay_Click(object sender, RoutedEventArgs e)
         {
             double CaloriesMonday, CaloriesTuesday, CaloriesWednesday, CaloriesThursday, CaloriesFriday, CaloriesSaturday, CaloriesSunday;
@@ -114,8 +146,6 @@ namespace FitnessPal
 
                         break;
                     }
-
-
                 case DayOfWeek.Saturday:
                     {
                         CaloriesSaturday = Double.Parse(CaloriesToday.Text);
@@ -134,6 +164,62 @@ namespace FitnessPal
                     }
             }
         }
+
+        // Highlighted heutigen Tag
+        private void HighlightTodaysDay()
+        {
+            DayOfWeek dow = DateTime.Now.DayOfWeek;
+
+            switch (dow)
+            {
+                case DayOfWeek.Monday:
+                    {
+                        Montag.Foreground = Brushes.Blue;
+                        break;
+                    }
+                case DayOfWeek.Tuesday:
+                    {
+                        Dienstag.Foreground = Brushes.Blue;
+                        break;
+                    }
+                case DayOfWeek.Wednesday:
+                    {
+                        Mittwoch.Foreground = Brushes.Blue;
+                        break;
+                    }
+                case DayOfWeek.Thursday:
+                    {
+                        Donnerstag.Foreground = Brushes.Blue;
+                        break;
+                    }
+                case DayOfWeek.Friday:
+                    {
+                        Freitag.Foreground = Brushes.Blue;
+                        break;
+                    }
+                case DayOfWeek.Saturday:
+                    {
+                        Samstag.Foreground = Brushes.Blue;
+                        break;
+                    }
+                case DayOfWeek.Sunday:
+                    {
+                        Sonntag.Foreground = Brushes.Blue;
+                        break;
+                    }
+            }
+        }
+
+
+        // ********************************Trainingsplan Code***********************************
+
+
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
+            e.Handled = true;
+        }
+
 
     }
 }

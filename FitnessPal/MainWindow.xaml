@@ -6,7 +6,7 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:FitnessPal"
         mc:Ignorable="d"
-        Title="FitnessPal" Height="550" Width="1200"
+        Title="FitnessPal" Height="750" Width="1200"
         BorderThickness="0"
         GlowBrush="Black"
         ResizeMode="CanResizeWithGrip"
@@ -22,7 +22,7 @@
                 </Style>
             </TabControl.Resources> -->
 
-            <TabItem FontFamily="Verdana" Header="KalorienTracker" Background="AliceBlue">
+            <TabItem FontFamily="Verdana" Header="KalorienTracker" Background="WhiteSmoke">
                 <Border 
                     
                             CornerRadius="10"
@@ -53,7 +53,7 @@
 
                         </Grid>
 
-                        <!-- Leere Zeile -->
+                        <!-- Kalorien der Tage -->
                         <StackPanel TextBlock.TextAlignment="Center">
                             <Grid>
                                 <Grid.ColumnDefinitions>
@@ -79,19 +79,101 @@
                             </Grid>
                         </StackPanel>
 
-                        <!-- Heute Kalorien und manuelle Eingabe -->
+
+                        <!-- heutige kalorien-->
+                        <StackPanel>
+                            <Grid>
+                                <!-- mehrere columns damit ich es leicht nach da vorne bekomme ca. unter mittwoch-->
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <Border
+                                            CornerRadius="10"
+                                            Padding="15,30"
+                                            Margin="10,35,10,20"
+                                            Grid.Column="1"
+                                            >
+                                    <StackPanel>
+                                        <TextBlock FontSize="16" FontFamily="Verdana" Text=" Kalorien"/>
+                                        <TextBlock x:Name="CaloriesToday" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Margin="10" Text="0"/>
+                                    </StackPanel>
+                                </Border>
+                            </Grid>
+                        </StackPanel>
+
+
+                        <!-- heutige makros-->
                         <StackPanel>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <!-- Heutige Kalorien -->
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <Border
+                                            CornerRadius="10"
+                                            Padding="15,30"
+                                            Grid.Column="0"
+                                            >
+
+                                    <StackPanel>
+                                        <TextBlock FontSize="16" FontFamily="Verdana" Text=" Proteine"/>
+                                        <TextBlock x:Name="ProteinsToday" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Text="0"/>
+                                        <!-- kann man hier sowas wie %d machen und sagen Text="0/%d" also 0 von 100(falls 100 das ziel ist?)-->
+                                    </StackPanel>
+
+                                </Border>
+                                <Border
+                                        CornerRadius="10"
+                                        Padding="15,30"
+                                        Grid.Column="1"
+                                        >
+                                    <StackPanel>
+                                        <TextBlock FontSize="16" FontFamily="Verdana" Text=" Kohlenhydrate"/>
+                                        <TextBlock x:Name="CarbsToday" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Text="0"/>
+                                        <!-- siehe fette kommentar-->
+                                    </StackPanel>
+                                </Border>
+                                <Border
+                                        CornerRadius="10"
+                                        Padding="15,30"
+                                        Grid.Column="2"
+                                        >
+                                    <StackPanel>
+                                        <TextBlock FontSize="16" FontFamily="Verdana" Text=" Fette"/>
+                                        <TextBlock x:Name="FatsToday" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Text="0"/>
+                                        <!-- siehe fette kommentar-->
+                                    </StackPanel>
+                                </Border>
+                            </Grid>
+                        </StackPanel>
+
+                        <!-- Makro Eingabe -->
+                        <StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
 
                                 <Border
                                                     CornerRadius="10"
-                                                    Padding="15, 100, 15, 15"
-                                                    Margin="0, 0, 0, 0"
+                                                    Padding="15, 50, 15, 15"
+                                                    Margin="0,0,435,0"
                                                     Grid.Column="0"
                                                     >
 
@@ -108,37 +190,49 @@
                                                 <RowDefinition Height="*"/>
                                                 <RowDefinition Height="*"/>
                                             </Grid.RowDefinitions>
-                                            <TextBlock VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.ColumnSpan="3" Text="Heutige Kalorien"/>
-                                            <TextBlock x:Name="CaloriesToday" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Row="1" Grid.Column="1" Margin="10" Text="0"/>
-                                            <TextBox Controls:TextBoxHelper.Watermark="Proteine" Grid.Row="2" Grid.Column="0" x:Name="ProteinBox" />
-                                            <TextBox Controls:TextBoxHelper.Watermark="Kohlenhydrate" Grid.Row="2" Grid.Column="1" x:Name="CarbBox"/>
-                                            <TextBox Controls:TextBoxHelper.Watermark="Fette" Grid.Row="2" Grid.Column="2" x:Name="FatBox"/>
-                                            <TextBlock Visibility="Hidden" FontSize="16" FontFamily="Verdana" Foreground="Red" Text="Werte richtig eintragen. Darf nichts leer sein!" x:Name="FalscheEingabe" Grid.Row="4" Grid.Column="0" Margin="5" Grid.ColumnSpan="3"/>
+
+                                            <TextBox Controls:TextBoxHelper.Watermark="Proteine" Grid.Row="2" Grid.Column="0" x:Name="ProteinBox" PreviewTextInput="NumberValidationTextBox"/>
+                                            <TextBox Controls:TextBoxHelper.Watermark="Kohlenhydrate" Grid.Row="2" Grid.Column="1" x:Name="CarbBox" PreviewTextInput="NumberValidationTextBox"/>
+                                            <TextBox Controls:TextBoxHelper.Watermark="Fette" Grid.Row="2" Grid.Column="2" x:Name="FatBox" PreviewTextInput="NumberValidationTextBox"/>
+                                            <TextBlock Visibility="Hidden" FontSize="16" FontFamily="Verdana" Foreground="Red" Text="Mindestens einen Wert eingeben." x:Name="FalscheEingabe" Grid.Row="4" Grid.Column="0" Margin="5" Grid.ColumnSpan="3"/>
                                         </Grid>
                                     </StackPanel>
                                 </Border>
-
-                                <!-- Manuelle Eingabe -->
-                                <Border
-                                            CornerRadius="10"
-                                            Padding="15, 100, 15, 15"
-                                            Margin="0, 0, 0, 0"
-                                            Grid.Column="1">
-                                    <StackPanel>
-                                        <TextBlock VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.ColumnSpan="1" Text="Manuelle Kalorieneingabe" Margin="19.5"/>
-                                        <TextBox Controls:TextBoxHelper.Watermark="Kalorien" Grid.Column="2" x:Name="ManualCaloryBox" />
-                                    </StackPanel>
-                                </Border>
-
                             </Grid>
-
                         </StackPanel>
+
+
+
+                        <!-- manuelle kalorieneingabe -->
+                        <StackPanel>
+                            <Border
+                                        Padding="15"
+                                        Margin="0,0,435,0"
+                                        >
+                                <StackPanel>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+
+                                        <TextBox Controls:TextBoxHelper.Watermark="Manuelle Kalorieneingabe" Grid.Column="1" x:Name="ManualCaloryBox" PreviewTextInput="NumberValidationTextBox"/>
+                                    </Grid>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+
+
 
                         <!-- Kalorien berechnen / Kalorien eintragen -->
                         <StackPanel>
                             <Border
                                             Padding="15, 25, 15, 15"
-                                            Margin="150,0,500,20"
+                                            Margin="190,0,500,20"
                                             Grid.Column="2">
 
                                 <StackPanel>
@@ -162,22 +256,304 @@
                     </StackPanel>
                 </Border>
             </TabItem>
-            <TabItem FontFamily="Verdana" Header="Trainingsplan"
-                     Background="AliceBlue">
 
+
+
+
+            <TabItem FontFamily="Verdana" Header="Trainingsplan"
+                     Background="WhiteSmoke">
+
+
+                <TabControl Background="WhiteSmoke">
+
+                    <!-- 30 Minuten Workout Plan-->
+                    <TabItem Header="30 Minuten Workout" FontFamily="Verdana" Padding="20">
+                        <Border
+                                    CornerRadius="10"
+                                    Padding="10"
+                                    >
+                            <!-- 3 Spalten - pro workout tag 1, 11 reihen, da 1 übung = 3 minuten und 10 übungen innerhalb 30min + 1 reihe für den tag-->
+                            <StackPanel>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <!-- Trainingsplan Tag 1 -->
+                                    
+                                    <Border BorderBrush="Black" BorderThickness="1" Grid.Column="0">
+                                        <StackPanel>
+                                            <TextBlock Text="Tag 1" TextAlignment="Center" Padding="10" FontFamily="Verdana" FontSize="16"/>
+                                            <Separator/>
+                                            <TextBlock Text="3x12 Bench Press" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=vthMCtgVtFw" RequestNavigate="Hyperlink_RequestNavigate"> 
+                                                Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="3x12 Dumbbell Bench Press" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=SHsUIZiNdeY" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="3x12 Dumbbell Row" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=EEFHHOCfHgw" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="4x8 One Armed Straight Pushdown " TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=WJXtu9F9K0g" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="3x12 Dumbbell Curls" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=yTWO2th-RIY" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="2x15 Concentration Curls" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=ebqgIOiYGEY" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="2x15 Tricep Pushdowns" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=REWv05om0ho" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="3x10 Skullcrushers" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=gXbSA9EKUtA" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="3x1 Minute Lying Ab Scissors" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=iuObz64TvMc" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="2x20 Military Sit Ups" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=y5BpvYGyVb0" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                        </StackPanel>
+
+                                    </Border>
+
+                                    <!-- Trainingsplan Tag 2 -->
+                                    
+                                    <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Margin="10,0,10,0">
+                                        <StackPanel>
+                                            <TextBlock Text="Tag 2" TextAlignment="Center" Padding="10" FontFamily="Verdana" FontSize="16"/>
+                                            <Separator/>
+                                            <TextBlock Text="4x10 Squats" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=nEQQle9-0NA" RequestNavigate="Hyperlink_RequestNavigate"> 
+                                                Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="3x15 Calv Contractions" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=3jTwNTm1EBE" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="3x12 Lateral Shoulder Raises" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=q5sNYB1Q6aM" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="3x10 Dumbbell Shoulder Press" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=BpbZC_Pd4XU" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="4x8 Shrugs" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=cYPDveEb1RQ" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="2x15 Overhead Trap Raise" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://youtu.be/cYPDveEb1RQ?t=83" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="2x1 Minute One Down Two Ups" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://youtu.be/EB8Iom51fdA?t=181" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="3x10 Abdominal Machine" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=OhDhMPjPT2M" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="3x12 Glute-Ham Raise Machine" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://youtu.be/RjexvOAsVtI?t=307" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="3x12 Dumbbell Goblet Adductor Lunge" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center" Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://youtu.be/RjexvOAsVtI?t=677" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                        </StackPanel>
+                                    </Border>
+
+                                    <!-- Trainingsplan Tag 3 -->
+                                    
+                                    <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2">
+                                        <StackPanel>
+                                            <TextBlock Text="Tag 3" TextAlignment="Center" Padding="10" FontFamily="Verdana" FontSize="16"/>
+                                            <Separator/>
+                                            <TextBlock Text="3x12 Dumbbell Pullover" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://youtu.be/T3NHYjGhAkk?t=75" RequestNavigate="Hyperlink_RequestNavigate"> 
+                                                Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="3x15 Crush Grip Dumbbell Press" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://youtu.be/T3NHYjGhAkk?t=132" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="3x10 Barbell Curls " TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=WeZLdaLggAo" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="2x12 Cable Curls" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://youtu.be/54krdTEyziQ?t=174" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="3x12 Bench Dips" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=jdFzYGmvDyg" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="2x15 Kickbacks" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=rTsNG5c568k" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="2x1 Lat Pulldown Machine" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=CAwf7n6Luuc" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="4x8 Rear Delt Row" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=8MKGArS7w7c" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="3x10 Side Oblique Crunches" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=CMJA332bfs0" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                            <Separator/>
+                                            <TextBlock Text="2x20 Military Sit Ups" TextAlignment="Center" FontSize="14"/>
+                                            <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=y5BpvYGyVb0" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                            </TextBlock>
+                                        </StackPanel>
+                                    </Border>
+                                    
+                                </Grid>
+                            </StackPanel>
+                            
+                        </Border>
+                    </TabItem>
+                    <TabItem Header="60 Minuten Workout" FontFamily="Verdana" Padding="20">
+
+                    </TabItem>
+                    <TabItem Header="90 Minuten Workout" FontFamily="Verdana" Padding="20">
+
+                    </TabItem>
+                </TabControl>
 
 
             </TabItem>
             <TabItem FontFamily="Verdana" Header="Ernährungsplan"
-                     Background="AliceBlue">
+                     Background="WhiteSmoke">
 
             </TabItem>
             <TabItem FontFamily="Verdana" Header="Fortschritt"
-                     Background="AliceBlue">
+                     Background="WhiteSmoke">
 
             </TabItem>
             <TabItem FontFamily="Verdana" Header="Lebensmittel"
-                     Background="AliceBlue">
+                     Background="WhiteSmoke">
 
             </TabItem>
         </TabControl>
@@ -186,5 +562,4 @@
 
 
     </Border>
-
 </Controls:MetroWindow>
