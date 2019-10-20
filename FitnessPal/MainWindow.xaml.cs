@@ -98,7 +98,7 @@ namespace FitnessPal
             }
 
         }
-
+        /// Test Kommentar
         /// <summary>
         /// Rechnet Kalorien aus und gibt Kalorien zurück.
         /// </summary>
