@@ -35,6 +35,7 @@ namespace FitnessPal
                 ProteinBox.Clear();
                 CarbBox.Clear();
                 FatBox.Clear();
+                ManualCaloryBox.Clear();
 
                 MessageBox.Show("Kalorien erfolgreich eingetragen");
             }

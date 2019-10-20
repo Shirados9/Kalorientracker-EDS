@@ -6,7 +6,7 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:FitnessPal"
         mc:Ignorable="d"
-        Title="FitnessPal" Height="550" Width="1200"
+        Title="FitnessPal" Height="750" Width="1200"
         BorderThickness="0"
         GlowBrush="Black"
         ResizeMode="CanResizeWithGrip"
@@ -78,20 +78,98 @@
 
                             </Grid>
                         </StackPanel>
+                        <!-- heutige kalorien-->
+                        <StackPanel>
+                            <Grid>
+                                <!-- mehrere columns damit ich es leicht nach da vorne bekomme ca. unter mittwoch-->
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <Border
+                                            CornerRadius="10"
+                                            Padding="15,30"
+                                            Margin="10,35,10,20"
+                                            Grid.Column="1"
+                                            >
+                                    <StackPanel>
+                                        <TextBlock FontSize="16" FontFamily="Verdana" Text=" Kalorien"/>
+                                        <TextBlock x:Name="CaloriesToday" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Margin="10" Text="0"/>
+                                    </StackPanel>
+                                </Border>
+                            </Grid>
+                        </StackPanel>
+                        <!-- heutige makros-->
+                        <StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <Border
+                                            CornerRadius="10"
+                                            Padding="15,30"
+                                            Grid.Column="0"
+                                            >
+
+                                    <StackPanel>
+                                        <TextBlock FontSize="16" FontFamily="Verdana" Text=" Proteine"/>
+                                        <TextBlock x:Name="ProteinsToday" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Text="0"/>
+                                        <!-- kann man hier sowas wie %d machen und sagen Text="0/%d" also 0 von 100(falls 100 das ziel ist?)-->
+                                    </StackPanel>
+
+                                </Border>
+                                <Border
+                                        CornerRadius="10"
+                                        Padding="15,30"
+                                        Grid.Column="1"
+                                        >
+                                    <StackPanel>
+                                        <TextBlock FontSize="16" FontFamily="Verdana" Text=" Kohlenhydrate"/>
+                                        <TextBlock x:Name="CarbsToday" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Text="0"/>
+                                        <!-- siehe fette kommentar-->
+                                    </StackPanel>
+                                </Border>
+                                <Border
+                                        CornerRadius="10"
+                                        Padding="15,30"
+                                        Grid.Column="2"
+                                        >
+                                    <StackPanel>
+                                        <TextBlock FontSize="16" FontFamily="Verdana" Text=" Fette"/>
+                                        <TextBlock x:Name="FatsToday" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Text="0"/>
+                                        <!-- siehe fette kommentar-->
+                                    </StackPanel>
+                                </Border>
+                            </Grid>
+                        </StackPanel>
 
                         <!-- Heute Kalorien und manuelle Eingabe -->
                         <StackPanel>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <!-- Heutige Kalorien -->
+                                <!-- Heutige Kalorien berechnung -->
 
                                 <Border
                                                     CornerRadius="10"
-                                                    Padding="15, 100, 15, 15"
-                                                    Margin="0, 0, 0, 0"
+                                                    Padding="15, 50, 15, 15"
+                                                    Margin="0,0,435,0"
                                                     Grid.Column="0"
                                                     >
 
@@ -108,8 +186,7 @@
                                                 <RowDefinition Height="*"/>
                                                 <RowDefinition Height="*"/>
                                             </Grid.RowDefinitions>
-                                            <TextBlock VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.ColumnSpan="3" Text="Heutige Kalorien"/>
-                                            <TextBlock x:Name="CaloriesToday" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Row="1" Grid.Column="1" Margin="10" Text="0"/>
+
                                             <TextBox Controls:TextBoxHelper.Watermark="Proteine" Grid.Row="2" Grid.Column="0" x:Name="ProteinBox" />
                                             <TextBox Controls:TextBoxHelper.Watermark="Kohlenhydrate" Grid.Row="2" Grid.Column="1" x:Name="CarbBox"/>
                                             <TextBox Controls:TextBoxHelper.Watermark="Fette" Grid.Row="2" Grid.Column="2" x:Name="FatBox"/>
@@ -117,28 +194,41 @@
                                         </Grid>
                                     </StackPanel>
                                 </Border>
-
-                                <!-- Manuelle Eingabe -->
-                                <Border
-                                            CornerRadius="10"
-                                            Padding="15, 100, 15, 15"
-                                            Margin="0, 0, 0, 0"
-                                            Grid.Column="1">
-                                    <StackPanel>
-                                        <TextBlock VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.ColumnSpan="1" Text="Manuelle Kalorieneingabe" Margin="19.5"/>
-                                        <TextBox Controls:TextBoxHelper.Watermark="Kalorien" Grid.Column="2" x:Name="ManualCaloryBox" />
-                                    </StackPanel>
-                                </Border>
-
                             </Grid>
-
                         </StackPanel>
 
+                        
+                        
+                        
+                        <StackPanel>
+                            <Border
+                                        Padding="15"
+                                        Margin="0,0,435,0"
+                                        >
+                                <StackPanel>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+
+                                        <TextBox Controls:TextBoxHelper.Watermark="Manuelle Kalorieneingabe" Grid.Column="1" x:Name="ManualCaloryBox"/>
+                                    </Grid>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                        
+                        
+                        
                         <!-- Kalorien berechnen / Kalorien eintragen -->
                         <StackPanel>
                             <Border
                                             Padding="15, 25, 15, 15"
-                                            Margin="150,0,500,20"
+                                            Margin="190,0,500,20"
                                             Grid.Column="2">
 
                                 <StackPanel>
@@ -186,5 +276,22 @@
 
 
     </Border>
+
+
+
+
+    <!--  Manuelle Eingabe
+    <Border
+                                            CornerRadius="10"
+                                            Padding="15, 100, 15, 15"
+                                            Margin="0, 0, 0, 0"
+                                            Grid.Column="1">
+        <StackPanel>
+            <TextBlock VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.ColumnSpan="1" Text="Manuelle Kalorieneingabe" Margin="19.5"/>
+            <TextBox Controls:TextBoxHelper.Watermark="Kalorien" Grid.Column="2" x:Name="ManualCaloryBox" />
+        </StackPanel>
+    </Border>
+    -->
+
 
 </Controls:MetroWindow>
