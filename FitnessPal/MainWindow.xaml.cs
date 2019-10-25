@@ -39,7 +39,7 @@ namespace FitnessPal
             this.FalscheEingabe.Visibility = Visibility.Hidden;
             if (AlleLeer())
             {
-                CaloriesToday.Text = Convert.ToString(CalcCalories());
+                CaloriesToday.Text = Convert.ToString(Math.Round(CalcCalories(), MidpointRounding.AwayFromZero));
                 BerechneNaehrstoff(ProteinsToday, ProteinBox, ProteinsZiel, ProteinBar);
                 BerechneNaehrstoff(CarbsToday, CarbBox, CarbsZiel, CarbBar);
                 BerechneNaehrstoff(FatsToday, FatBox, FatsZiel, FatBar);
@@ -58,7 +58,10 @@ namespace FitnessPal
 
         }
 
-        // Check ob alles leer
+        /// <summary>
+        /// Checkt ob alle Eingaben leer sind.
+        /// </summary>
+        /// <returns></returns>
         private bool AlleLeer()
         {
             if (String.IsNullOrWhiteSpace(ProteinBox.Text) && String.IsNullOrWhiteSpace(CarbBox.Text) && String.IsNullOrWhiteSpace(FatBox.Text) && String.IsNullOrWhiteSpace(ManualCaloryBox.Text))
@@ -68,7 +71,11 @@ namespace FitnessPal
             return true;
         }
 
-        // Nur Zahlen in Textboxen
+        /// <summary>
+        /// Gültige Eingabe nur positive Zahlen.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
             Regex regex = new Regex("[^0-9]+");
@@ -76,7 +83,7 @@ namespace FitnessPal
         }
 
         /// <summary>
-        /// Kontrolliert ob einzelne Kästchen leer sind und trägt 0 ein
+        /// Kontrolliert ob einzelne Kästchen leer sind und trägt 0 ein.
         /// </summary>
         private void CheckKästchen()
         {
@@ -98,7 +105,7 @@ namespace FitnessPal
             }
 
         }
-        /// Test Kommentar
+        
         /// <summary>
         /// Rechnet Kalorien aus und gibt Kalorien zurück.
         /// </summary>
@@ -124,6 +131,7 @@ namespace FitnessPal
 
             naehrstoffOutput.Text = Convert.ToString(newOutput);
             bar.Value = BerechneBarProgress(newOutput, Double.Parse(naehrstoffZiel.Text));
+            ProgressBarColor(bar);
         }
 
         /// <summary>
@@ -139,6 +147,21 @@ namespace FitnessPal
             return tmp; ;
         }
 
+        private void ProgressBarColor(ProgressBar bar)
+        {
+            if (bar.Value < 75)
+            {
+                bar.Background = Brushes.Green;
+            }
+            else if (bar.Value < 100)
+            {
+                bar.Background = Brushes.Orange;
+            }
+            else if (bar.Value >= 100)
+            {
+                bar.Background = Brushes.Red;
+            }
+        }
         // Trägt Kalorien in heutigen Tag oben ein
         private void SubmitCaloriesToCurrentDay_Click(object sender, RoutedEventArgs e)
         {
@@ -252,10 +275,27 @@ namespace FitnessPal
             }
         }
 
+        /// <summary>
+        /// Enter startet CalculateCalories_Click Event.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                CalculateCalories_Click(null, null);
+            }
+        }
+
 
         // ********************************Trainingsplan Code***********************************
 
-
+        /// <summary>
+        /// Navigation von URLs in den Browser.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
             Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
