@@ -267,8 +267,8 @@
 
                 <TabControl Background="WhiteSmoke">
 
-                    <!-- 30 Minuten Workout Plan-->
-                    <TabItem Header="30 Minuten Workout" FontFamily="Verdana" Padding="20">
+                    <!-- Beginner Workout Plan-->
+                    <TabItem Header="Beginner Workout" FontFamily="Verdana" Padding="20">
                         <Border
                                     CornerRadius="10"
                                     Padding="10"
@@ -536,8 +536,8 @@
                         </Border>
                     </TabItem>
                     
-                    <!-- 60 Minuten Workout Plan -->
-                    <TabItem Header="60 Minuten Workout" FontFamily="Verdana" Padding="20">
+                    <!-- Advanced Workout Plan -->
+                    <TabItem Header="Advanced Workout" FontFamily="Verdana" Padding="20">
 
                         <ScrollViewer>
                             <Border
@@ -989,8 +989,8 @@
                         
                     </TabItem>
                     
-                    <!-- 90 Minuten Workout Plan -->
-                    <TabItem Header="90 Minuten Workout" FontFamily="Verdana" Padding="20">
+                    <!-- Expert Workout Plan -->
+                    <TabItem Header="Expert Workout" FontFamily="Verdana" Padding="20">
 
 
                         <ScrollViewer>
@@ -1007,6 +1007,9 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
                                             <RowDefinition Height="*"/>
                                             <RowDefinition Height="*"/>
                                             <RowDefinition Height="*"/>
@@ -1109,6 +1112,27 @@
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x20 Leg Lifts" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=d08B-QJL124" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x20 Military Sit Ups" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=y5BpvYGyVb0" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="3x10 Side Oblique Crunches" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=CMJA332bfs0" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
                                             </StackPanel>
 
                                         </Border>
@@ -1119,16 +1143,79 @@
                                             <StackPanel>
                                                 <TextBlock Text="Tag 2" TextAlignment="Center" Padding="10" FontFamily="Verdana" FontSize="16"/>
                                                 <Separator/>
-                                                <TextBlock Text="4x10 Squats" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="4x10 Rear Delt Row" TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=nEQQle9-0NA" RequestNavigate="Hyperlink_RequestNavigate"> 
-                                                Tutorial Anschauen
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=8MKGArS7w7c" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
                                                 <Separator/>
-                                                <TextBlock Text="3x15 Calv Contractions" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="4x12 Pull Ups " TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=3jTwNTm1EBE" RequestNavigate="Hyperlink_RequestNavigate">
+                                                <Hyperlink NavigateUri="https://youtu.be/sIvJTfGxdFo?t=220" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="3x12 Lat Pull Down" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://youtu.be/U5YWNF3675Q?t=165" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x10 Barbell Rows" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=T3N-TO4reLQ" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x8 Deadlifts" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=hCDzSR6bW10" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x10 Skullcrushers" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=gXbSA9EKUtA" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x10 Tricep Pushdowns" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=REWv05om0ho" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x12 Bench Dips" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=jdFzYGmvDyg" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x10 Pushaway Drag PD Combo" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://youtu.be/tMyFe-IL7Ks?t=329" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="3x12 Kickbacks" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=rTsNG5c568k" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="3x8 Overhead Front Press" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://youtu.be/02W0832OQos?t=294" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
@@ -1140,9 +1227,9 @@
                                                 </Hyperlink>
                                                 </TextBlock>
                                                 <Separator/>
-                                                <TextBlock Text="3x10 Dumbbell Shoulder Press" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="4x8 Face Pulls" TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=BpbZC_Pd4XU" RequestNavigate="Hyperlink_RequestNavigate">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=eIq5CB9JfKE" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
@@ -1154,37 +1241,9 @@
                                                 </Hyperlink>
                                                 </TextBlock>
                                                 <Separator/>
-                                                <TextBlock Text="2x15 Overhead Trap Raise" TextAlignment="Center" FontSize="14"/>
-                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://youtu.be/cYPDveEb1RQ?t=83" RequestNavigate="Hyperlink_RequestNavigate">
-                                                    Tutorial Anschauen
-                                                </Hyperlink>
-                                                </TextBlock>
-                                                <Separator/>
-                                                <TextBlock Text="2x1 Minute One Down Two Ups" TextAlignment="Center" FontSize="14"/>
-                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://youtu.be/EB8Iom51fdA?t=181" RequestNavigate="Hyperlink_RequestNavigate">
-                                                    Tutorial Anschauen
-                                                </Hyperlink>
-                                                </TextBlock>
-                                                <Separator/>
-                                                <TextBlock Text="3x10 Abdominal Machine" TextAlignment="Center" FontSize="14"/>
-                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=OhDhMPjPT2M" RequestNavigate="Hyperlink_RequestNavigate">
-                                                    Tutorial Anschauen
-                                                </Hyperlink>
-                                                </TextBlock>
-                                                <Separator/>
-                                                <TextBlock Text="3x12 Glute-Ham Raise Machine" TextAlignment="Center" FontSize="14"/>
-                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://youtu.be/RjexvOAsVtI?t=307" RequestNavigate="Hyperlink_RequestNavigate">
-                                                    Tutorial Anschauen
-                                                </Hyperlink>
-                                                </TextBlock>
-                                                <Separator/>
-                                                <TextBlock Text="3x12 Dumbbell Goblet Adductor Lunge" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="3x10 Behind the Back Shrugs" TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center" Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://youtu.be/RjexvOAsVtI?t=677" RequestNavigate="Hyperlink_RequestNavigate">
+                                                <Hyperlink NavigateUri="https://youtu.be/hZhPYJdOb88?t=194" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
@@ -1193,62 +1252,104 @@
 
                                         <!-- Trainingsplan Tag 3 -->
 
-                                        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2">
+                                        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2" Margin="0,0,0,0">
                                             <StackPanel>
                                                 <TextBlock Text="Tag 3" TextAlignment="Center" Padding="10" FontFamily="Verdana" FontSize="16"/>
                                                 <Separator/>
-                                                <TextBlock Text="3x12 Dumbbell Pullover" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="4x10 Bench Press" TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://youtu.be/T3NHYjGhAkk?t=75" RequestNavigate="Hyperlink_RequestNavigate"> 
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=vthMCtgVtFw" RequestNavigate="Hyperlink_RequestNavigate"> 
                                                 Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
                                                 <Separator/>
-                                                <TextBlock Text="3x15 Crush Grip Dumbbell Press" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="4x10 Dumbbell Bench Press" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=SHsUIZiNdeY" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="3x10 Crush Grip Dumbbell Press" TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
                                                 <Hyperlink NavigateUri="https://youtu.be/T3NHYjGhAkk?t=132" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
                                                 <Separator/>
-                                                <TextBlock Text="3x10 Barbell Curls " TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="4x10 Cable Chest Flyes" TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=WeZLdaLggAo" RequestNavigate="Hyperlink_RequestNavigate">
+                                                <Hyperlink NavigateUri="https://youtu.be/1SoJVttMI1w?t=101" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
                                                 <Separator/>
-                                                <TextBlock Text="2x12 Cable Curls" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="3x12 Butterfly Machine" TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://youtu.be/54krdTEyziQ?t=174" RequestNavigate="Hyperlink_RequestNavigate">
+                                                <Hyperlink NavigateUri="https://youtu.be/ymhwUhR_oJU?t=42" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
                                                 <Separator/>
-                                                <TextBlock Text="3x12 Bench Dips" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="4x12 Chest Dips" TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=jdFzYGmvDyg" RequestNavigate="Hyperlink_RequestNavigate">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=yN6Q1UI_xkE" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
                                                 <Separator/>
-                                                <TextBlock Text="2x15 Kickbacks" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="3x12 Dumbbell Curls" TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=rTsNG5c568k" RequestNavigate="Hyperlink_RequestNavigate">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=yTWO2th-RIY" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
                                                 <Separator/>
-                                                <TextBlock Text="2x1 Lat Pulldown Machine" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="3x12 Seated Preacher Curls" TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=CAwf7n6Luuc" RequestNavigate="Hyperlink_RequestNavigate">
+                                                <Hyperlink NavigateUri="https://youtu.be/fIWP-FRFNU0?t=29" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
                                                 <Separator/>
-                                                <TextBlock Text="4x8 Rear Delt Row" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="2x10 Outside Grip Cable Curls " TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=8MKGArS7w7c" RequestNavigate="Hyperlink_RequestNavigate">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=AsAVbj7puKo" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x10 High Cable Curls" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=d4YaCgGG-so" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x10 Seated Incline Curls" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=O3NiFSBo3GI" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="2x15 Concentration Curls" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=ebqgIOiYGEY" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x20 Leg Lifts" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=d08B-QJL124" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x20 Military Sit Ups" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=y5BpvYGyVb0" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
@@ -1259,14 +1360,8 @@
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
-                                                <Separator/>
-                                                <TextBlock Text="2x20 Military Sit Ups" TextAlignment="Center" FontSize="14"/>
-                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=y5BpvYGyVb0" RequestNavigate="Hyperlink_RequestNavigate">
-                                                    Tutorial Anschauen
-                                                </Hyperlink>
-                                                </TextBlock>
                                             </StackPanel>
+
                                         </Border>
                                     </Grid>
 
@@ -1297,72 +1392,107 @@
                                             <StackPanel>
                                                 <TextBlock Text="Tag 4" TextAlignment="Center" Padding="10" FontFamily="Verdana" FontSize="16"/>
                                                 <Separator/>
-                                                <TextBlock Text="3x12 Dumbbell Pullover" TextAlignment="Center" FontSize="14"/>
-                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://youtu.be/T3NHYjGhAkk?t=75" RequestNavigate="Hyperlink_RequestNavigate"> 
-                                                Tutorial Anschauen
-                                                </Hyperlink>
-                                                </TextBlock>
-                                                <Separator/>
-                                                <TextBlock Text="3x15 Crush Grip Dumbbell Press" TextAlignment="Center" FontSize="14"/>
-                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://youtu.be/T3NHYjGhAkk?t=132" RequestNavigate="Hyperlink_RequestNavigate">
-                                                    Tutorial Anschauen
-                                                </Hyperlink>
-                                                </TextBlock>
-                                                <Separator/>
-                                                <TextBlock Text="3x10 Barbell Curls " TextAlignment="Center" FontSize="14"/>
-                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=WeZLdaLggAo" RequestNavigate="Hyperlink_RequestNavigate">
-                                                    Tutorial Anschauen
-                                                </Hyperlink>
-                                                </TextBlock>
-                                                <Separator/>
-                                                <TextBlock Text="2x12 Cable Curls" TextAlignment="Center" FontSize="14"/>
-                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://youtu.be/54krdTEyziQ?t=174" RequestNavigate="Hyperlink_RequestNavigate">
-                                                    Tutorial Anschauen
-                                                </Hyperlink>
-                                                </TextBlock>
-                                                <Separator/>
-                                                <TextBlock Text="3x12 Bench Dips" TextAlignment="Center" FontSize="14"/>
-                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=jdFzYGmvDyg" RequestNavigate="Hyperlink_RequestNavigate">
-                                                    Tutorial Anschauen
-                                                </Hyperlink>
-                                                </TextBlock>
-                                                <Separator/>
-                                                <TextBlock Text="2x15 Kickbacks" TextAlignment="Center" FontSize="14"/>
-                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=rTsNG5c568k" RequestNavigate="Hyperlink_RequestNavigate">
-                                                    Tutorial Anschauen
-                                                </Hyperlink>
-                                                </TextBlock>
-                                                <Separator/>
-                                                <TextBlock Text="2x1 Lat Pulldown Machine" TextAlignment="Center" FontSize="14"/>
-                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=CAwf7n6Luuc" RequestNavigate="Hyperlink_RequestNavigate">
-                                                    Tutorial Anschauen
-                                                </Hyperlink>
-                                                </TextBlock>
-                                                <Separator/>
-                                                <TextBlock Text="4x8 Rear Delt Row" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="4x10 Rear Delt Row" TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
                                                 <Hyperlink NavigateUri="https://www.youtube.com/watch?v=8MKGArS7w7c" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
                                                 <Separator/>
-                                                <TextBlock Text="3x10 Side Oblique Crunches" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="4x12 Pull Ups " TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=CMJA332bfs0" RequestNavigate="Hyperlink_RequestNavigate">
+                                                <Hyperlink NavigateUri="https://youtu.be/sIvJTfGxdFo?t=220" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
                                                 <Separator/>
-                                                <TextBlock Text="2x20 Military Sit Ups" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="3x12 Lat Pull Down" TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=y5BpvYGyVb0" RequestNavigate="Hyperlink_RequestNavigate">
+                                                <Hyperlink NavigateUri="https://youtu.be/U5YWNF3675Q?t=165" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x10 Barbell Rows" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=T3N-TO4reLQ" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x8 Deadlifts" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=hCDzSR6bW10" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x10 Skullcrushers" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=gXbSA9EKUtA" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x10 Tricep Pushdowns" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=REWv05om0ho" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x12 Bench Dips" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=jdFzYGmvDyg" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x10 Pushaway Drag PD Combo" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://youtu.be/tMyFe-IL7Ks?t=329" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="3x12 Kickbacks" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=rTsNG5c568k" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="3x8 Overhead Front Press" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://youtu.be/02W0832OQos?t=294" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="3x12 Lateral Shoulder Raises" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=q5sNYB1Q6aM" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x8 Face Pulls" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=eIq5CB9JfKE" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x8 Shrugs" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=cYPDveEb1RQ" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="3x10 Behind the Back Shrugs" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center" Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://youtu.be/hZhPYJdOb88?t=194" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
@@ -1375,58 +1505,100 @@
                                             <StackPanel>
                                                 <TextBlock Text="Tag 5" TextAlignment="Center" Padding="10" FontFamily="Verdana" FontSize="16"/>
                                                 <Separator/>
-                                                <TextBlock Text="3x12 Dumbbell Pullover" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="4x10 Bench Press" TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://youtu.be/T3NHYjGhAkk?t=75" RequestNavigate="Hyperlink_RequestNavigate"> 
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=vthMCtgVtFw" RequestNavigate="Hyperlink_RequestNavigate"> 
                                                 Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
                                                 <Separator/>
-                                                <TextBlock Text="3x15 Crush Grip Dumbbell Press" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="4x10 Dumbbell Bench Press" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=SHsUIZiNdeY" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="3x10 Crush Grip Dumbbell Press" TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
                                                 <Hyperlink NavigateUri="https://youtu.be/T3NHYjGhAkk?t=132" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
                                                 <Separator/>
-                                                <TextBlock Text="3x10 Barbell Curls " TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="4x10 Cable Chest Flyes" TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=WeZLdaLggAo" RequestNavigate="Hyperlink_RequestNavigate">
+                                                <Hyperlink NavigateUri="https://youtu.be/1SoJVttMI1w?t=101" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
                                                 <Separator/>
-                                                <TextBlock Text="2x12 Cable Curls" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="3x12 Butterfly Machine" TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://youtu.be/54krdTEyziQ?t=174" RequestNavigate="Hyperlink_RequestNavigate">
+                                                <Hyperlink NavigateUri="https://youtu.be/ymhwUhR_oJU?t=42" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
                                                 <Separator/>
-                                                <TextBlock Text="3x12 Bench Dips" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="4x12 Chest Dips" TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=jdFzYGmvDyg" RequestNavigate="Hyperlink_RequestNavigate">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=yN6Q1UI_xkE" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
                                                 <Separator/>
-                                                <TextBlock Text="2x15 Kickbacks" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="3x12 Dumbbell Curls" TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=rTsNG5c568k" RequestNavigate="Hyperlink_RequestNavigate">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=yTWO2th-RIY" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
                                                 <Separator/>
-                                                <TextBlock Text="2x1 Lat Pulldown Machine" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="3x12 Seated Preacher Curls" TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=CAwf7n6Luuc" RequestNavigate="Hyperlink_RequestNavigate">
+                                                <Hyperlink NavigateUri="https://youtu.be/fIWP-FRFNU0?t=29" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
                                                 <Separator/>
-                                                <TextBlock Text="4x8 Rear Delt Row" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock Text="2x10 Outside Grip Cable Curls " TextAlignment="Center" FontSize="14"/>
                                                 <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=8MKGArS7w7c" RequestNavigate="Hyperlink_RequestNavigate">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=AsAVbj7puKo" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x10 High Cable Curls" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=d4YaCgGG-so" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x10 Seated Incline Curls" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=O3NiFSBo3GI" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="2x15 Concentration Curls" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=ebqgIOiYGEY" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x20 Leg Lifts" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=d08B-QJL124" RequestNavigate="Hyperlink_RequestNavigate">
+                                                    Tutorial Anschauen
+                                                </Hyperlink>
+                                                </TextBlock>
+                                                <Separator/>
+                                                <TextBlock Text="4x20 Military Sit Ups" TextAlignment="Center" FontSize="14"/>
+                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
+                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=y5BpvYGyVb0" RequestNavigate="Hyperlink_RequestNavigate">
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
@@ -1437,16 +1609,9 @@
                                                     Tutorial Anschauen
                                                 </Hyperlink>
                                                 </TextBlock>
-                                                <Separator/>
-                                                <TextBlock Text="2x20 Military Sit Ups" TextAlignment="Center" FontSize="14"/>
-                                                <TextBlock TextAlignment="Center"  Margin="0,0,0,10">
-                                                <Hyperlink NavigateUri="https://www.youtube.com/watch?v=y5BpvYGyVb0" RequestNavigate="Hyperlink_RequestNavigate">
-                                                    Tutorial Anschauen
-                                                </Hyperlink>
-                                                </TextBlock>
                                             </StackPanel>
-                                        </Border>
 
+                                        </Border>
                                         <!-- Trainingsplan Tag 6 -->
 
                                         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2" Margin="0,10,0,0">
