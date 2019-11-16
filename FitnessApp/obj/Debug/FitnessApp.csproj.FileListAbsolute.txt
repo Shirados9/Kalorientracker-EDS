@@ -1,0 +1,319 @@
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\FitnessApp.csprojAssemblyReference.cache
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\App.g.cs
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\FitnessApp_MarkupCompile.cache
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\FitnessApp_MarkupCompile.lref
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\MainWindow.g.cs
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\KalorienTracker.g.cs
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\Trainingsplan.g.cs
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\bin\Debug\FitnessApp.exe.config
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\bin\Debug\FitnessApp.exe
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\bin\Debug\FitnessApp.pdb
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\bin\Debug\MaterialDesignColors.dll
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\App.baml
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\MainWindow.baml
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\KalorienTracker.baml
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\Trainingsplan.baml
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\FitnessApp.g.resources
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\FitnessApp.Properties.Resources.resources
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\FitnessApp.csproj.GenerateResource.cache
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\FitnessApp.csproj.CopyComplete
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\FitnessApp.exe
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\FitnessApp.pdb
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\bin\Debug\ControlzEx.dll
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\bin\Debug\MahApps.Metro.dll
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\bin\Debug\ControlzEx.pdb
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\bin\Debug\MahApps.Metro.pdb
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\bin\Debug\MahApps.Metro.xml
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\Fortschritt.g.cs
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\Fortschritt.baml
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\Lebensmittel.g.cs
+C:\Users\Darwi\Desktop\FitnessApp\FitnessApp\obj\Debug\Lebensmittel.baml
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\bin\Debug\FitnessApp.exe.config
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\bin\Debug\FitnessApp.exe
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\bin\Debug\FitnessApp.pdb
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\bin\Debug\ControlzEx.dll
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\bin\Debug\MahApps.Metro.dll
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\bin\Debug\MaterialDesignColors.dll
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\bin\Debug\ControlzEx.pdb
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\bin\Debug\MahApps.Metro.pdb
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\bin\Debug\MahApps.Metro.xml
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\FitnessApp.csprojAssemblyReference.cache
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\AdvancedWorkout.g.cs
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\BeginnerWorkout.g.cs
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\ExpertWorkout.g.cs
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\Fortschritt.g.cs
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\KalorienTracker.g.cs
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\Lebensmittel.g.cs
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\MainWindow.g.cs
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\Trainingsplan.g.cs
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\App.g.cs
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\FitnessApp_MarkupCompile.cache
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\FitnessApp_MarkupCompile.lref
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\App.baml
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\AdvancedWorkout.baml
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\BeginnerWorkout.baml
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\ExpertWorkout.baml
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\Fortschritt.baml
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\KalorienTracker.baml
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\Lebensmittel.baml
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\MainWindow.baml
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\Trainingsplan.baml
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\FitnessApp.g.resources
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\FitnessApp.Properties.Resources.resources
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\FitnessApp.csproj.GenerateResource.cache
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\FitnessApp.csproj.CoreCompileInputs.cache
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\FitnessApp.csproj.CopyComplete
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\FitnessApp.exe
+C:\Users\Marcel Metzler\FitnessApp\FitnessApp\obj\Debug\FitnessApp.pdb
+C:\Users\Darwi\FitnessApp\FitnessApp\bin\Debug\FitnessApp.exe.config
+C:\Users\Darwi\FitnessApp\FitnessApp\bin\Debug\FitnessApp.exe
+C:\Users\Darwi\FitnessApp\FitnessApp\bin\Debug\FitnessApp.pdb
+C:\Users\Darwi\FitnessApp\FitnessApp\bin\Debug\ControlzEx.dll
+C:\Users\Darwi\FitnessApp\FitnessApp\bin\Debug\MahApps.Metro.dll
+C:\Users\Darwi\FitnessApp\FitnessApp\bin\Debug\MaterialDesignColors.dll
+C:\Users\Darwi\FitnessApp\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Darwi\FitnessApp\FitnessApp\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Darwi\FitnessApp\FitnessApp\bin\Debug\ControlzEx.pdb
+C:\Users\Darwi\FitnessApp\FitnessApp\bin\Debug\MahApps.Metro.pdb
+C:\Users\Darwi\FitnessApp\FitnessApp\bin\Debug\MahApps.Metro.xml
+C:\Users\Darwi\FitnessApp\FitnessApp\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Darwi\FitnessApp\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Darwi\FitnessApp\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\FitnessApp.csprojAssemblyReference.cache
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\FitnessApp.csproj.ResolveComReference.cache
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\AdvancedWorkout.g.cs
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\BeginnerWorkout.g.cs
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\ExpertWorkout.g.cs
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\Fortschritt.g.cs
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\KalorienTracker.g.cs
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\Lebensmittel.g.cs
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\MainWindow.g.cs
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\Trainingsplan.g.cs
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\App.g.cs
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\FitnessApp_MarkupCompile.cache
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\FitnessApp_MarkupCompile.lref
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\App.baml
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\AdvancedWorkout.baml
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\BeginnerWorkout.baml
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\ExpertWorkout.baml
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\Fortschritt.baml
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\KalorienTracker.baml
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\Lebensmittel.baml
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\MainWindow.baml
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\Trainingsplan.baml
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\FitnessApp.g.resources
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\FitnessApp.Properties.Resources.resources
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\FitnessApp.csproj.GenerateResource.cache
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\FitnessApp.csproj.CopyComplete
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\FitnessApp.exe
+C:\Users\Darwi\FitnessApp\FitnessApp\obj\Debug\FitnessApp.pdb
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.csprojAssemblyReference.cache
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.csproj.ResolveComReference.cache
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\AdvancedWorkout.g.cs
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\BeginnerWorkout.g.cs
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\ExpertWorkout.g.cs
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Fortschritt.g.cs
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\KalorienTracker.g.cs
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Lebensmittel.g.cs
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\MainWindow.g.cs
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Trainingsplan.g.cs
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\App.g.cs
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp_MarkupCompile.cache
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp_MarkupCompile.lref
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.exe
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.pdb
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\FitnessApp.exe.config
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\FitnessApp.exe
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\FitnessApp.pdb
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\ControlzEx.dll
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MahApps.Metro.dll
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MaterialDesignColors.dll
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\ControlzEx.pdb
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MahApps.Metro.pdb
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MahApps.Metro.xml
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\App.baml
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\AdvancedWorkout.baml
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\BeginnerWorkout.baml
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\ExpertWorkout.baml
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Fortschritt.baml
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\KalorienTracker.baml
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Lebensmittel.baml
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\MainWindow.baml
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Trainingsplan.baml
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.g.resources
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.Properties.Resources.resources
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.csproj.GenerateResource.cache
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.csproj.CoreCompileInputs.cache
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.csproj.CopyComplete
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Ernährungsplan.g.cs
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Abendessen.g.cs
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Frühstück.g.cs
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Mittagessen.g.cs
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Ernährungsplan.baml
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Abendessen.baml
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Frühstück.baml
+C:\Users\Marcel Metzler\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Mittagessen.baml
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\FitnessApp.exe.config
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\FitnessApp.exe
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\FitnessApp.pdb
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\ControlzEx.dll
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MahApps.Metro.dll
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MaterialDesignColors.dll
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\ControlzEx.pdb
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MahApps.Metro.pdb
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MahApps.Metro.xml
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.csprojAssemblyReference.cache
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.csproj.ResolveComReference.cache
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Abendessen.g.cs
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\AdvancedWorkout.g.cs
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\BeginnerWorkout.g.cs
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Ernährungsplan.g.cs
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\ExpertWorkout.g.cs
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Fortschritt.g.cs
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Frühstück.g.cs
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\KalorienTracker.g.cs
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Lebensmittel.g.cs
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\MainWindow.g.cs
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Mittagessen.g.cs
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Trainingsplan.g.cs
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\App.g.cs
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp_MarkupCompile.cache
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp_MarkupCompile.lref
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\App.baml
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Abendessen.baml
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\AdvancedWorkout.baml
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\BeginnerWorkout.baml
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Ernährungsplan.baml
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\ExpertWorkout.baml
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Fortschritt.baml
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Frühstück.baml
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\KalorienTracker.baml
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Lebensmittel.baml
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\MainWindow.baml
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Mittagessen.baml
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Trainingsplan.baml
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.g.resources
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.Properties.Resources.resources
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.csproj.GenerateResource.cache
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.csproj.CopyComplete
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.exe
+C:\Users\Darwi\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.pdb
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.csprojAssemblyReference.cache
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.csproj.ResolveComReference.cache
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Abendessen.g.cs
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\AdvancedWorkout.g.cs
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\BeginnerWorkout.g.cs
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Ernährungsplan.g.cs
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\ExpertWorkout.g.cs
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Fortschritt.g.cs
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Frühstück.g.cs
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\KalorienTracker.g.cs
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Lebensmittel.g.cs
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\MainWindow.g.cs
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Mittagessen.g.cs
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Trainingsplan.g.cs
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\App.g.cs
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp_MarkupCompile.cache
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp_MarkupCompile.lref
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.exe
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.pdb
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\App.baml
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Abendessen.baml
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\AdvancedWorkout.baml
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\BeginnerWorkout.baml
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Ernährungsplan.baml
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\ExpertWorkout.baml
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Fortschritt.baml
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Frühstück.baml
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\KalorienTracker.baml
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Lebensmittel.baml
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\MainWindow.baml
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Mittagessen.baml
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\Trainingsplan.baml
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.g.resources
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\FitnessApp.exe.config
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\FitnessApp.exe
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\FitnessApp.pdb
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\ControlzEx.dll
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MahApps.Metro.dll
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MaterialDesignColors.dll
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.dll
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\Newtonsoft.Json.dll
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\System.Windows.Interactivity.dll
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\ControlzEx.pdb
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MahApps.Metro.pdb
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MahApps.Metro.xml
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MaterialDesignColors.pdb
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.pdb
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.xml
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\bin\Debug\Newtonsoft.Json.xml
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.Properties.Resources.resources
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.csproj.GenerateResource.cache
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.csproj.CoreCompileInputs.cache
+H:\win-data\Desktop\FitnessApp-Darwin\FitnessApp\obj\Debug\FitnessApp.csproj.CopyComplete
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\bin\Debug\FitnessApp.exe.config
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\bin\Debug\FitnessApp.exe
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\bin\Debug\FitnessApp.pdb
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\bin\Debug\ControlzEx.dll
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\bin\Debug\MahApps.Metro.dll
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\bin\Debug\MaterialDesignColors.dll
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\bin\Debug\ControlzEx.pdb
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\bin\Debug\MahApps.Metro.pdb
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\bin\Debug\MahApps.Metro.xml
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\FitnessApp.csproj.ResolveComReference.cache
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\AdvancedWorkout.g.cs
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\BeginnerWorkout.g.cs
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\Ernährungsplan.g.cs
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\ExpertWorkout.g.cs
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\Fortschritt.g.cs
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\KalorienTracker.g.cs
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\Lebensmittel.g.cs
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\MainWindow.g.cs
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\Trainingsplan.g.cs
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\App.g.cs
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\FitnessApp_MarkupCompile.cache
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\FitnessApp_MarkupCompile.lref
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\App.baml
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\AdvancedWorkout.baml
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\BeginnerWorkout.baml
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\Ernährungsplan.baml
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\ExpertWorkout.baml
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\Fortschritt.baml
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\KalorienTracker.baml
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\Lebensmittel.baml
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\MainWindow.baml
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\Trainingsplan.baml
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\FitnessApp.g.resources
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\FitnessApp.Properties.Resources.resources
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\FitnessApp.csproj.GenerateResource.cache
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\FitnessApp.csproj.CopyComplete
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\FitnessApp.exe
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\FitnessApp.pdb
+C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\FitnessApp.csprojAssemblyReference.cache
