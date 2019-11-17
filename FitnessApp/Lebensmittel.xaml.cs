@@ -12,10 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Excel = Microsoft.Office.Interop.Excel;
 using System.IO;
 using Newtonsoft.Json;
 using FitnessApp.Class;
+using System.Collections.ObjectModel;
 
 namespace FitnessApp
 {
@@ -24,8 +24,8 @@ namespace FitnessApp
     /// </summary>
     public partial class Lebensmittel : UserControl
     {
-        JsonDeSerializer json = new JsonDeSerializer();
-       
+        readonly JsonDeSerializer json = new JsonDeSerializer();
+
         public Lebensmittel()
         {
             InitializeComponent();
@@ -38,23 +38,26 @@ namespace FitnessApp
         private void ReadJson()
         {
             Lebensmitteltabelle.Items.Clear();
-            var lebensmittel = json.Deserializer();
-            if (lebensmittel == null) return;
+            var groceryList = json.Deserializer();
+            if (groceryList == null) return;
 
-            foreach (var item in lebensmittel)
+            foreach (var item in groceryList)
             {
-                var addLebensmittel = new Groceries
+                if (item.Name == null) continue;
+                var addGrocery = new Groceries
                 {
+                    Uid = item.Uid,
                     Name = item.Name,
                     Calories = item.Calories,
                     Carbs = item.Carbs,
                     Fats = item.Fats,
                     Protein = item.Protein
                 };
-                Lebensmitteltabelle.Items.Add(addLebensmittel);
+                Lebensmitteltabelle.Items.Add(addGrocery);
             }
         }
 
+        #region Manipulate List
         /// <summary>
         /// Neuen Eintrag in Json schreiben
         /// </summary>
@@ -66,8 +69,25 @@ namespace FitnessApp
             var groceryList = json.Deserializer();
             if (ValidateDataGridInput())
             {
+                foreach(var item in groceryList)
+                {
+                    if (item.Name == null)
+                    {
+                        item.Name = NameBox.Text;
+                        item.Carbs = CarbsBox.Text;
+                        item.Calories = CaloriesBox.Text;
+                        item.Fats = FatBox.Text;
+                        item.Protein = ProteinBox.Text;
+                        json.Serializer(groceryList);
+                        ResetTextBoxes();
+                        EntrySuccessful.Text = "Essen erfolgreich eingetragen";
+                        ReadJson();
+                        return;
+                    }
+                }
                 groceryList.Add(new Groceries()
                 {
+                    Uid = GetFreeUid(groceryList),
                     Name = NameBox.Text,
                     Carbs = CarbsBox.Text,
                     Calories = CaloriesBox.Text,
@@ -81,6 +101,45 @@ namespace FitnessApp
 
             }        
         }
+
+        /// <summary>
+        /// Löscht Reihe aus der Liste
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DeleteRow(object sender, RoutedEventArgs e)
+        {
+            int uid = int.Parse(((Button)e.Source).Uid);
+            var groceryList = json.Deserializer();
+
+            int counter = 0;
+            while (uid != groceryList[counter].Uid)
+            {
+                counter++;
+            }
+            groceryList[counter].Name = null;
+
+            json.Serializer(groceryList);
+            ReadJson();
+        }
+
+        /// <summary>
+        /// Gibt freie Uid zum erstellen eines Eintrags zurück
+        /// </summary>
+        /// <param name="groceryList"></param>
+        /// <returns></returns>
+        private int GetFreeUid(List<Groceries> groceryList)
+        {
+            int counter = 0;
+            foreach (var item in groceryList)
+            {
+                if (counter != item.Uid) return counter;
+                counter++;
+            }
+            return counter;
+        }
+        #endregion
+
 
         /// <summary>
         /// Textboxen nach eintragen zurücksetzen
@@ -104,8 +163,8 @@ namespace FitnessApp
         {
             if (String.IsNullOrEmpty(NameBox.Text))
             {
-                EntryNotSuccessful.Text = "Bitte Namen eingeben";
                 EntrySuccessful.Text = "";
+                EntryNotSuccessful.Text = "Bitte Namen eingeben";
                 return false;
             }
             if (String.IsNullOrEmpty(CaloriesBox.Text))
@@ -129,5 +188,7 @@ namespace FitnessApp
             var kt = new KalorienTracker();
             kt.NumberValidationTextBox(null, e);
         }
+
+        
     }
 }

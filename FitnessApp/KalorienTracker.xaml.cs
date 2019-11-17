@@ -36,10 +36,10 @@ namespace FitnessApp
             {
                 CaloriesToday.Text = Convert.ToString(Math.Round(CalcCalories(), MidpointRounding.AwayFromZero));
                 BerechneNaehrstoff(ProteinsToday, ProteinBox, "200", ProteinBar);
-                //BerechneNaehrstoff(CarbsToday, CarbBox, CarbsZiel, CarbBar);
+                //BerechneNaehrstoff(CarbsToday, CarbBox, CarZbsiel, CarbBar);
                 //BerechneNaehrstoff(FatsToday, FatBox, FatsZiel, FatBar);
 
-                ProteinBox.Clear();
+                ProteinBox.Clear(); 
                 CarbBox.Clear();
                 FatBox.Clear();
                 ManualCaloryBox.Clear();
