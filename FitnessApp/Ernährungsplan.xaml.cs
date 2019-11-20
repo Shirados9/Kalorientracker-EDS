@@ -1,19 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace FitnessApp
 {
@@ -34,15 +26,15 @@ namespace FitnessApp
             //MealsList.Items.Clear();
             List<Meals> items = new List<Meals>
             {
-                new Meals() { Name = "Dinkel-Apfel-Müsli-Joghurt", Calories = 270, Path = "Images/dinkelapfelmueslijoghurtfruehstück.png", Carbs = 52, Fats = 3, Proteins = 8, Link = "https://www.lecker.de/dinkel-apfel-muesli-mit-joghurt-27697.html"},
-                new Meals() { Name = "Papaya mit körnigem Frischkäse", Calories = 220, Path = "Images/papaya-mit-koernigem-frischkaese.png", Carbs = 6, Fats = 9, Proteins = 27, Link = "https://www.lecker.de/papaya-mit-koernigem-frischkaese-14914.html"},
-                new Meals() { Name = "Vollkornbrot mit Quark, Bananenscheiben", Calories = 150, Path = "Images/vollkornbrot-mit-quark-bananenscheiben.png", Carbs = 27, Fats = 1, Proteins = 8, Link = "https://www.lecker.de/vollkornbrot-mit-quark-bananenscheiben-agavendicksaft-und-chiasamen-60929.html"},
-                new Meals() { Name = "Obstsalat", Calories = 270, Path = "Images/obstsalat.png", Carbs = 52, Fats = 6, Proteins = 4, Link = "https://www.lecker.de/der-gesuendeste-obstsalat-der-welt-66961.html"},
-                new Meals() { Name = "Beeren-Knusper-Quark", Calories = 220, Path = "Images/beeren-knusper-quark.png", Carbs = 23, Fats = 5, Proteins = 23, Link = "https://www.lecker.de/beeren-knusper-quark-60219.html"},
-                new Meals() { Name = "Cloud-Eggs", Calories = 150, Path = "Images/cloud-eggs.png", Carbs = 1, Fats = 6, Proteins = 8, Link = "https://www.lecker.de/cloud-eggs-72693.html"},
-                new Meals() { Name = "Roggenbrötchen mit Käse, Radieschen und Sprossen", Calories = 270, Path = "Images/roggenbroetchen-mit-kaese-radieschen-und-sprossen.png", Carbs = 41, Fats = 6, Proteins = 18, Link = "https://www.lecker.de/roggenbroetchen-mit-kaese-radieschen-und-sprossen-7843.html"},
-                new Meals() { Name = "Joghurt mit Blaubeeren und Banane", Calories = 220, Path = "Images/joghurt-mit-blaubeeren-pecannuessen-und-banane.png", Carbs = 9, Fats = 22, Proteins = 17, Link = "https://www.lecker.de/joghurt-mit-blaubeeren-pecannuessen-und-banane-64648.html"},
-                new Meals() { Name = "Rühreibagel mit Lachs", Calories = 150, Path = "Images/ruehreibagel-mit-lachs.png", Carbs = 21, Fats = 9, Proteins = 36, Link = "https://eatsmarter.de/rezepte/ruehreibagel-mit-lachs-0"},
+                new Meals() { Name = "Dinkel-Apfel-Müsli-Joghurt", Calories = 270, Path = "/Images/dinkelapfelmueslijoghurtfruehstück.png", Carbs = 52, Fats = 3, Proteins = 8, Link = "https://www.lecker.de/dinkel-apfel-muesli-mit-joghurt-27697.html"},
+                new Meals() { Name = "Papaya mit körnigem Frischkäse", Calories = 220, Path = "/Images/papaya-mit-koernigem-frischkaese.png", Carbs = 6, Fats = 9, Proteins = 27, Link = "https://www.lecker.de/papaya-mit-koernigem-frischkaese-14914.html"},
+                new Meals() { Name = "Vollkornbrot mit Quark, Bananenscheiben", Calories = 150, Path = "/Images/vollkornbrot-mit-quark-bananenscheiben.png", Carbs = 27, Fats = 1, Proteins = 8, Link = "https://www.lecker.de/vollkornbrot-mit-quark-bananenscheiben-agavendicksaft-und-chiasamen-60929.html"},
+                new Meals() { Name = "Obstsalat", Calories = 270, Path = "/Images/obstsalat.png", Carbs = 52, Fats = 6, Proteins = 4, Link = "https://www.lecker.de/der-gesuendeste-obstsalat-der-welt-66961.html"},
+                new Meals() { Name = "Beeren-Knusper-Quark", Calories = 220, Path = "/Images/beeren-knusper-quark.png", Carbs = 23, Fats = 5, Proteins = 23, Link = "https://www.lecker.de/beeren-knusper-quark-60219.html"},
+                new Meals() { Name = "Cloud-Eggs", Calories = 150, Path = "/Images/cloud-eggs.png", Carbs = 1, Fats = 6, Proteins = 8, Link = "https://www.lecker.de/cloud-eggs-72693.html"},
+                new Meals() { Name = "Roggenbrötchen mit Käse, Radieschen und Sprossen", Calories = 270, Path = "/Images/roggenbroetchen-mit-kaese-radieschen-und-sprossen.png", Carbs = 41, Fats = 6, Proteins = 18, Link = "https://www.lecker.de/roggenbroetchen-mit-kaese-radieschen-und-sprossen-7843.html"},
+                new Meals() { Name = "Joghurt mit Blaubeeren und Banane", Calories = 220, Path = "/Images/joghurt-mit-blaubeeren-pecannuessen-und-banane.png", Carbs = 9, Fats = 22, Proteins = 17, Link = "https://www.lecker.de/joghurt-mit-blaubeeren-pecannuessen-und-banane-64648.html"},
+                new Meals() { Name = "Rühreibagel mit Lachs", Calories = 150, Path = "/Images/ruehreibagel-mit-lachs.png", Carbs = 21, Fats = 9, Proteins = 36, Link = "https://eatsmarter.de/rezepte/ruehreibagel-mit-lachs-0"},
             };
             MealsList.ItemsSource = items;
         }
@@ -52,15 +44,15 @@ namespace FitnessApp
             //MealsList.Items.Clear();
             List<Meals> items = new List<Meals>
             {
-                new Meals() { Name = "Schnitzel im Sauseschritt mit Spitzkohl-Slaw", Calories = 490, Path = "Images/schnitzel-im-sauseschritt-mit-spitzkohl-slaw.png", Carbs = 33, Fats = 21, Proteins = 39, Link = "https://www.lecker.de/schnitzel-im-sauseschritt-mit-spitzkohl-slaw-77451.html"},
-                new Meals() { Name = "Pfanne mit Steak und Brokkoli", Calories = 350, Path = "Images/Express-Pfanne-mit-Steak-und-Brokkoli.png", Carbs = 8, Fats = 17, Proteins = 38, Link = "https://www.lecker.de/express-pfanne-mit-steak-und-brokkoli-69737.html"},
-                new Meals() { Name = "Gemüsepfanne mit Lachs", Calories = 550, Path = "Images/gemuesepfanne-mit-lachs.png", Carbs = 18, Fats = 35, Proteins = 37, Link = "https://www.lecker.de/gemuesepfanne-mit-lachs-71686.html"},
-                new Meals() { Name = "Makkaroni Molto p(r)esto", Calories = 560, Path = "Images/makkaroni-moltopresto.png", Carbs = 70, Fats = 14, Proteins = 34, Link = "https://www.lecker.de/makkaroni-molto-presto-74135.html"},
-                new Meals() { Name = "Hähnchen mit Express-Bratreis", Calories = 670, Path = "Images/haehnchen-mit-express-bratreis.png", Carbs = 68, Fats = 22, Proteins = 45, Link = "https://www.lecker.de/haehnchen-mit-express-bratreis-72481.html"},
-                new Meals() { Name = "Farfalle mit Möhren-Hähnchen-Sugo", Calories = 760, Path = "Images/farfalle-mit-moehren-haehnchen-sugo.png", Carbs = 83, Fats = 29, Proteins = 41, Link = "https://www.lecker.de/farfalle-mit-moehren-haehnchen-sugo-72146.html"},
-                new Meals() { Name = "Putenbrust mit Mango, Kürbis und roten Linsen", Calories = 460, Path = "Images/putenbrust-mit-mango-kuerbis-roten-linsen.png", Carbs = 35, Fats = 13, Proteins = 50, Link = "https://www.lecker.de/putenbrust-mit-mango-kuerbis-und-roten-linsen-66718.html"},
-                new Meals() { Name = "Reisnudeln mit Asia-Hackfleisch", Calories = 740, Path = "Images/reisnudeln-mit-asia-hackfleisch.png", Carbs = 44, Fats = 47, Proteins = 31, Link = "https://www.lecker.de/reisnudeln-mit-asia-hackfleisch-70378.html"},
-                new Meals() { Name = "Süss-Scharfe Reis-Bowl Hawaii", Calories = 560, Path = "Images/suess-scharfe-reisbowl-hawaii.png", Carbs = 60, Fats = 17, Proteins = 38, Link = "https://www.lecker.de/suess-scharfe-reis-bowl-hawaii-74291.html"},
+                new Meals() { Name = "Schnitzel im Sauseschritt mit Spitzkohl-Slaw", Calories = 490, Path = "/Images/schnitzel-im-sauseschritt-mit-spitzkohl-slaw.png", Carbs = 33, Fats = 21, Proteins = 39, Link = "https://www.lecker.de/schnitzel-im-sauseschritt-mit-spitzkohl-slaw-77451.html"},
+                new Meals() { Name = "Pfanne mit Steak und Brokkoli", Calories = 350, Path = "/Images/Express-Pfanne-mit-Steak-und-Brokkoli.png", Carbs = 8, Fats = 17, Proteins = 38, Link = "https://www.lecker.de/express-pfanne-mit-steak-und-brokkoli-69737.html"},
+                new Meals() { Name = "Gemüsepfanne mit Lachs", Calories = 550, Path = "/Images/gemuesepfanne-mit-lachs.png", Carbs = 18, Fats = 35, Proteins = 37, Link = "https://www.lecker.de/gemuesepfanne-mit-lachs-71686.html"},
+                new Meals() { Name = "Makkaroni Molto p(r)esto", Calories = 560, Path = "/Images/makkaroni-moltopresto.png", Carbs = 70, Fats = 14, Proteins = 34, Link = "https://www.lecker.de/makkaroni-molto-presto-74135.html"},
+                new Meals() { Name = "Hähnchen mit Express-Bratreis", Calories = 670, Path = "/Images/haehnchen-mit-express-bratreis.png", Carbs = 68, Fats = 22, Proteins = 45, Link = "https://www.lecker.de/haehnchen-mit-express-bratreis-72481.html"},
+                new Meals() { Name = "Farfalle mit Möhren-Hähnchen-Sugo", Calories = 760, Path = "/Images/farfalle-mit-moehren-haehnchen-sugo.png", Carbs = 83, Fats = 29, Proteins = 41, Link = "https://www.lecker.de/farfalle-mit-moehren-haehnchen-sugo-72146.html"},
+                new Meals() { Name = "Putenbrust mit Mango, Kürbis und roten Linsen", Calories = 460, Path = "/Images/putenbrust-mit-mango-kuerbis-roten-linsen.png", Carbs = 35, Fats = 13, Proteins = 50, Link = "https://www.lecker.de/putenbrust-mit-mango-kuerbis-und-roten-linsen-66718.html"},
+                new Meals() { Name = "Reisnudeln mit Asia-Hackfleisch", Calories = 740, Path = "/Images/reisnudeln-mit-asia-hackfleisch.png", Carbs = 44, Fats = 47, Proteins = 31, Link = "https://www.lecker.de/reisnudeln-mit-asia-hackfleisch-70378.html"},
+                new Meals() { Name = "Süss-Scharfe Reis-Bowl Hawaii", Calories = 560, Path = "/Images/suess-scharfe-reisbowl-hawaii.png", Carbs = 60, Fats = 17, Proteins = 38, Link = "https://www.lecker.de/suess-scharfe-reis-bowl-hawaii-74291.html"},
             };
             MealsList.ItemsSource = items;
         }
@@ -132,13 +124,13 @@ namespace FitnessApp
             }
         }
 
-        private Uri ConvertToBitmapSource(string path)
+        private Uri ConvertToUriImage(string path)
         {
             var source = new Uri(@"/FitnessApp;component" + path, UriKind.Relative);
             return source;
 
         }
-        private Uri ConvertToUri(string link)
+        private Uri ConvertToUriURL(string link)
         {
             Uri uri = new Uri(link, UriKind.Absolute);
             return uri;
@@ -150,7 +142,7 @@ namespace FitnessApp
 
             if (meal != null)
             {
-                SelectedMealImage.Source = new BitmapImage(ConvertToBitmapSource(meal.Path));
+                SelectedMealImage.Source = new BitmapImage(ConvertToUriImage(meal.Path));
                 SelectedMealName.Text = meal.Name.ToString();
                 SelectedMealCalories.Text = meal.Calories.ToString() + "kcal";
 
@@ -161,15 +153,8 @@ namespace FitnessApp
                 SelectedMealProteins.Text = meal.Proteins.ToString() + "g";
                 SelectedMealProteins2.Text = "Proteine";
 
-                LinkToMeal.NavigateUri = ConvertToUri(meal.Link);
+                LinkToMeal.NavigateUri = ConvertToUriURL(meal.Link);
             }   
         }
-
-        //private void Button_Click_1(object sender, RoutedEventArgs e)
-        //{
-        //    ListViewItem item = new ListViewItem("Test");
-        //    this.listView1.Items.Insert(0, item);
-        //    this.listView1.Groups[0].Items.Insert(0, item);
-        //}
     }
 }

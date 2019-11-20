@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Text.RegularExpressions;
+using FitnessApp.Class;
 
 namespace FitnessApp
 {
@@ -21,10 +22,34 @@ namespace FitnessApp
     /// </summary>
     public partial class KalorienTracker : UserControl
     {
+        readonly JsonDeSerializer json = new JsonDeSerializer();
         public KalorienTracker()
         {
             InitializeComponent();
             SetDays();
+            ReadJson();
+        }
+
+        private void ReadJson()
+        {
+            KalorienTrackerListe.Items.Clear();
+            var groceryList = json.Deserializer();
+            if (groceryList == null) return;
+
+            foreach (var item in groceryList)
+            {
+                if (item.Name == null) continue;
+                var addGrocery = new Groceries
+                {
+                    Uid = item.Uid,
+                    Name = item.Name,
+                    Calories = item.Calories,
+                    Carbs = item.Carbs,
+                    Fats = item.Fats,
+                    Protein = item.Protein
+                };
+                KalorienTrackerListe.Items.Add(addGrocery);
+            }
         }
 
         private void CalculateCalories_Click(object sender, RoutedEventArgs e)

@@ -112,12 +112,14 @@ namespace FitnessApp
             int uid = int.Parse(((Button)e.Source).Uid);
             var groceryList = json.Deserializer();
 
-            int counter = 0;
-            while (uid != groceryList[counter].Uid)
+            foreach (var item in groceryList)
             {
-                counter++;
+                if (item.Uid == uid)
+                {
+                    groceryList.Remove(item);
+                    break;
+                }
             }
-            groceryList[counter].Name = null;
 
             json.Serializer(groceryList);
             ReadJson();

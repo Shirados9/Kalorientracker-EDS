@@ -233,9 +233,5 @@
     <Resource Include="Images\vollkornbrot-mit-quark-bananenscheiben.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <ProjectExtensions>
-    <VisualStudio>
-      <UserProperties data_4lebensmittel_1json__JsonSchema="http://json-schema.org/draft-04/schema" />
-    </VisualStudio>
-  </ProjectExtensions>
+  <ProjectExtensions />
 </Project>
