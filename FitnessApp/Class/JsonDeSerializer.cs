@@ -24,6 +24,14 @@ namespace FitnessApp.Class
             return groceryList;
         }
 
+        public List<KalorienTag> DeserializeKalorienTag()
+        {
+            var jsonData = System.IO.File.ReadAllText(GetPathJson());
+            var KalorienTagList = JsonConvert.DeserializeObject<List<KalorienTag>>(jsonData)
+                    ?? new List<KalorienTag>();
+            return KalorienTagList;
+        }
+
         /// <summary>
         /// Serialize Json
         /// </summary>
@@ -35,6 +43,13 @@ namespace FitnessApp.Class
             System.IO.File.WriteAllText(GetPathJson(), jsonData);
         }
 
+        public void Serializer(List<KalorienTag> kalorienTagList)
+        {
+            //var jsonData = System.IO.File.ReadAllText(GetPathJson());
+            var jsonData = JsonConvert.SerializeObject(kalorienTagList);
+            System.IO.File.WriteAllText(GetPathJson(), jsonData);
+        }
+
         /// <summary>
         /// Pfad von Json-File
         /// </summary>
@@ -42,7 +57,7 @@ namespace FitnessApp.Class
         public string GetPathJson()
         {
             var parentPath = new DirectoryInfo(Environment.CurrentDirectory).Parent.Parent.FullName;
-            var fullPath = System.IO.Path.Combine(Environment.CurrentDirectory, parentPath + "\\Data\\", "Lebensmittel.json");
+            var fullPath = System.IO.Path.Combine(Environment.CurrentDirectory, parentPath + "\\Data\\", "Kalorien.json");
             return fullPath;
         }
     }

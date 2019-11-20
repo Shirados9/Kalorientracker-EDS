@@ -5,12 +5,62 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:FitnessApp"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1200">
+
+    <Grid>
+
+        <Border CornerRadius="10" Padding="10,10,10,10">
+            <StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="Button0" Uid="0" Content="Gewicht" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="0" Click="Button0_Click"/>
+                    <Button x:Name="Button1" Uid="1" Content="Kalorien" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="1" Click="Button0_Click"/>
+                    
+
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid x:Name="GridCursor" Height="5" Background="#FF2196F3" Grid.Column="0"/>
+                </Grid>
+                <Grid x:Name="GridMain" VerticalAlignment="Bottom" Height="650"/>
+            </StackPanel>
+
+        </Border>
+
+        <!--<Grid>
+
+            <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Right" >
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis Title="Kalorien" LabelFormatter="{Binding YFormatter}"></lvc:Axis>
+                </lvc:CartesianChart.AxisY>
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Title="Tage" Labels="{Binding Labels}"></lvc:Axis>
+                </lvc:CartesianChart.AxisX>
+            </lvc:CartesianChart>
+
+        </Grid>
+-->
+        <StackPanel Margin="10 10 0 0" Visibility="Hidden">
+            <TextBox x:Name="ProteinsZiel" PreviewTextInput="NumberValidationTextBox" Text="120"/>
+            <TextBox x:Name="CarbsZiel" PreviewTextInput="NumberValidationTextBox" Text="200"/>
+            <TextBox x:Name="FatsZiel" PreviewTextInput="NumberValidationTextBox" Text="80"/>
+        </StackPanel>
+
+    </Grid>
     
-    <StackPanel Margin="10 10 0 0">
-        <TextBox x:Name="ProteinsZiel" PreviewTextInput="NumberValidationTextBox" Text="120"/>
-        <TextBox x:Name="CarbsZiel" PreviewTextInput="NumberValidationTextBox" Text="200"/>
-        <TextBox x:Name="FatsZiel" PreviewTextInput="NumberValidationTextBox" Text="80"/>
-    </StackPanel>
+    
+    
+    
+    
+    
 </UserControl>

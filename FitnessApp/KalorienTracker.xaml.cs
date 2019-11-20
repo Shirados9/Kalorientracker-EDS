@@ -22,7 +22,12 @@ namespace FitnessApp
     /// </summary>
     public partial class KalorienTracker : UserControl
     {
+<<<<<<< Updated upstream
         readonly JsonDeSerializer json = new JsonDeSerializer();
+=======
+        JsonDeSerializer json = new JsonDeSerializer();
+
+>>>>>>> Stashed changes
         public KalorienTracker()
         {
             InitializeComponent();
@@ -70,12 +75,44 @@ namespace FitnessApp
                 ManualCaloryBox.Clear();
 
                 MessageBox.Show("Kalorien erfolgreich eingetragen");
+
+                WriteCaloryDayInJson();
             }
             else
             {
                 this.FalscheEingabe.Visibility = Visibility.Visible;
             }
 
+        }
+
+        private void WriteCaloryDayInJson()
+        {
+            
+            //
+            var KalorienTag = json.DeserializeKalorienTag();
+
+            int currentDay = DateTime.Today.Day;
+
+            foreach (var itemDay in KalorienTag)
+            {
+
+                if (currentDay == itemDay.Day)
+                {
+                    itemDay.CaloriesDay = double.Parse(CaloriesToday.Text);
+                    json.Serializer(KalorienTag);
+                    return;
+                }               
+            }
+                KalorienTag.Add(new KalorienTag()
+                {
+                    Day = DateTime.Today.Day,
+                    CaloriesDay = double.Parse(CaloriesToday.Text)
+                });
+            json.Serializer(KalorienTag);
+            //ResetTextBoxes();
+            //ReadJson();
+
+            return;
         }
 
         /// <summary>
