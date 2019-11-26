@@ -13,9 +13,9 @@ namespace FitnessApp.Class
     {
         public int Uid { get; set; }
         public string Name { get; set; }
-        public string Calories { get; set; }
-        public string Protein { get; set; }
-        public string Carbs { get; set; }
-        public string Fats { get; set; }
+        public double Calories { get; set; }
+        public double Protein { get; set; }
+        public double Carbs { get; set; }
+        public double Fats { get; set; }
     }
 }

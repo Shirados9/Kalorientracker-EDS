@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Text.RegularExpressions;
 using FitnessApp.Class;
 
+
 namespace FitnessApp
 {
     /// <summary>
@@ -29,7 +30,10 @@ namespace FitnessApp
             SetDays();
             ReadJson();
         }
-
+        
+        /// <summary>
+        /// Json auslesen zum erstellen der Lebensmittelliste
+        /// </summary>
         private void ReadJson()
         {
             KalorienTrackerListe.Items.Clear();
@@ -51,12 +55,17 @@ namespace FitnessApp
                 KalorienTrackerListe.Items.Add(addGrocery);
             }
         }
-
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CalculateCalories_Click(object sender, RoutedEventArgs e)
         {
 
-
-            this.FalscheEingabe.Visibility = Visibility.Hidden;
+            SuccessfulEntry.Visibility = Visibility.Hidden;
+            FalscheEingabe.Visibility = Visibility.Hidden;
             if (AlleLeer())
             {
                 CaloriesToday.Text = Convert.ToString(Math.Round(CalcCalories(), MidpointRounding.AwayFromZero));
@@ -69,7 +78,7 @@ namespace FitnessApp
                 FatBox.Clear();
                 ManualCaloryBox.Clear();
 
-                MessageBox.Show("Kalorien erfolgreich eingetragen");
+                SuccessfulEntry.Visibility = Visibility.Visible;
             }
             else
             {
@@ -282,6 +291,37 @@ namespace FitnessApp
             int index = int.Parse(((Button)e.Source).Uid);
 
             GridCursor.SetValue(Grid.ColumnProperty, index);
+        }
+
+        private void KalorienTrackerListe_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var grocery = (Groceries)((ListView)sender).SelectedItem;
+            
+            if (grocery != null)
+            {
+                if (String.IsNullOrEmpty(HowMuchBox.Text))
+                    EnterMacroValues(0);
+                else
+                    EnterMacroValues(double.Parse(HowMuchBox.Text));
+            }
+        }
+
+        private void HowMuchBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!String.IsNullOrEmpty(HowMuchBox.Text))
+                EnterMacroValues(double.Parse(HowMuchBox.Text));
+            
+        }
+
+        private void EnterMacroValues(double howMuch)
+        {
+            if (KalorienTrackerListe.SelectedIndex >= 0)
+            {
+                Groceries grocery = (Groceries)KalorienTrackerListe.SelectedItems[0];
+                CarbBox.Text = (grocery.Carbs / 100 * howMuch).ToString();
+                ProteinBox.Text = (grocery.Protein / 100 * howMuch).ToString();
+                FatBox.Text = (grocery.Fats / 100 * howMuch).ToString();
+            }
         }
     }
 }

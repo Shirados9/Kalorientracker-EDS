@@ -74,10 +74,10 @@ namespace FitnessApp
                     if (item.Name == null)
                     {
                         item.Name = NameBox.Text;
-                        item.Carbs = CarbsBox.Text;
-                        item.Calories = CaloriesBox.Text;
-                        item.Fats = FatBox.Text;
-                        item.Protein = ProteinBox.Text;
+                        item.Carbs = double.Parse(CarbsBox.Text);
+                        item.Calories = double.Parse(CaloriesBox.Text);
+                        item.Fats = double.Parse(FatBox.Text);
+                        item.Protein = double.Parse(ProteinBox.Text);
                         json.Serializer(groceryList);
                         ResetTextBoxes();
                         EntrySuccessful.Text = "Essen erfolgreich eingetragen";
@@ -89,10 +89,10 @@ namespace FitnessApp
                 {
                     Uid = GetFreeUid(groceryList),
                     Name = NameBox.Text,
-                    Carbs = CarbsBox.Text,
-                    Calories = CaloriesBox.Text,
-                    Fats = FatBox.Text,
-                    Protein = ProteinBox.Text
+                    Carbs = double.Parse(CarbsBox.Text),
+                    Calories = double.Parse(CaloriesBox.Text),
+                    Fats = double.Parse(FatBox.Text),
+                    Protein = double.Parse(ProteinBox.Text)
                 });
                 json.Serializer(groceryList);
                 ResetTextBoxes();
