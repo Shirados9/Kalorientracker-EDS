@@ -18,7 +18,7 @@ namespace FitnessApp.Class
         /// <returns></returns>
         public List<Groceries> Deserializer()
         {
-            var jsonData = System.IO.File.ReadAllText(GetPathJson());
+            var jsonData = System.IO.File.ReadAllText(GetPathGroceriesJson());
             var groceryList = JsonConvert.DeserializeObject<List<Groceries>>(jsonData)
                       ?? new List<Groceries>();
             return groceryList;
@@ -26,10 +26,18 @@ namespace FitnessApp.Class
 
         public List<KalorienTag> DeserializeKalorienTag()
         {
-            var jsonData = System.IO.File.ReadAllText(GetPathJson());
+            var jsonData = System.IO.File.ReadAllText(GetPathKalorienJson());
             var KalorienTagList = JsonConvert.DeserializeObject<List<KalorienTag>>(jsonData)
                     ?? new List<KalorienTag>();
             return KalorienTagList;
+        }
+
+        public List<GewichtTag> DeserializeGewichtTag()
+        {
+            var jsonData = System.IO.File.ReadAllText(GetPathGewichtJson());
+            var GewichtTagList = JsonConvert.DeserializeObject<List<GewichtTag>>(jsonData)
+                ?? new List<GewichtTag>();
+            return GewichtTagList;
         }
 
         /// <summary>
@@ -40,24 +48,45 @@ namespace FitnessApp.Class
         {
             //var jsonData = System.IO.File.ReadAllText(GetPathJson());
             var jsonData = JsonConvert.SerializeObject(groceryList);
-            System.IO.File.WriteAllText(GetPathJson(), jsonData);
+            System.IO.File.WriteAllText(GetPathGroceriesJson(), jsonData);
         }
 
         public void Serializer(List<KalorienTag> kalorienTagList)
         {
             //var jsonData = System.IO.File.ReadAllText(GetPathJson());
             var jsonData = JsonConvert.SerializeObject(kalorienTagList);
-            System.IO.File.WriteAllText(GetPathJson(), jsonData);
+            System.IO.File.WriteAllText(GetPathKalorienJson(), jsonData);
+        }
+
+        public void Serializer(List<GewichtTag> gewichtTagList)
+        {
+           // var jsonGewichtData = System.IO.File.ReadAllText(GetPathGewichtJson());
+            var jsonData = JsonConvert.SerializeObject(gewichtTagList);
+            System.IO.File.WriteAllText(GetPathKalorienJson(), jsonData);
         }
 
         /// <summary>
         /// Pfad von Json-File
         /// </summary>
         /// <returns></returns>
-        public string GetPathJson()
+        public string GetPathKalorienJson()
         {
             var parentPath = new DirectoryInfo(Environment.CurrentDirectory).Parent.Parent.FullName;
             var fullPath = System.IO.Path.Combine(Environment.CurrentDirectory, parentPath + "\\Data\\", "Kalorien.json");
+            return fullPath;
+        }
+
+        public string GetPathGewichtJson()
+        {
+            var parentPath = new DirectoryInfo(Environment.CurrentDirectory).Parent.Parent.FullName;
+            var fullPath = System.IO.Path.Combine(Environment.CurrentDirectory, parentPath + "\\Data\\", "Gewicht.json");
+            return fullPath;
+        }
+
+        public string GetPathGroceriesJson()
+        {
+            var parentPath = new DirectoryInfo(Environment.CurrentDirectory).Parent.Parent.FullName;
+            var fullPath = System.IO.Path.Combine(Environment.CurrentDirectory, parentPath + "\\Data\\", "Lebensmittel.json");
             return fullPath;
         }
     }

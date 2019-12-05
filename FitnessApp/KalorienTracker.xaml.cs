@@ -22,12 +22,8 @@ namespace FitnessApp
     /// </summary>
     public partial class KalorienTracker : UserControl
     {
-<<<<<<< Updated upstream
         readonly JsonDeSerializer json = new JsonDeSerializer();
-=======
-        JsonDeSerializer json = new JsonDeSerializer();
 
->>>>>>> Stashed changes
         public KalorienTracker()
         {
             InitializeComponent();
@@ -219,6 +215,7 @@ namespace FitnessApp
                 bar.Foreground = Brushes.Red;
             }
         }
+        
         // Trägt Kalorien in heutigen Tag oben ein
         //private void SubmitCaloriesToCurrentDay_Click(object sender, RoutedEventArgs e)
         //{

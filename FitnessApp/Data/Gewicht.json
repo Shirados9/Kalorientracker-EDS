@@ -1,282 +1,126 @@
 [
   {
-    "Mark": false,
-    "Name": "31",
-    "Calories": "123",
-    "Protein": "123",
-    "Carbs": "123",
-    "Fats": "123"
+    "TodaysWeight": 80,
+    "Day": 1
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 83,
+    "Day": 2
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 82,
+    "Day": 3
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 82,
+    "Day": 4
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 83,
+    "Day": 5
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 85,
+    "Day": 6
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 85,
+    "Day": 7
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 85,
+    "Day": 8
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 84,
+    "Day": 9
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight":83,
+    "Day": 10
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 82,
+    "Day": 11
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 0,
+    "Day": 12
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 0,
+    "Day": 13
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 0,
+    "Day": 14
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 0,
+    "Day": 15
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 0,
+    "Day": 16
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 0,
+    "Day": 17
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 0,
+    "Day": 18
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 0,
+    "Day": 19
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 0,
+    "Day": 20
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 0,
+    "Day": 21
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 0,
+    "Day": 22
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 0,
+    "Day": 23
   },
   {
-    "Mark": false,
-    "Name": "",
-    "Calories": "0",
-    "Protein": "",
-    "Carbs": "",
-    "Fats": ""
+    "TodaysWeight": 0,
+    "Day": 24
   },
   {
-    "Mark": false,
-    "Name": "asd",
-    "Calories": "0",
-    "Protein": "0",
-    "Carbs": "0",
-    "Fats": "0"
+    "TodaysWeight": 0,
+    "Day": 25
   },
   {
-    "Mark": false,
-    "Name": "asd",
-    "Calories": "0",
-    "Protein": "0",
-    "Carbs": "0",
-    "Fats": "0"
+    "TodaysWeight": 0,
+    "Day": 26
   },
   {
-    "Mark": false,
-    "Name": "asd",
-    "Calories": "0",
-    "Protein": "0",
-    "Carbs": "0",
-    "Fats": "0"
+    "TodaysWeight": 0,
+    "Day": 27
   },
   {
-    "Mark": false,
-    "Name": "s",
-    "Calories": "0",
-    "Protein": "0",
-    "Carbs": "0",
-    "Fats": "0"
+    "TodaysWeight": 0,
+    "Day": 28
   },
   {
-    "Mark": false,
-    "Name": "a",
-    "Calories": "0",
-    "Protein": "0",
-    "Carbs": "0",
-    "Fats": "0"
+    "TodaysWeight": 0,
+    "Day": 29
   },
   {
-    "Mark": false,
-    "Name": "a",
-    "Calories": "0",
-    "Protein": "0",
-    "Carbs": "0",
-    "Fats": "0"
+    "TodaysWeight": 0,
+    "Day": 30
   },
   {
-    "Mark": false,
-    "Name": "1",
-    "Calories": "1",
-    "Protein": "1",
-    "Carbs": "1",
-    "Fats": "0"
+    "TodaysWeight": 0,
+    "Day": 31
   },
-  {
-    "Mark": false,
-    "Name": "20",
-    "Calories": "20",
-    "Protein": "20",
-    "Carbs": "20",
-    "Fats": "0"
-  },
-  {
-    "Mark": false,
-    "Name": "20",
-    "Calories": "20",
-    "Protein": "20",
-    "Carbs": "20",
-    "Fats": "20"
-  },
-  {
-    "Mark": false,
-    "Name": "1",
-    "Calories": "1",
-    "Protein": "1",
-    "Carbs": "1",
-    "Fats": "1"
-  },
-  {
-    "Mark": false,
-    "Name": "1",
-    "Calories": "1",
-    "Protein": "1",
-    "Carbs": "1",
-    "Fats": "1"
-  }
 ]

@@ -1,4 +1,4 @@
-﻿
+﻿using FitnessApp.Class;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LiveCharts;
+using LiveCharts.Defaults;
 using LiveCharts.Wpf;
 
 namespace FitnessApp
@@ -23,30 +24,101 @@ namespace FitnessApp
     /// </summary>
     public partial class GewichtGraph : UserControl
     {
+        JsonDeSerializer json = new JsonDeSerializer();
+        public ChartValues<ObservableValue> MyValues { get; set; }
+        public SeriesCollection SeriesCollection { get; set; }
+
         public GewichtGraph()
         {
             InitializeComponent();
 
-            SeriesCollection = new SeriesCollection
+            MyValues = new ChartValues<ObservableValue>
             {
-                new LineSeries
-                {
-                    Title = "Series 1",
-                    Values = new ChartValues<double> { 4, 6, 5, 2 ,4 },
-                    PointGeometry = DefaultGeometries.Diamond,
-                    PointGeometrySize = 10
-                }
             };
-            Labels = new[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30" };
-            //YFormatter = value => value.ToString("C");
-            //modifying any series values will also animate and update the chart
-            SeriesCollection[0].Values.Add(5d);
+
+            var lineSeries = new LineSeries
+            {
+                Values = MyValues,
+                StrokeThickness = 1,
+                Fill = Brushes.Transparent,
+                PointGeometrySize = 0,
+                DataLabels = true
+            };
+            SeriesCollection = new SeriesCollection { lineSeries };
             DataContext = this;
 
+            Graphplot();
         }
+       
 
-        public SeriesCollection SeriesCollection { get; set; }
-        public string[] Labels { get; set; }
-        public Func<double, string> YFormatter { get; set; }
+        private void Graphplot()
+        {
+            var currentweight = json.DeserializeGewichtTag();
+
+            for (int i = 0; i <= 30; i++)
+            {
+                //if (currentweight[i].TodaysWeight == 0)
+                //{
+                //    continue;
+                //}
+
+                MyValues.Add(new ObservableValue(currentweight[i].TodaysWeight));
+
+            }
+            
+        }
+        //private void InsertPointOnClick(object sender, RoutedEventArgs e)
+        //{
+        //    var r = new Random();
+        //    if (MyValues.Count > 3)
+        //        MyValues.Insert(2, new ObservableValue(r.Next(-20, 20)));
+        //}
+
+        //private void RemovePointOnClick(object sender, RoutedEventArgs e)
+        //{
+        //    MyValues.RemoveAt(0);
+        //}
+
+        //private void AddSeriesOnClick(object sender, RoutedEventArgs e)
+        //{
+        //    //Yes it also listens for series changes
+        //    var r = new Random();
+
+        //    var c = SeriesCollection[0].Values.Count;
+
+        //    var val = new ChartValues<ObservableValue>();
+
+        //    for (int i = 0; i < c; i++)
+        //    {
+        //        val.Add(new ObservableValue(r.Next(-20, 20)));
+        //    }
+
+        //    SeriesCollection.Add(new LineSeries
+        //    {
+        //        Values = val,
+        //        StrokeThickness = 4,
+        //        Fill = Brushes.Transparent,
+        //        PointGeometrySize = 0
+        //    });
+        //}
+
+        //private void RemoveSeriesOnClick(object sender, RoutedEventArgs e)
+        //{
+        //    var s = SeriesCollection.Where(x => x.Values != MyValues).ToList();
+        //    if (s.Count > 0) SeriesCollection.RemoveAt(1);
+        //}
+
+        //private void MoveAllOnClick(object sender, RoutedEventArgs e)
+        //{
+        //    var r = new Random();
+
+        //    foreach (var observable in MyValues)
+        //    {
+        //        observable.Value = r.Next(-20, 20);
+        //    }
+        //}
+
+        //public string[] labels { get; set; }
+        //public func<double, string> yformatter { get; set; }
     }
 }
