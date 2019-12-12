@@ -40,6 +40,14 @@ namespace FitnessApp.Class
             return GewichtTagList;
         }
 
+        public List<Extratab> DeserializeExtratab()
+        {
+            var jsonData = System.IO.File.ReadAllText(GetPathGewichtJson());
+            var ExtraList = JsonConvert.DeserializeObject<List<Extratab>>(jsonData)
+                ?? new List<Extratab>();
+            return ExtraList;
+        }
+
         /// <summary>
         /// Serialize Json
         /// </summary>
@@ -65,6 +73,12 @@ namespace FitnessApp.Class
             System.IO.File.WriteAllText(GetPathKalorienJson(), jsonData);
         }
 
+        public void Serializer(List<Extratab> extraList)
+        {
+            var jsonData = JsonConvert.SerializeObject(extraList);
+            System.IO.File.WriteAllText(GetPathExtraJson(), jsonData);
+        }
+
         /// <summary>
         /// Pfad von Json-File
         /// </summary>
@@ -87,6 +101,13 @@ namespace FitnessApp.Class
         {
             var parentPath = new DirectoryInfo(Environment.CurrentDirectory).Parent.Parent.FullName;
             var fullPath = System.IO.Path.Combine(Environment.CurrentDirectory, parentPath + "\\Data\\", "Lebensmittel.json");
+            return fullPath;
+        }
+
+        public string GetPathExtraJson()
+        {
+            var parentPath = new DirectoryInfo(Environment.CurrentDirectory).Parent.Parent.FullName;
+            var fullPath = System.IO.Path.Combine(Environment.CurrentDirectory, parentPath + "\\Data\\", "Extras.json");
             return fullPath;
         }
     }

@@ -107,6 +107,12 @@
                             <TextBlock Text="Lebensmittel" VerticalAlignment="Center"  Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
+                    <ListViewItem x:Name="Extra" Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="TagPlus" Height="25" Width="25" Margin="10"/>
+                            <TextBlock Text="Extra" VerticalAlignment="Center"  Margin="20 10"/>
+                        </StackPanel>
+                    </ListViewItem>
                 </ListView>
 
                 <StackPanel Height="60" Orientation="Vertical" HorizontalAlignment="Center" Margin="0 370">

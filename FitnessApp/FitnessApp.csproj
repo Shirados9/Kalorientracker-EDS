@@ -87,6 +87,7 @@
     <Compile Include="BeginnerWorkout.xaml.cs">
       <DependentUpon>BeginnerWorkout.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Class\Extratab.cs" />
     <Compile Include="Class\GewichtTag.cs" />
     <Compile Include="Class\Groceries.cs" />
     <Compile Include="Class\JsonDeSerializer.cs" />
@@ -96,6 +97,9 @@
     </Compile>
     <Compile Include="ExpertWorkout.xaml.cs">
       <DependentUpon>ExpertWorkout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Extra.xaml.cs">
+      <DependentUpon>Extra.xaml</DependentUpon>
     </Compile>
     <Compile Include="Fortschritt.xaml.cs">
       <DependentUpon>Fortschritt.xaml</DependentUpon>
@@ -127,6 +131,10 @@
     <Page Include="ExpertWorkout.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Extra.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Fortschritt.xaml">
       <SubType>Designer</SubType>
@@ -186,6 +194,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Data\Extras.json" />
     <None Include="Data\Gewicht.json" />
     <None Include="Data\Kalorien.json" />
     <None Include="Data\Lebensmittel.json" />

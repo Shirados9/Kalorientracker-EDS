@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Text.RegularExpressions;
 using FitnessApp.Class;
 
@@ -83,15 +74,11 @@ namespace FitnessApp
 
         private void WriteCaloryDayInJson()
         {
-            
-            //
             var KalorienTag = json.DeserializeKalorienTag();
-
             int currentDay = DateTime.Today.Day;
 
             foreach (var itemDay in KalorienTag)
             {
-
                 if (currentDay == itemDay.Day)
                 {
                     itemDay.CaloriesDay = double.Parse(CaloriesToday.Text);
@@ -105,9 +92,6 @@ namespace FitnessApp
                     CaloriesDay = double.Parse(CaloriesToday.Text)
                 });
             json.Serializer(KalorienTag);
-            //ResetTextBoxes();
-            //ReadJson();
-
             return;
         }
 

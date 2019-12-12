@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-H:\win-data\Downloads\FitnessAppInGui\FitnessAppInGui\FitnessApp\obj\Debug\
+C:\Users\labor\FitnessApp\FitnessApp\obj\Debug\
 FitnessApp
 none
 false
 DEBUG;TRACE
-H:\win-data\Downloads\FitnessAppInGui\FitnessAppInGui\FitnessApp\App.xaml
-11-1974120402
+C:\Users\labor\FitnessApp\FitnessApp\App.xaml
+12-1103012627
 
-201282316744
-24-1883305693
-AdvancedWorkout.xaml;BeginnerWorkout.xaml;Ernährungsplan.xaml;ExpertWorkout.xaml;Fortschritt.xaml;GewichtGraph.xaml;KalorienGraph.xaml;KalorienTracker.xaml;Lebensmittel.xaml;MainWindow.xaml;Trainingsplan.xaml;
+25-723509900
+24-122733315
+AdvancedWorkout.xaml;BeginnerWorkout.xaml;Ernährungsplan.xaml;ExpertWorkout.xaml;Extra.xaml;Fortschritt.xaml;GewichtGraph.xaml;KalorienGraph.xaml;KalorienTracker.xaml;Lebensmittel.xaml;MainWindow.xaml;Trainingsplan.xaml;
 
-False
+True
 
