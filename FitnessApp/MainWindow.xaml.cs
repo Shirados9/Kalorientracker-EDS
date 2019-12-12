@@ -1,18 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
+using FitnessApp.Class;
 
 namespace FitnessApp
 {
@@ -25,8 +17,23 @@ namespace FitnessApp
         {
             InitializeComponent();
             StartDispatchTimer();
-            
-            
+            FirstStartUp();
+        }
+
+        private void FirstStartUp()
+        {
+            var json = new JsonDeSerializer();
+            string path = json.GetPathJson("First.json");
+            if (!File.Exists(path))
+            {
+                GridMain.Children.Clear();
+                GridMain.Children.Add(new FirstStartup());
+            }
+            else
+            {
+                GridMain.Children.Clear();
+                GridMain.Children.Add(new KalorienTracker());
+            }
         }
 
         /// <summary>
@@ -34,8 +41,10 @@ namespace FitnessApp
         /// </summary>
         private void StartDispatchTimer()
         {
-            DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(1);
+            DispatcherTimer timer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromSeconds(1)
+            };
             timer.Tick += Timer_Tick;
             timer.Start();
         }
@@ -113,6 +122,10 @@ namespace FitnessApp
                 case 4:
                     GridMain.Children.Clear();
                     GridMain.Children.Add(new Lebensmittel());
+                    break;
+                case 5:
+                    GridMain.Children.Clear();
+                    GridMain.Children.Add(new Extra());
                     break;
                 default:
                     break;

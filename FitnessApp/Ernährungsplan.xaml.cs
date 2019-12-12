@@ -89,18 +89,19 @@ namespace FitnessApp
         }
         #endregion
 
+        // lädt standard grid der seite
         private void LoadDefault()
         {
             Breakfast();
             GridCursor.SetValue(Grid.ColumnProperty, 0);
         }
-
+        // funktion zum öffnen von links
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
             Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
             e.Handled = true;
         }
-
+        // wechselt zwischen frühstück, mittagessen und abendessen
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             int index = int.Parse(((Button)e.Source).Uid);
@@ -123,19 +124,20 @@ namespace FitnessApp
                     break;
             }
         }
-
+        // ???
         private Uri ConvertToUriImage(string path)
         {
             var source = new Uri(@"/FitnessApp;component" + path, UriKind.Relative);
             return source;
 
         }
+        // ???
         private Uri ConvertToUriURL(string link)
         {
             Uri uri = new Uri(link, UriKind.Absolute);
             return uri;
         }
-
+        // zeigt das info fenster zu den einzelnen meals an
         private void MealsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var meal = (Meals)((ListView)sender).SelectedItem;

@@ -144,7 +144,6 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <TextBlock Visibility="Hidden" FontSize="16" FontFamily="Verdana" Foreground="Red" Text="Mindestens einen Wert eingeben." x:Name="FalscheEingabe" Grid.Row="4" Grid.Column="0" Margin="5" Grid.ColumnSpan="3"/>
-                    <TextBlock Visibility="Hidden" FontSize="16" FontFamily="Verdana" Foreground="Green" Text="Erfolgreich eingetragen" x:Name="SuccessfulEntry" Grid.Row="4" Grid.Column="0" Margin="5" Grid.ColumnSpan="3"/>
                 </Grid>
 
                 <!-- Kalorien berechnen / Kalorien eintragen -->
@@ -166,7 +165,7 @@
                 </StackPanel>
 
                 <!-- Liste für Lebensmittelauswahl -->
-                <ListView Grid.Column="2" Grid.Row="0" Grid.RowSpan="5" Name="KalorienTrackerListe" ScrollViewer.CanContentScroll="False" SelectionChanged="KalorienTrackerListe_SelectionChanged" MaxHeight="600">
+                <ListView Grid.Column="2" Grid.Row="0" Grid.RowSpan="5"  Name="KalorienTrackerListe" ScrollViewer.CanContentScroll="False">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Grid>
@@ -189,7 +188,6 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <TextBox Grid.Column="1" x:Name="HowMuchBox" MaxLength="4" TextChanged="HowMuchBox_TextChanged" PreviewTextInput="NumberValidationTextBox"/>
             </Grid>
         </StackPanel>
     </Border>

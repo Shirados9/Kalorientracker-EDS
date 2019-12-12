@@ -40,6 +40,12 @@
     <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net462\ControlzEx.dll</HintPath>
     </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="MahApps.Metro, Version=1.6.5.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.6.5\lib\net47\MahApps.Metro.dll</HintPath>
     </Reference>
@@ -81,16 +87,31 @@
     <Compile Include="BeginnerWorkout.xaml.cs">
       <DependentUpon>BeginnerWorkout.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Class\Extratab.cs" />
+    <Compile Include="Class\GewichtTag.cs" />
     <Compile Include="Class\Groceries.cs" />
     <Compile Include="Class\JsonDeSerializer.cs" />
+    <Compile Include="Class\KalorienTag.cs" />
     <Compile Include="Ernährungsplan.xaml.cs">
       <DependentUpon>Ernährungsplan.xaml</DependentUpon>
     </Compile>
     <Compile Include="ExpertWorkout.xaml.cs">
       <DependentUpon>ExpertWorkout.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Extra.xaml.cs">
+      <DependentUpon>Extra.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FirstStartup.xaml.cs">
+      <DependentUpon>FirstStartup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Fortschritt.xaml.cs">
       <DependentUpon>Fortschritt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GewichtGraph.xaml.cs">
+      <DependentUpon>GewichtGraph.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KalorienGraph.xaml.cs">
+      <DependentUpon>KalorienGraph.xaml</DependentUpon>
     </Compile>
     <Compile Include="Lebensmittel.xaml.cs">
       <DependentUpon>Lebensmittel.xaml</DependentUpon>
@@ -114,7 +135,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Extra.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FirstStartup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Fortschritt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GewichtGraph.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KalorienGraph.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -164,6 +201,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Data\Extras.json" />
+    <None Include="Data\Gewicht.json" />
+    <None Include="Data\Kalorien.json" />
     <None Include="Data\Lebensmittel.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
