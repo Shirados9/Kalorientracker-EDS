@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Documents;
 using Newtonsoft.Json;
 
 namespace FitnessApp.Class
@@ -57,6 +53,18 @@ namespace FitnessApp.Class
         }
 
         /// <summary>
+        /// Deserialize Json zu List<GewichtTag>
+        /// </summary>
+        /// <returns></returns>
+        public List<SetFirstStartup> DeserializeFirstStartup()
+        {
+            var jsonData = System.IO.File.ReadAllText(GetPathJson("FirstStartup.json"));
+            var firstStartup = JsonConvert.DeserializeObject<List<SetFirstStartup>>(jsonData)
+                      ?? new List<SetFirstStartup>();
+            return firstStartup;
+        }
+
+        /// <summary>
         /// Serialize Json
         /// </summary>
         /// <param name="groceryList"></param>
@@ -87,6 +95,17 @@ namespace FitnessApp.Class
             //var jsonData = System.IO.File.ReadAllText(GetPathJson());
             var jsonData = JsonConvert.SerializeObject(kalorienList);
             System.IO.File.WriteAllText(GetPathJson("Kalorien.json"), jsonData);
+        }
+
+        /// <summary>
+        /// Serialize Json
+        /// </summary>
+        /// <param name="firstStartup"></param>
+        public void Serializer(List<SetFirstStartup> firstStartup)
+        {
+            //var jsonData = System.IO.File.ReadAllText(GetPathJson());
+            var jsonData = JsonConvert.SerializeObject(firstStartup);
+            System.IO.File.WriteAllText(GetPathJson("FirstStartup.json"), jsonData);
         }
 
         /// <summary>

@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FitnessApp.Class;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace FitnessApp
 {
@@ -24,5 +14,31 @@ namespace FitnessApp
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var json = new JsonDeSerializer();
+            var mw = new MainWindow();
+
+            var firstStartup = json.DeserializeFirstStartup();
+            firstStartup[0].FirstStartupIsSet = true;
+            json.Serializer(firstStartup);
+
+            mw.ListViewMenu.SelectedIndex = 0;
+            //mw.ChangeGridMain();
+        }
+
+        
+        
+        private void TextBox_Validation(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        {
+            var kt = new KalorienTracker();
+            kt.NumberValidationTextBox(sender, e);
+        }
+        //public void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        //{
+        //    Regex regex = new Regex("[^a-zA-Zäö]+");
+        //    e.Handled = regex.IsMatch(e.Text);
+        //}
     }
 }

@@ -33,7 +33,7 @@ namespace FitnessApp
         }
 
         /// <summary>
-        /// Ließt Json beim Startup und nachdem ein Item eingetragen wurde
+        /// Liest Json beim Startup und nachdem ein Item eingetragen wurde
         /// </summary>
         private void ReadJson()
         {
@@ -43,7 +43,6 @@ namespace FitnessApp
 
             foreach (var item in groceryList)
             {
-                if (item.Name == null) continue;
                 var addGrocery = new Groceries
                 {
                     Uid = item.Uid,
@@ -69,22 +68,6 @@ namespace FitnessApp
             var groceryList = json.Deserializer();
             if (ValidateDataGridInput())
             {
-                foreach(var item in groceryList)
-                {
-                    if (item.Name == null)
-                    {
-                        item.Name = NameBox.Text;
-                        item.Carbs = CarbsBox.Text;
-                        item.Calories = CaloriesBox.Text;
-                        item.Fats = FatBox.Text;
-                        item.Protein = ProteinBox.Text;
-                        json.Serializer(groceryList);
-                        ResetTextBoxes();
-                        EntrySuccessful.Text = "Essen erfolgreich eingetragen";
-                        ReadJson();
-                        return;
-                    }
-                }
                 groceryList.Add(new Groceries()
                 {
                     Uid = GetFreeUid(groceryList),

@@ -5,6 +5,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Text.RegularExpressions;
 using FitnessApp.Class;
+using Newtonsoft.Json.Linq;
 
 namespace FitnessApp
 {
@@ -51,7 +52,7 @@ namespace FitnessApp
             this.FalscheEingabe.Visibility = Visibility.Hidden;
             if (AlleLeer())
             {
-                CaloriesToday.Text = Convert.ToString(Math.Round(CalcCalories(), MidpointRounding.AwayFromZero));
+                ConsumedCalories.Text = Convert.ToString(Math.Round(CalcCalories(), MidpointRounding.AwayFromZero));
                 BerechneNaehrstoff(ProteinsToday, ProteinBox, "200", ProteinBar);
                 //BerechneNaehrstoff(CarbsToday, CarbBox, CarZbsiel, CarbBar);
                 //BerechneNaehrstoff(FatsToday, FatBox, FatsZiel, FatBar);
@@ -81,7 +82,7 @@ namespace FitnessApp
             {
                 if (currentDay == itemDay.Day)
                 {
-                    itemDay.CaloriesDay = double.Parse(CaloriesToday.Text);
+                    itemDay.CaloriesDay = double.Parse(ConsumedCalories.Text);
                     json.Serializer(KalorienTag);
                     return;
                 }               
@@ -89,7 +90,7 @@ namespace FitnessApp
                 KalorienTag.Add(new KalorienTag()
                 {
                     Day = DateTime.Today.Day,
-                    CaloriesDay = double.Parse(CaloriesToday.Text)
+                    CaloriesDay = double.Parse(ConsumedCalories.Text)
                 });
             json.Serializer(KalorienTag);
             return;
@@ -150,7 +151,7 @@ namespace FitnessApp
         private double CalcCalories()
         {
             CheckKästchen();
-            return Double.Parse(ProteinBox.Text) * (4.1) + Double.Parse(CarbBox.Text) * (4.1) + Double.Parse(FatBox.Text) * (9.3) + Double.Parse(ManualCaloryBox.Text) + Double.Parse(CaloriesToday.Text);
+            return Double.Parse(ProteinBox.Text) * (4.1) + Double.Parse(CarbBox.Text) * (4.1) + Double.Parse(FatBox.Text) * (9.3) + Double.Parse(ManualCaloryBox.Text) + Double.Parse(ConsumedCalories.Text);
         }
 
         /// <summary>
@@ -300,6 +301,37 @@ namespace FitnessApp
             int index = int.Parse(((Button)e.Source).Uid);
 
             GridCursor.SetValue(Grid.ColumnProperty, index);
+        }
+
+        private void KalorienTrackerListe_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var grocery = (Groceries)((ListView)sender).SelectedItem;
+
+            if (grocery != null)
+            {
+                if (String.IsNullOrEmpty(HowMuchBox.Text))
+                    EnterMacroValues(0);
+                else
+                    EnterMacroValues(double.Parse(HowMuchBox.Text));
+            }
+        }
+
+        private void HowMuchBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!String.IsNullOrEmpty(HowMuchBox.Text))
+                EnterMacroValues(double.Parse(HowMuchBox.Text));
+
+        }
+
+        private void EnterMacroValues(double howMuch)
+        {
+            if (KalorienTrackerListe.SelectedIndex >= 0)
+            {
+                Groceries grocery = (Groceries)KalorienTrackerListe.SelectedItems[0];
+                CarbBox.Text = (double.Parse(grocery.Carbs) / 100 * howMuch).ToString();
+                ProteinBox.Text = (double.Parse(grocery.Protein) / 100 * howMuch).ToString();
+                FatBox.Text = (double.Parse(grocery.Fats) / 100 * howMuch).ToString();
+            }
         }
     }
 }

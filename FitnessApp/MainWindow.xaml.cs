@@ -23,17 +23,24 @@ namespace FitnessApp
         private void FirstStartUp()
         {
             var json = new JsonDeSerializer();
-            string path = json.GetPathJson("First.json");
-            if (!File.Exists(path))
-            {
-                GridMain.Children.Clear();
-                GridMain.Children.Add(new FirstStartup());
-            }
-            else
+            var firstStartup = json.DeserializeFirstStartup();
+            if (firstStartup[0].FirstStartupIsSet == true)
             {
                 GridMain.Children.Clear();
                 GridMain.Children.Add(new KalorienTracker());
             }
+            else
+            {
+                ListViewMenu.SelectedItem = null;
+                GridMain.Children.Clear();
+                GridMain.Children.Add(new FirstStartup());
+            }
+        }
+
+        public void ChangeGridMain()
+        {
+            GridMain.Children.Clear();
+            GridMain.Children.Add(new KalorienTracker());
         }
 
         /// <summary>

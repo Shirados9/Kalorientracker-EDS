@@ -62,15 +62,15 @@ namespace FitnessApp
             //MealsList.Items.Clear();
             List<Meals> items = new List<Meals>
             {
-                new Meals() { Name = "Gnocchi mit ­Spinat und Lachs", Calories = 540, Path = "Images/gnocchi-mit-spinat-und-lachs.png", Carbs = 45, Fats = 30, Proteins = 18, Link = "https://www.lecker.de/ruck-zuck-gnocchi-mit-spinat-und-lachs-74105.html"},
-                new Meals() { Name = "Thainudelsuppe mit Hähnchen", Calories = 440, Path = "Images/thainudelsuppe-mit-haehnchen.png", Carbs = 37, Fats = 15, Proteins = 37, Link = "https://www.lecker.de/thainudelsuppe-mit-haehnchen-70443.html"},
-                new Meals() { Name = "Fladenbrot-Gyrospizza", Calories = 670, Path = "Images/fladenbrot-gyrospizza.png", Carbs = 60, Fats = 23, Proteins = 51, Link = "https://www.lecker.de/fladenbrot-gyrospizza-71701.html"},
-                new Meals() { Name = "Omelett mit Lachs und Fenchelsalat", Calories = 560, Path = "Images/ommm-omelett-mit-lachs-und-fenchelsalat.png", Carbs = 8, Fats = 44, Proteins = 28, Link = "https://www.lecker.de/ommm-omelett-mit-lachs-und-fenchelsalat-77612.html"},
-                new Meals() { Name = "Geschnetzeltes mit Gnocchi und Pestorahm", Calories = 670, Path = "Images/geschnetzeltzes-mit-gnocchi-und-pestorahm.png", Carbs = 52, Fats = 34, Proteins = 37, Link = "https://www.lecker.de/geschnetzeltes-mit-gnocchi-und-pestorahm-64982.html"},
-                new Meals() { Name = "Penne mit Bratwurst-Bolo", Calories = 610, Path = "Images/express-penne-mit-bratwurst-bolo.png", Carbs = 82, Fats = 19, Proteins = 23, Link = "https://www.lecker.de/express-penne-mit-bratwurst-bolo-8353.html"},
-                new Meals() { Name = "Hähnchen-Gemüsepfanne", Calories = 340, Path = "Images/haehnchen-gemuesepfanne.png", Carbs = 25, Fats = 14, Proteins = 26, Link = "https://www.lecker.de/haehnchen-gemuesepfanne-67018.html" },
-                new Meals() { Name = "Feurige Garnelenpfanne", Calories = 190, Path = "Images/feurige-garnelenpfanne.png", Carbs = 10, Fats = 7, Proteins = 22, Link = "https://www.lecker.de/feurige-garnelenpfanne-60571.html"},
-                new Meals() { Name = "Putenpasta in Zitronencreme", Calories = 570, Path = "Images/putenpasta-in-zitronencreme.png", Carbs = 43, Fats = 26, Proteins = 37, Link = "https://www.lecker.de/putenpasta-zitronencreme-74548.html"},
+                new Meals() { Name = "Gnocchi mit ­Spinat und Lachs", Calories = 540, Path = "/Images/gnocchi-mit-spinat-und-lachs.png", Carbs = 45, Fats = 30, Proteins = 18, Link = "https://www.lecker.de/ruck-zuck-gnocchi-mit-spinat-und-lachs-74105.html"},
+                new Meals() { Name = "Thainudelsuppe mit Hähnchen", Calories = 440, Path = "/Images/thainudelsuppe-mit-haehnchen.png", Carbs = 37, Fats = 15, Proteins = 37, Link = "https://www.lecker.de/thainudelsuppe-mit-haehnchen-70443.html"},
+                new Meals() { Name = "Fladenbrot-Gyrospizza", Calories = 670, Path = "/Images/fladenbrot-gyrospizza.png", Carbs = 60, Fats = 23, Proteins = 51, Link = "https://www.lecker.de/fladenbrot-gyrospizza-71701.html"},
+                new Meals() { Name = "Omelett mit Lachs und Fenchelsalat", Calories = 560, Path = "/Images/ommm-omelett-mit-lachs-und-fenchelsalat.png", Carbs = 8, Fats = 44, Proteins = 28, Link = "https://www.lecker.de/ommm-omelett-mit-lachs-und-fenchelsalat-77612.html"},
+                new Meals() { Name = "Geschnetzeltes mit Gnocchi und Pestorahm", Calories = 670, Path = "/Images/geschnetzeltzes-mit-gnocchi-und-pestorahm.png", Carbs = 52, Fats = 34, Proteins = 37, Link = "https://www.lecker.de/geschnetzeltes-mit-gnocchi-und-pestorahm-64982.html"},
+                new Meals() { Name = "Penne mit Bratwurst-Bolo", Calories = 610, Path = "/Images/express-penne-mit-bratwurst-bolo.png", Carbs = 82, Fats = 19, Proteins = 23, Link = "https://www.lecker.de/express-penne-mit-bratwurst-bolo-8353.html"},
+                new Meals() { Name = "Hähnchen-Gemüsepfanne", Calories = 340, Path = "/Images/haehnchen-gemuesepfanne.png", Carbs = 25, Fats = 14, Proteins = 26, Link = "https://www.lecker.de/haehnchen-gemuesepfanne-67018.html" },
+                new Meals() { Name = "Feurige Garnelenpfanne", Calories = 190, Path = "/Images/feurige-garnelenpfanne.png", Carbs = 10, Fats = 7, Proteins = 22, Link = "https://www.lecker.de/feurige-garnelenpfanne-60571.html"},
+                new Meals() { Name = "Putenpasta in Zitronencreme", Calories = 570, Path = "/Images/putenpasta-in-zitronencreme.png", Carbs = 43, Fats = 26, Proteins = 37, Link = "https://www.lecker.de/putenpasta-zitronencreme-74548.html"},
             };
             MealsList.ItemsSource = items;
         }

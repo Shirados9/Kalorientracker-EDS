@@ -88,6 +88,7 @@
       <DependentUpon>BeginnerWorkout.xaml</DependentUpon>
     </Compile>
     <Compile Include="Class\Extratab.cs" />
+    <Compile Include="Class\SetFirstStartup.cs" />
     <Compile Include="Class\GewichtTag.cs" />
     <Compile Include="Class\Groceries.cs" />
     <Compile Include="Class\JsonDeSerializer.cs" />
@@ -202,6 +203,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Data\Extras.json" />
+    <None Include="Data\FirstStartup.json" />
     <None Include="Data\Gewicht.json" />
     <None Include="Data\Kalorien.json" />
     <None Include="Data\Lebensmittel.json" />
