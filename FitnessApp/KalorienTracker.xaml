@@ -17,58 +17,20 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-                <Button x:Name="Button0" Uid="0" Content="Montag" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="0" Click="Button_Click"/>
-                <Button x:Name="Button1" Uid="1" Content="Dienstag" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="1" Click="Button_Click"/>
-                <Button x:Name="Button2" Uid="2" Content="Mittwoch" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="2" Click="Button_Click"/>
-                <Button x:Name="Button3" Uid="3" FontWeight="Bold" Content="Donnerstag" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="3" Click="Button_Click"/>
-                <Button x:Name="Button4" Uid="4" Content="Freitag" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="4" Click="Button_Click"/>
-                <Button x:Name="Button5" Uid="5" Content="Samstag" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="5" Click="Button_Click"/>
-                <Button x:Name="Button6" Uid="6" Content="Sonntag" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="6" Click="Button_Click"/>
+                <TextBlock FontSize="16" FontFamily="Verdana" Grid.Column="0" Grid.Row="0" Text=" Zielkalorien"/>
+                <TextBlock FontSize="16" FontFamily="Verdana" Grid.Column="1" Grid.Row="0" Text=" gegessene Kalorien"/>
+                <TextBlock FontSize="16" FontFamily="Verdana" Grid.Column="2" Grid.Row="0" Text=" übrige Kalorien"/>
+
+                <TextBlock x:Name="CaloryGoal" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" FontSize="16" FontFamily="Verdana" Margin="10" Text="0"/>
+                <TextBlock x:Name="ConsumedCalories" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" FontSize="16" FontFamily="Verdana" Margin="10" Text="0"/>
+                <TextBlock x:Name="LeftoverCalories" VerticalAlignment="Center" Grid.Column="2" Grid.Row="1" FontSize="16" FontFamily="Verdana" Margin="10" Text="0"/>
             </Grid>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <Grid x:Name="GridCursor" Height="5" Background="#FF2196F3" Grid.Column="0"/>
-            </Grid>
-            
-
-            <!-- Kalorien der Tage -->
-            <StackPanel TextBlock.TextAlignment="Center">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <TextBlock x:Name="ThreeDaysBeforeCalories" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="0" Margin="0,10,0,9" />
-                    <TextBlock x:Name="TwoDaysBeforeCalories" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="1" Margin="0,10,0,9" />
-                    <TextBlock x:Name="OneDaysBeforeCalories" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="2" Margin="0,10,0,9" />
-                    <TextBlock x:Name="TodaysDayCalories" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="3" Margin="0,10,0,9" />
-                    <TextBlock x:Name="OneDaysAfterCalories" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="4" Margin="0,10,0,9" />
-                    <TextBlock x:Name="TwoDaysAfterCalories" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="5" Margin="0,10,0,9" />
-                    <TextBlock x:Name="ThreeDaysAfterCalories" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Grid.Column="6" Margin="0,10,0,9" Grid.ColumnSpan="2" />
-                </Grid>
-            </StackPanel>
-
 
             <!-- heutige kalorien-->
             <Grid>
@@ -96,12 +58,7 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        <TextBlock FontSize="16" FontFamily="Verdana" Grid.Column="0" Grid.Row="0" Text=" Zielkalorien"/>
-                        <TextBlock FontSize="16" FontFamily="Verdana" Grid.Column="1" Grid.Row="0" Text=" gegessene Kalorien"/>
-                        <TextBlock FontSize="16" FontFamily="Verdana" Grid.Column="2" Grid.Row="0" Text=" übrige Kalorien"/>
-                        <TextBlock x:Name="CaloryGoal" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" FontSize="16" FontFamily="Verdana" Margin="10" Text="0"/>
-                        <TextBlock x:Name="ConsumedCalories" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" FontSize="16" FontFamily="Verdana" Margin="10" Text="0"/>
-                        <TextBlock x:Name="LeftoverCalories" VerticalAlignment="Center" Grid.Column="2" Grid.Row="1" FontSize="16" FontFamily="Verdana" Margin="10" Text="0"/>
+
                     </Grid>
                 </StackPanel>
 
@@ -176,7 +133,7 @@
                 </StackPanel>
 
                 <!-- Liste für Lebensmittelauswahl -->
-                <ListView Grid.Column="2" Grid.Row="0" Grid.RowSpan="4"  Name="KalorienTrackerListe" ScrollViewer.CanContentScroll="False" SelectionChanged="KalorienTrackerListe_SelectionChanged">
+                <ListView Grid.Column="2" Grid.Row="0" Grid.RowSpan="4" Height="390" Name="KalorienTrackerListe" ScrollViewer.CanContentScroll="True" SelectionChanged="KalorienTrackerListe_SelectionChanged">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Grid>

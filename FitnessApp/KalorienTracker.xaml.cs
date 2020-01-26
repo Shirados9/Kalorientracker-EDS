@@ -5,7 +5,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Text.RegularExpressions;
 using FitnessApp.Class;
-using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
+using System.Windows.Data;
+using System.ComponentModel;
 
 namespace FitnessApp
 {
@@ -19,7 +21,6 @@ namespace FitnessApp
         public KalorienTracker()
         {
             InitializeComponent();
-            SetDays();
             ReadJson();
         }
 
@@ -29,20 +30,18 @@ namespace FitnessApp
             var groceryList = json.Deserializer();
             if (groceryList == null) return;
 
+            var listAdder = new List<Groceries>();
+
             foreach (var item in groceryList)
             {
-                if (item.Name == null) continue;
-                var addGrocery = new Groceries
-                {
-                    Uid = item.Uid,
-                    Name = item.Name,
-                    Calories = item.Calories,
-                    Carbs = item.Carbs,
-                    Fats = item.Fats,
-                    Protein = item.Protein
-                };
-                KalorienTrackerListe.Items.Add(addGrocery);
+                listAdder.Add(new Groceries() { Name = item.Name, Calories = item.Calories, Carbs = item.Carbs, Fats = item.Fats, Protein = item.Protein, Uid = item.Uid });
             }
+            KalorienTrackerListe.ItemsSource = listAdder;
+
+            //Nach Namen sortieren
+            CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(KalorienTrackerListe.ItemsSource);
+            view.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));
+
         }
 
         private void CalculateCalories_Click(object sender, RoutedEventArgs e)
@@ -200,88 +199,6 @@ namespace FitnessApp
                 bar.Foreground = Brushes.Red;
             }
         }
-        
-        // Trägt Kalorien in heutigen Tag oben ein
-        //private void SubmitCaloriesToCurrentDay_Click(object sender, RoutedEventArgs e)
-        //{
-        //    double CaloriesMonday, CaloriesTuesday, CaloriesWednesday, CaloriesThursday, CaloriesFriday, CaloriesSaturday, CaloriesSunday;
-
-        //    DayOfWeek dow = DateTime.Now.DayOfWeek;
-
-        //    switch (dow)
-        //    {
-        //        case DayOfWeek.Monday:
-        //            {
-        //                CaloriesMonday = Double.Parse(CaloriesToday.Text);
-
-        //                MondayCalories.Text = Convert.ToString(CaloriesMonday);
-
-        //                break;
-        //            }
-        //        case DayOfWeek.Tuesday:
-        //            {
-        //                CaloriesTuesday = Double.Parse(CaloriesToday.Text);
-
-        //                TuesdayCalories.Text = Convert.ToString(CaloriesTuesday);
-
-        //                break;
-        //            }
-        //        case DayOfWeek.Wednesday:
-        //            {
-        //                CaloriesWednesday = Double.Parse(CaloriesToday.Text);
-
-        //                WednesdayCalories.Text = Convert.ToString(CaloriesWednesday);
-
-        //                break;
-        //            }
-        //        case DayOfWeek.Thursday:
-        //            {
-        //                CaloriesThursday = Double.Parse(CaloriesToday.Text);
-
-        //                ThursdayCalories.Text = Convert.ToString(CaloriesThursday);
-
-        //                break;
-        //            }
-        //        case DayOfWeek.Friday:
-        //            {
-        //                CaloriesFriday = Double.Parse(CaloriesToday.Text);
-
-        //                FridayCalories.Text = Convert.ToString(CaloriesFriday);
-
-        //                break;
-        //            }
-        //        case DayOfWeek.Saturday:
-        //            {
-        //                CaloriesSaturday = Double.Parse(CaloriesToday.Text);
-
-        //                SaturdayCalories.Text = Convert.ToString(CaloriesSaturday);
-
-        //                break;
-        //            }
-        //        case DayOfWeek.Sunday:
-        //            {
-        //                CaloriesSunday = Double.Parse(CaloriesToday.Text);
-
-        //                SundayCalories.Text = Convert.ToString(CaloriesSunday);
-
-        //                break;
-        //            }
-        //    }
-        //}
-
-        //Highlighted heutigen Tag
-        private void SetDays()
-        {
-            GridCursor.SetValue(Grid.ColumnProperty, 3);
-            var dow = DateTime.Now;
-            Button0.SetValue(Button.ContentProperty, dow.AddDays(-3).DayOfWeek.ToString());
-            Button1.SetValue(Button.ContentProperty, dow.AddDays(-2).DayOfWeek.ToString());
-            Button2.SetValue(Button.ContentProperty, dow.AddDays(-1).DayOfWeek.ToString());
-            Button3.SetValue(Button.ContentProperty, dow.DayOfWeek);
-            Button4.SetValue(Button.ContentProperty, dow.AddDays(+1).DayOfWeek.ToString());
-            Button5.SetValue(Button.ContentProperty, dow.AddDays(+2).DayOfWeek.ToString());
-            Button6.SetValue(Button.ContentProperty, dow.AddDays(+3).DayOfWeek.ToString());
-        }
 
         /// <summary>
         /// Enter startet CalculateCalories_Click Event.
@@ -294,13 +211,6 @@ namespace FitnessApp
             {
                 CalculateCalories_Click(null, null);
             }
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            int index = int.Parse(((Button)e.Source).Uid);
-
-            GridCursor.SetValue(Grid.ColumnProperty, index);
         }
 
         private void KalorienTrackerListe_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -47,9 +47,9 @@ namespace FitnessApp.Class
         public List<Extratab> DeserializeExtratab()
         {
             var jsonData = System.IO.File.ReadAllText(GetPathJson("Extras.json"));
-            var ExtraList = JsonConvert.DeserializeObject<List<Extratab>>(jsonData)
+            var extraList = JsonConvert.DeserializeObject<List<Extratab>>(jsonData)
                 ?? new List<Extratab>();
-            return ExtraList;
+            return extraList;
         }
 
         /// <summary>

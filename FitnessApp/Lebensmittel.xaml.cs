@@ -1,21 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.IO;
-using Newtonsoft.Json;
 using FitnessApp.Class;
-using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace FitnessApp
 {
@@ -40,20 +30,18 @@ namespace FitnessApp
             Lebensmitteltabelle.Items.Clear();
             var groceryList = json.Deserializer();
             if (groceryList == null) return;
+            
+            var listAdder = new List<Groceries>();
 
             foreach (var item in groceryList)
             {
-                var addGrocery = new Groceries
-                {
-                    Uid = item.Uid,
-                    Name = item.Name,
-                    Calories = item.Calories,
-                    Carbs = item.Carbs,
-                    Fats = item.Fats,
-                    Protein = item.Protein
-                };
-                Lebensmitteltabelle.Items.Add(addGrocery);
+                listAdder.Add(new Groceries() { Name = item.Name, Calories = item.Calories, Carbs = item.Carbs, Fats = item.Fats, Protein = item.Protein, Uid = item.Uid});
             }
+            Lebensmitteltabelle.ItemsSource = listAdder; 
+            
+            //Nach Namen sortieren
+            CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(Lebensmitteltabelle.ItemsSource);
+            view.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));
         }
 
         #region Manipulate List
@@ -174,6 +162,9 @@ namespace FitnessApp
             kt.NumberValidationTextBox(null, e);
         }
 
-        
+        private void GridViewColumn_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
