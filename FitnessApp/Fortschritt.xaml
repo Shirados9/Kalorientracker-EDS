@@ -9,7 +9,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1200">
 
-    <Grid>
+    <Grid Background="#FFFFFF">
 
         <Border CornerRadius="10" Padding="10,10,10,10">
             <StackPanel>
