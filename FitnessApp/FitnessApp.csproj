@@ -88,6 +88,7 @@
       <DependentUpon>BeginnerWorkout.xaml</DependentUpon>
     </Compile>
     <Compile Include="Class\Extratab.cs" />
+    <Compile Include="Class\Meals.cs" />
     <Compile Include="Class\SetFirstStartup.cs" />
     <Compile Include="Class\GewichtTag.cs" />
     <Compile Include="Class\Groceries.cs" />
