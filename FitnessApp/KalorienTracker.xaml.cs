@@ -17,11 +17,18 @@ namespace FitnessApp
     public partial class KalorienTracker : UserControl
     {
         readonly JsonDeSerializer json = new JsonDeSerializer();
+        readonly Fortschritt fortschritt = new Fortschritt();
 
         public KalorienTracker()
         {
             InitializeComponent();
+            CaloryGoal.Text = fortschritt.GetCaloriesZiel();
             ReadJson();
+        }
+
+        private void calculateLeftover()
+        {
+            LeftoverCalories.Text = (double.Parse(CaloryGoal.Text) - double.Parse(ConsumedCalories.Text)).ToString();
         }
 
         private void ReadJson()
@@ -52,16 +59,15 @@ namespace FitnessApp
             if (AlleLeer())
             {
                 ConsumedCalories.Text = Convert.ToString(Math.Round(CalcCalories(), MidpointRounding.AwayFromZero));
-                BerechneNaehrstoff(ProteinsToday, ProteinBox, "200", ProteinBar);
-                //BerechneNaehrstoff(CarbsToday, CarbBox, CarZbsiel, CarbBar);
-                //BerechneNaehrstoff(FatsToday, FatBox, FatsZiel, FatBar);
+                BerechneNaehrstoff(ProteinsToday, ProteinBox, fortschritt.GetProteinZiel(), ProteinBar);
+                BerechneNaehrstoff(CarbsToday, CarbBox, fortschritt.GetCarbsZiel(), CarbBar);
+                BerechneNaehrstoff(FatsToday, FatBox, fortschritt.GetFatZiel(), FatBar);
+                calculateLeftover();
 
                 ProteinBox.Clear(); 
                 CarbBox.Clear();
                 FatBox.Clear();
                 ManualCaloryBox.Clear();
-
-                MessageBox.Show("Kalorien erfolgreich eingetragen");
 
                 WriteCaloryDayInJson();
             }

@@ -21,6 +21,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
                 <TextBlock FontSize="16" FontFamily="Verdana" Grid.Column="0" Grid.Row="0" Text=" Zielkalorien"/>
@@ -30,6 +31,7 @@
                 <TextBlock x:Name="CaloryGoal" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" FontSize="16" FontFamily="Verdana" Margin="10" Text="0"/>
                 <TextBlock x:Name="ConsumedCalories" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" FontSize="16" FontFamily="Verdana" Margin="10" Text="0"/>
                 <TextBlock x:Name="LeftoverCalories" VerticalAlignment="Center" Grid.Column="2" Grid.Row="1" FontSize="16" FontFamily="Verdana" Margin="10" Text="0"/>
+                <Separator Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Margin="5 5 10 5"/>
             </Grid>
 
             <!-- heutige kalorien-->

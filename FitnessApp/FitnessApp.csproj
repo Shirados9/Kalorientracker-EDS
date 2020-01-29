@@ -109,12 +109,6 @@
     <Compile Include="Fortschritt.xaml.cs">
       <DependentUpon>Fortschritt.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GewichtGraph.xaml.cs">
-      <DependentUpon>GewichtGraph.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="KalorienGraph.xaml.cs">
-      <DependentUpon>KalorienGraph.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Lebensmittel.xaml.cs">
       <DependentUpon>Lebensmittel.xaml</DependentUpon>
     </Compile>
@@ -146,14 +140,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Fortschritt.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="GewichtGraph.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="KalorienGraph.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
