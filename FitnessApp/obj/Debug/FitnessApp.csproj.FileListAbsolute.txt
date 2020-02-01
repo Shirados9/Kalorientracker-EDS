@@ -802,12 +802,8 @@ C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\bin\Debug\LiveCharts.Wpf.xml
 C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\Extra.g.cs
 C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\FirstStartup.g.cs
-C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\GewichtGraph.g.cs
-C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\KalorienGraph.g.cs
 C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\Extra.baml
 C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\FirstStartup.baml
-C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\GewichtGraph.baml
-C:\Users\Darwi\Desktop\GUI\FitnessApp\FitnessApp\obj\Debug\KalorienGraph.baml
 C:\Users\Musa\Desktop\FitnessApp\FitnessApp\bin\Debug\FitnessApp.exe.config
 C:\Users\Musa\Desktop\FitnessApp\FitnessApp\bin\Debug\FitnessApp.exe
 C:\Users\Musa\Desktop\FitnessApp\FitnessApp\bin\Debug\FitnessApp.pdb

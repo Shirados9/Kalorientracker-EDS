@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:FitnessApp"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
-             d:DesignHeight="800" d:DesignWidth="800"  Background="White">
+             d:DesignHeight="800" d:DesignWidth="800"
+             Foreground="#5C99D6" Background="White" FontFamily="Verdana">
+    
     <Border CornerRadius="10" Padding="10,10,10,10">
         <StackPanel>
             <Grid>
@@ -16,9 +18,9 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button x:Name="Button0" Uid="0" Click="Button_Click" Content="Frühstück" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="0"/>
-                <Button x:Name="Button1" Uid="1" Click="Button_Click" Content="Mittagessen" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="1"/>
-                <Button x:Name="Button2" Uid="2" Click="Button_Click" Content="Abendessen" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="2"/>
+                <Button x:Name="Button0" Uid="0" FontWeight="Bold" Click="Button_Click" Content="Frühstück" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="0"/>
+                <Button x:Name="Button1" Uid="1" FontWeight="Bold" Click="Button_Click" Content="Mittagessen" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="1"/>
+                <Button x:Name="Button2" Uid="2" FontWeight="Bold" Click="Button_Click" Content="Abendessen" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="2"/>
 
             </Grid>
             <Grid>
@@ -38,10 +40,10 @@
                 </Grid.ColumnDefinitions>
                 <Border Grid.Column="0" Padding="20" CornerRadius="10" BorderBrush="#D1D1D1" BorderThickness="2" Margin="10,10,15,0">
                     <StackPanel Margin="0,0,0,0">
-                        <Image x:Name="SelectedMealImage" Source="/Images/gnocchi-mit-spinat-und-lachs.png" Margin="10"  Height="250" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Image x:Name="SelectedMealImage" Source="/Images/gnocchi-mit-spinat-und-lachs.png" Margin="10"  Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" />
                         <Separator Margin="15"/>
-                        <TextBlock TextAlignment="Center" FontFamily="Verdana" x:Name="SelectedMealName" Foreground="Black" Text="" FontSize="18" TextWrapping="Wrap"/>
-                        <TextBlock TextAlignment="Center" FontFamily="Verdana" x:Name ="SelectedMealCalories" Foreground="Black" Text="" FontSize="18" TextWrapping="Wrap"/>
+                        <TextBlock TextAlignment="Center" FontWeight="Bold" x:Name="SelectedMealName" Text="" FontSize="18" TextWrapping="Wrap"/>
+                        <TextBlock TextAlignment="Center" x:Name ="SelectedMealCalories" Foreground="#5C99D6" Text="" FontSize="18" TextWrapping="Wrap"/>
                         <Separator Margin="15"/>
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -53,25 +55,22 @@
                                 <RowDefinition Height="*"/>
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
-                            <TextBlock Grid.Column="0" TextAlignment="Center" FontFamily="Verdana" x:Name="SelectedMealCarbs" Foreground="Black" Text="" FontSize="18" TextWrapping="Wrap" HorizontalAlignment="Center"/>
-                            <TextBlock Grid.Column="1" TextAlignment="Center" FontFamily="Verdana" x:Name="SelectedMealFats" Foreground="Black" Text="" FontSize="18" TextWrapping="Wrap" HorizontalAlignment="Center"/>
-                            <TextBlock Grid.Column="2" TextAlignment="Center" FontFamily="Verdana" x:Name="SelectedMealProteins" Foreground="Black" Text="" FontSize="18" TextWrapping="Wrap" HorizontalAlignment="Center"/>
-                            <TextBlock Grid.Column="0" Grid.Row="1" TextAlignment="Center" FontFamily="Verdana" x:Name="SelectedMealCarbs2" Foreground="Black" Text="" FontSize="18" TextWrapping="Wrap" HorizontalAlignment="Center"/>
-                            <TextBlock Grid.Column="1" Grid.Row="1" TextAlignment="Center" FontFamily="Verdana" x:Name="SelectedMealFats2" Foreground="Black" Text="" FontSize="18" TextWrapping="Wrap" HorizontalAlignment="Center"/>
-                            <TextBlock Grid.Column="2" Grid.Row="1" TextAlignment="Center" FontFamily="Verdana" x:Name="SelectedMealProteins2" Foreground="Black" Text="" FontSize="18" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column="0" TextAlignment="Center" x:Name="SelectedMealCarbs" Foreground="#FF2196F3" Text="" FontSize="18" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column="1" TextAlignment="Center" x:Name="SelectedMealFats" Foreground="#FF2196F3" Text="" FontSize="18" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column="2" TextAlignment="Center" x:Name="SelectedMealProteins" Foreground="#FF2196F3" Text="" FontSize="18" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column="0" Grid.Row="1" TextAlignment="Center" x:Name="SelectedMealCarbs2" Foreground="#FF2196F3" Text="" FontSize="18" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column="1" Grid.Row="1" TextAlignment="Center" x:Name="SelectedMealFats2" Foreground="#FF2196F3" Text="" FontSize="18" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column="2" Grid.Row="1" TextAlignment="Center" x:Name="SelectedMealProteins2" Foreground="#FF2196F3" Text="" FontSize="18" TextWrapping="Wrap" HorizontalAlignment="Center"/>
                         </Grid>
                         <Separator Margin="15"/>
-                        
+
                         <TextBlock TextAlignment="Center">
-                                                <Hyperlink x:Name="LinkToMeal" RequestNavigate="Hyperlink_RequestNavigate" NavigateUri="https://www.lecker.de/ruck-zuck-gnocchi-mit-spinat-und-lachs-74105.html" FontSize="20">   
-                                                    Rezept
-                                                </Hyperlink>
+                            <Hyperlink x:Name="LinkToMeal" RequestNavigate="Hyperlink_RequestNavigate" NavigateUri="https://www.lecker.de/ruck-zuck-gnocchi-mit-spinat-und-lachs-74105.html" FontSize="20">   
+                                Rezept
+                            </Hyperlink>
                         </TextBlock>
                         <Separator Margin="15,15,15,30"/>
-                        <Button Content="Mahlzeit Eintragen" Margin="15,10,15,0"/>  <!--Click="Button_Click_1"/>-->
-
                     </StackPanel>
-
                 </Border>
 
                 <ListView Grid.Column="3" Height="650" SelectedIndex="0" Name="MealsList" ScrollViewer.CanContentScroll="False" SelectionChanged="MealsList_SelectionChanged">
@@ -92,8 +91,8 @@
                                         <ImageBrush ImageSource="{Binding Path}"/>
                                     </Ellipse.Fill>
                                 </Ellipse>
-                                <TextBlock x:Name="FoodName" Grid.Column="1" Text="{Binding Name}" Margin="12,6,0,0"/>
-                                <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Calories , StringFormat=\{0\} kcal}" Margin="12,6,0,0"/>
+                                <TextBlock FontWeight="Bold" Foreground="#5C99D6" x:Name="FoodName" Grid.Column="1" Text="{Binding Name}" Margin="12,6,0,0"/>
+                                <TextBlock Foreground="#FF2196F3" Grid.Column="1" Grid.Row="1" Text="{Binding Calories , StringFormat=\{0\} kcal}" Margin="12,6,0,0"/>
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>

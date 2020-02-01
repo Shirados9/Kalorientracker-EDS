@@ -7,9 +7,10 @@
              xmlns:local="clr-namespace:FitnessApp"
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d" 
-             d:DesignHeight="800" d:DesignWidth="1200">
+             d:DesignHeight="800" d:DesignWidth="1200"
+             Foreground="#5C99D6" Background="White" FontFamily="Verdana">
 
-    <StackPanel Background="#FFFFFF">
+    <StackPanel>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="6*"/>
@@ -19,11 +20,11 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="Button0" Uid="0" Content="Gewicht" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="0" Click="Button0_Click"/>
-            <Button x:Name="Button1" Uid="1" Content="Kalorien" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="1" Click="Button0_Click"/>
-            <Button x:Name="Button2" Uid="7" Content="7D" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="2" Click="Button4_Click"/>
-            <Button x:Name="Button3" Uid="14" Content="14D" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="3" Click="Button4_Click"/>
-            <Button x:Name="Button4" Uid="30" Content="30D" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="4" Click="Button4_Click"/>
+            <Button x:Name="Button0" Uid="0" FontWeight="Bold" Content="Gewicht" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="0" Click="Button0_Click"/>
+            <Button x:Name="Button1" Uid="1" FontWeight="Bold" Content="Kalorien" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="1" Click="Button0_Click"/>
+            <Button x:Name="Button2" Uid="7" FontWeight="Bold" Content="7D" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="2" Click="Button4_Click"/>
+            <Button x:Name="Button3" Uid="14" FontWeight="Bold" Content="14D" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="3" Click="Button4_Click"/>
+            <Button x:Name="Button4" Uid="30" FontWeight="Bold" Content="30D" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="4" Click="Button4_Click"/>
 
         </Grid>
 
@@ -61,7 +62,7 @@
                 <TextBox x:Name="CaloriesZiel" PreviewTextInput="NumberValidationTextBox" Text="2000"/>
             </StackPanel>
 
-            <lvc:CartesianChart Grid.Row="2" Series="{Binding SeriesCollection}" LegendLocation="Right">
+            <lvc:CartesianChart Grid.Row="2" Series="{Binding SeriesCollection}" LegendLocation="None">
                 <lvc:CartesianChart.DataTooltip>
                     <lvc:DefaultTooltip Visibility="Hidden"/>
                 </lvc:CartesianChart.DataTooltip>

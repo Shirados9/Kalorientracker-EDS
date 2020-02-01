@@ -6,8 +6,9 @@
         xmlns:local="clr-namespace:FitnessApp"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        mc:Ignorable="d" Height="800" Width="1200" Foreground="White" ResizeMode="NoResize" 
-        WindowStyle="None" WindowStartupLocation="CenterScreen">
+        mc:Ignorable="d" Height="800" Width="1200" ResizeMode="NoResize" 
+        WindowStyle="None" WindowStartupLocation="CenterScreen"
+        Foreground="#5C99D6" Background="White" FontFamily="Verdana">
 
     <!--  Funktion von Öffnen und Schließen des Menüs -->
     <Window.Resources>
@@ -34,14 +35,18 @@
     </Window.Triggers>
 
     <Grid Background="#FFDEDEDE">
-        <Grid x:Name="GridMain" VerticalAlignment="Bottom" Height="740" Margin="70,0,0,0"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="491*"/>
+            <ColumnDefinition Width="109*"/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="GridMain" Background="White" VerticalAlignment="Bottom" Height="740" Margin="70,0,0,0" Grid.ColumnSpan="2"/>
         <!-- Obere Leiste -->
-        <Grid Height="60" VerticalAlignment="Top" Background="#FF5C99D6"  MouseLeftButtonDown="Window_MouseDown">
+        <Grid Height="60" VerticalAlignment="Top" Background="#223754"  MouseLeftButtonDown="Window_MouseDown" Grid.ColumnSpan="2">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
             </Grid.Effect>
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Fitness App</TextBlock>
+                <TextBlock Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Fitness App</TextBlock>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10 0">
                 <Label  Width="auto" Height="auto" FontFamily="20" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 30 0"/>
@@ -54,7 +59,7 @@
             </StackPanel>
         </Grid>
         <!-- Linke Leiste -->
-        <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#FF31577E">
+        <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#223754">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="1" Color="#FFAEAEAE"/>
             </Grid.Effect>

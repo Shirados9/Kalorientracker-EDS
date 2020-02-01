@@ -97,7 +97,7 @@ namespace FitnessApp
         private void MealsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var meal = (Meals)((ListView)sender).SelectedItem;
-            var listAdder = new List<Meals>();
+            //var listAdder = new List<Meals>();
 
             if (meal != null)
             {

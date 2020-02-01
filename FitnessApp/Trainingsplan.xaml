@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FitnessApp"
              mc:Ignorable="d" 
-             d:DesignHeight="800" d:DesignWidth="1200" Background="White">
+             d:DesignHeight="800" d:DesignWidth="1200"
+             Foreground="#5C99D6" Background="White" FontFamily="Verdana">
 
     <Border CornerRadius="10" Padding="10,10,10,10">
         <StackPanel>
@@ -16,9 +17,9 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button x:Name="Button0" Uid="0" Content="Beginner Workout" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="0" Click="Button_Click"/>
-                <Button x:Name="Button1" Uid="1" Content="Advanced Workout" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="1" Click="Button_Click"/>
-                <Button x:Name="Button2" Uid="2" Content="Expert Workout" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="2" Click="Button_Click"/>
+                <Button x:Name="Button0" Uid="0" Content="Beginner Workout" Height="50" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="0" Click="Button_Click"/>
+                <Button x:Name="Button1" Uid="1" Content="Advanced Workout" Height="50" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="1" Click="Button_Click" />
+                    <Button x:Name="Button2" Uid="2" Content="Expert Workout" Height="50" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Grid.Column="2" Click="Button_Click" />
             
             </Grid>
             <Grid>
