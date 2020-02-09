@@ -3,17 +3,17 @@
         "Uid": 0,
         "Name": "Apfel",
         "Calories": "52",
-        "Protein": "0.3",
+        "Protein": "0,3",
         "Carbs": "14",
-        "Fats": "0.2"
+        "Fats": "0,2"
     },
     {
         "Uid": 1,
         "Name": "Ananas",
         "Calories": "50",
-        "Protein": "0.5",
+        "Protein": "0,5",
         "Carbs": "13",
-        "Fats": "0.1"
+        "Fats": "0,1"
     },
     {
         "Uid": 2,
@@ -27,41 +27,41 @@
         "Uid": 3,
         "Name": "Birne",
         "Calories": "52",
-        "Protein": "0.5",
-        "Carbs": "12.4",
-        "Fats": "0.3"
+        "Protein": "0,5",
+        "Carbs": "12,4",
+        "Fats": "0,3"
     },
     {
         "Uid": 4,
         "Name": "Banane",
         "Calories": "89",
-        "Protein": "1.1",
+        "Protein": "1,1",
         "Carbs": "23",
-        "Fats": "0.3"
+        "Fats": "0,3"
     },
     {
         "Uid": 5,
         "Name": "Blaubeeren",
         "Calories": "42",
-        "Protein": "0.6",
-        "Carbs": "7.4",
-        "Fats": "0.6"
+        "Protein": "0,6",
+        "Carbs": "7,4",
+        "Fats": "0,6"
     },
     {
         "Uid": 6,
         "Name": "Erdbeeren",
         "Calories": "32",
-        "Protein": "0.8",
-        "Carbs": "5.4",
-        "Fats": "0.4"
+        "Protein": "0,8",
+        "Carbs": "5,4",
+        "Fats": "0,4"
     },
     {
         "Uid": 7,
         "Name": "Granatapfel",
         "Calories": "83",
-        "Protein": "1.7",
+        "Protein": "1,7",
         "Carbs": "19",
-        "Fats": "1.2"
+        "Fats": "1,2"
     },
     {
         "Uid": 8,
@@ -75,17 +75,17 @@
         "Uid": 9,
         "Name": "Ingwer",
         "Calories": "80",
-        "Protein": "1.8",
+        "Protein": "1,8",
         "Carbs": "18",
-        "Fats": "0.8"
+        "Fats": "0,8"
     },
     {
         "Uid": 10,
         "Name": "Kiwi",
         "Calories": "61",
-        "Protein": "1.1",
+        "Protein": "1,1",
         "Carbs": "15",
-        "Fats": "0.5"
+        "Fats": "0,5"
     },
     {
         "Uid": 11,
@@ -93,63 +93,63 @@
         "Calories": "50",
         "Protein": "1",
         "Carbs": "12",
-        "Fats": "0.3"
+        "Fats": "0,3"
     },
     {
         "Uid": 12,
         "Name": "Mandarine",
         "Calories": "53",
-        "Protein": "0.7",
+        "Protein": "0,7",
         "Carbs": "10",
-        "Fats": "0.3"
+        "Fats": "0,3"
     },
     {
         "Uid": 13,
         "Name": "Mango",
         "Calories": "60",
-        "Protein": "0.8",
+        "Protein": "0,8",
         "Carbs": "15",
-        "Fats": "0.4"
+        "Fats": "0,4"
     },
     {
         "Uid": 14,
         "Name": "Pflaume",
         "Calories": "46",
-        "Protein": "0.7",
+        "Protein": "0,7",
         "Carbs": "11",
-        "Fats": "0.3"
+        "Fats": "0,3"
     },
     {
         "Uid": 15,
         "Name": "Pfirsich",
         "Calories": "39",
-        "Protein": "0.9",
+        "Protein": "0,9",
         "Carbs": "10",
-        "Fats": "0.3"
+        "Fats": "0,3"
     },
     {
         "Uid": 16,
         "Name": "Wassermelone",
         "Calories": "30",
-        "Protein": "0.6",
+        "Protein": "0,6",
         "Carbs": "8",
-        "Fats": "0.2"
+        "Fats": "0,2"
     },
     {
         "Uid": 17,
         "Name": "Weintraube",
         "Calories": "67",
-        "Protein": "0.6",
+        "Protein": "0,6",
         "Carbs": "17",
-        "Fats": "0.4"
+        "Fats": "0,4"
     },
     {
         "Uid": 18,
         "Name": "Zitrone",
         "Calories": "29",
-        "Protein": "1.1",
+        "Protein": "1,1",
         "Carbs": "9",
-        "Fats": "0.3"
+        "Fats": "0,3"
     },
     {
         "Uid": 19,
@@ -157,7 +157,7 @@
         "Calories": "25",
         "Protein": "1",
         "Carbs": "6",
-        "Fats": "0.2"
+        "Fats": "0,2"
     },
     {
         "Uid": 20,
@@ -171,17 +171,17 @@
         "Uid": 21,
         "Name": "Blumenkohl",
         "Calories": "25",
-        "Protein": "1.9",
+        "Protein": "1,9",
         "Carbs": "5",
-        "Fats": "0.3"
+        "Fats": "0,3"
     },
     {
         "Uid": 22,
         "Name": "Brokkoli",
         "Calories": "34",
-        "Protein": "2.8",
+        "Protein": "2,8",
         "Carbs": "5",
-        "Fats": "0.4"
+        "Fats": "0,4"
     },
     {
         "Uid": 23,
@@ -189,15 +189,15 @@
         "Calories": "347",
         "Protein": "21",
         "Carbs": "63",
-        "Fats": "1.2"
+        "Fats": "1,2"
     },
     {
         "Uid": 24,
         "Name": "Champignons",
         "Calories": "22",
-        "Protein": "3.1",
-        "Carbs": "3.3",
-        "Fats": "0.3"
+        "Protein": "3,1",
+        "Carbs": "3,3",
+        "Fats": "0,3"
     },
     {
         "Uid": 25,
@@ -205,7 +205,7 @@
         "Calories": "101",
         "Protein": "10",
         "Carbs": "9",
-        "Fats": "3.3"
+        "Fats": "3,3"
     },
     {
         "Uid": 26,
@@ -213,15 +213,15 @@
         "Calories": "81",
         "Protein": "5",
         "Carbs": "14",
-        "Fats": "0.4"
+        "Fats": "0,4"
     },
     {
         "Uid": 27,
         "Name": "Eisbergsalat",
         "Calories": "14",
-        "Protein": "0.9",
+        "Protein": "0,9",
         "Carbs": "3",
-        "Fats": "0.1"
+        "Fats": "0,1"
     },
     {
         "Uid": 28,
@@ -235,9 +235,9 @@
         "Uid": 29,
         "Name": "Karotte",
         "Calories": "41",
-        "Protein": "0.9",
+        "Protein": "0,9",
         "Carbs": "10",
-        "Fats": "0.2"
+        "Fats": "0,2"
     },
     {
         "Uid": 30,
@@ -245,31 +245,31 @@
         "Calories": "304",
         "Protein": "2",
         "Carbs": "14",
-        "Fats": "0.1"
+        "Fats": "0,1"
     },
     {
         "Uid": 31,
         "Name": "Kohlrabi",
         "Calories": "27",
-        "Protein": "1.7",
+        "Protein": "1,7",
         "Carbs": "6",
-        "Fats": "0.1"
+        "Fats": "0,1"
     },
     {
         "Uid": 32,
         "Name": "Kürbis",
         "Calories": "63",
-        "Protein": "1.7",
+        "Protein": "1,7",
         "Carbs": "12",
-        "Fats": "0.5"
+        "Fats": "0,5"
     },
     {
         "Uid": 33,
         "Name": "Lauch",
         "Calories": "61",
-        "Protein": "1.5",
+        "Protein": "1,5",
         "Carbs": "14",
-        "Fats": "0.3"
+        "Fats": "0,3"
     },
     {
         "Uid": 34,
@@ -285,55 +285,55 @@
         "Calories": "40",
         "Protein": "2",
         "Carbs": "9",
-        "Fats": "0.2"
+        "Fats": "0,2"
     },
     {
         "Uid": 36,
         "Name": "Radieschen",
         "Calories": "73",
-        "Protein": "1.1",
-        "Carbs": "2.1",
-        "Fats": "0.1"
+        "Protein": "1,1",
+        "Carbs": "2,1",
+        "Fats": "0,1"
     },
     {
         "Uid": 37,
         "Name": "Rote Bete",
         "Calories": "43",
-        "Protein": "1.6",
+        "Protein": "1,6",
         "Carbs": "10",
-        "Fats": "0.2"
+        "Fats": "0,2"
     },
     {
         "Uid": 38,
         "Name": "Rotkohl",
         "Calories": "31",
-        "Protein": "1.4",
+        "Protein": "1,4",
         "Carbs": "7",
-        "Fats": "0.2"
+        "Fats": "0,2"
     },
     {
         "Uid": 39,
         "Name": "Rosenkohl",
         "Calories": "43",
-        "Protein": "3.4",
+        "Protein": "3,4",
         "Carbs": "9",
-        "Fats": "0.3"
+        "Fats": "0,3"
     },
     {
         "Uid": 40,
         "Name": "Rucola",
         "Calories": "28",
-        "Protein": "1.7",
-        "Carbs": "1.9",
-        "Fats": "1.2"
+        "Protein": "1,7",
+        "Carbs": "1,9",
+        "Fats": "1,2"
     },
     {
         "Uid": 41,
         "Name": "Spargel",
         "Calories": "20",
-        "Protein": "2.2",
-        "Carbs": "3.9",
-        "Fats": "0.1"
+        "Protein": "2,2",
+        "Carbs": "3,9",
+        "Fats": "0,1"
     },
     {
         "Uid": 42,
@@ -347,25 +347,25 @@
         "Uid": 43,
         "Name": "Süßkartoffel",
         "Calories": "86",
-        "Protein": "1.6",
+        "Protein": "1,6",
         "Carbs": "20",
-        "Fats": "0.1"
+        "Fats": "0,1"
     },
     {
         "Uid": 44,
         "Name": "Zucchini",
         "Calories": "17",
-        "Protein": "1.2",
-        "Carbs": "3.1",
-        "Fats": "0.3"
+        "Protein": "1,2",
+        "Carbs": "3,1",
+        "Fats": "0,3"
     },
     {
         "Uid": 45,
         "Name": "Zwiebel",
         "Calories": "40",
-        "Protein": "1.1",
+        "Protein": "1,1",
         "Carbs": "9",
-        "Fats": "0.11"
+        "Fats": "0,11"
     },
     {
         "Uid": 46,
@@ -389,7 +389,7 @@
         "Calories": "165",
         "Protein": "31",
         "Carbs": "0",
-        "Fats": "3.6"
+        "Fats": "3,6"
     },
     {
         "Uid": 49,
@@ -413,14 +413,14 @@
         "Calories": "106",
         "Protein": "21",
         "Carbs": "0",
-        "Fats": "1.5"
+        "Fats": "1,5"
     },
     {
         "Uid": 52,
         "Name": "Salami",
         "Calories": "336",
         "Protein": "22",
-        "Carbs": "2.4",
+        "Carbs": "2,4",
         "Fats": "26"
     },
     {
@@ -444,7 +444,7 @@
         "Name": "Schinken",
         "Calories": "145",
         "Protein": "21",
-        "Carbs": "1.5",
+        "Carbs": "1,5",
         "Fats": "6"
     },
     {
@@ -460,7 +460,7 @@
         "Name": "Wiener Würstchen",
         "Calories": "230",
         "Protein": "11",
-        "Carbs": "2.6",
+        "Carbs": "2,6",
         "Fats": "19"
     },
     {
@@ -469,6 +469,6 @@
         "Calories": "209",
         "Protein": "20",
         "Carbs": "11",
-        "Fats": "9.3"
+        "Fats": "9,3"
     }
 ]

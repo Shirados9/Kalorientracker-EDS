@@ -7,6 +7,15 @@
              mc:Ignorable="d"
              Foreground="#5C99D6" Background="White" FontFamily="Verdana">
 
+    <UserControl.Resources>
+        <Style x:Key="myLBStyle" TargetType="{x:Type ListBoxItem}">
+            <Style.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"
+                             Color="Transparent"/>
+            </Style.Resources>
+        </Style>
+    </UserControl.Resources>
+    
     <Border CornerRadius="10" Padding="10,20,10,10">
 
         <!-- Tage -->
@@ -76,21 +85,19 @@
                         </Grid.RowDefinitions>
 
                         <Border CornerRadius="10" Padding="15,30" Grid.Column="0">
-
-                            <StackPanel>
-                                <TextBlock FontSize="16" FontFamily="Verdana" Text=" Proteine"/>
-                                <TextBlock x:Name="ProteinsToday" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Text="0" Margin="0 0 0 10"/>
-                                <ProgressBar Minimum="0" Maximum="100" Name="ProteinBar" Background="#e0e0e0"/>
-                                <TextBox Margin="2 20 2 0" Grid.Row="2" Grid.Column="0" x:Name="ProteinBox" PreviewTextInput="NumberValidationTextBox" MaxLength="5"  KeyDown="OnKeyDownHandler"/>
-                            </StackPanel>
-
-                        </Border>
-                        <Border CornerRadius="10" Padding="15,30" Grid.Column="1">
                             <StackPanel>
                                 <TextBlock FontSize="16" FontFamily="Verdana" Text=" Kohlenhydrate"/>
                                 <TextBlock x:Name="CarbsToday" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Text="0" Margin="0 0 0 10"/>
                                 <ProgressBar Minimum="0" Maximum="100" Name="CarbBar" Value="0" Background="#e0e0e0" />
-                                <TextBox Margin="2 20 2 0" Grid.Row="2" Grid.Column="1" x:Name="CarbBox" PreviewTextInput="NumberValidationTextBox" MaxLength="5"  KeyDown="OnKeyDownHandler"/>
+                                <TextBox Margin="2 20 2 0" Grid.Row="2" Grid.Column="2" x:Name="CarbBox" PreviewTextInput="NumberValidationTextBox" MaxLength="5"  KeyDown="OnKeyDownHandler"/>
+                            </StackPanel>
+                        </Border>
+                        <Border CornerRadius="10" Padding="15,30" Grid.Column="1">
+                            <StackPanel>
+                                <TextBlock FontSize="16" FontFamily="Verdana" Text=" Fette"/>
+                                <TextBlock x:Name="FatsToday" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Text="0" Margin="0 0 0 10"/>
+                                <ProgressBar Minimum="0" Maximum="100" Name="FatBar" Background="#e0e0e0"/>
+                                <TextBox Margin="2 20 2 0" Grid.Row="2" Grid.Column="1" x:Name="FatBox" PreviewTextInput="NumberValidationTextBox" MaxLength="5"  KeyDown="OnKeyDownHandler"/>
                                 <!-- manuelle kalorieneingabe -->
                                 <TextBlock FontSize="14" FontFamily="Verdana" Text=" manuelle Kalorieneingabe" Margin="0 80 0 10"/>
                                 <TextBox Grid.Column="1"  x:Name="ManualCaloryBox" PreviewTextInput="NumberValidationTextBox" MaxLength="4" KeyDown="OnKeyDownHandler"/>
@@ -98,10 +105,10 @@
                         </Border>
                         <Border CornerRadius="10" Padding="15,30" Grid.Column="2">
                             <StackPanel>
-                                <TextBlock FontSize="16" FontFamily="Verdana" Text=" Fette"/>
-                                <TextBlock x:Name="FatsToday" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Text="0" Margin="0 0 0 10"/>
-                                <ProgressBar Minimum="0" Maximum="100" Name="FatBar" Background="#e0e0e0"/>
-                                <TextBox Margin="2 20 2 0" Grid.Row="2" Grid.Column="2" x:Name="FatBox" PreviewTextInput="NumberValidationTextBox" MaxLength="5"  KeyDown="OnKeyDownHandler"/>
+                                <TextBlock FontSize="16" FontFamily="Verdana" Text=" Proteine"/>
+                                <TextBlock x:Name="ProteinsToday" VerticalAlignment="Center" FontSize="16" FontFamily="Verdana" Text="0" Margin="0 0 0 10"/>
+                                <ProgressBar Minimum="0" Maximum="100" Name="ProteinBar" Background="#e0e0e0"/>
+                                <TextBox Margin="2 20 2 0" Grid.Row="2" Grid.Column="0" x:Name="ProteinBox" PreviewTextInput="NumberValidationTextBox" MaxLength="5"  KeyDown="OnKeyDownHandler"/>
                             </StackPanel>
                         </Border>
                     </Grid>
@@ -129,12 +136,11 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <Button x:Name="CalculateCalories" Content="Kalorien berechnen" Grid.Row="0" Grid.Column="1" Click="CalculateCalories_Click" />
-                        <Button x:Name="SubmitCaloriesToCurrentDay" Content="Heutige Kalorien eintragen" Grid.Row="1" Grid.Column="1" Margin="0,10,0,0" />
                     </Grid>
                 </StackPanel>
 
                 <!-- Liste für Lebensmittelauswahl -->
-                <ListView Grid.Column="2" Grid.Row="0" Grid.RowSpan="4" Height="470" Name="KalorienTrackerListe" ScrollViewer.CanContentScroll="True" SelectionChanged="KalorienTrackerListe_SelectionChanged">
+                <ListView Grid.Column="2" Grid.Row="0" Grid.RowSpan="4" Height="470" Name="KalorienTrackerListe" ScrollViewer.CanContentScroll="True" SelectionChanged="KalorienTrackerListe_SelectionChanged" ItemContainerStyle="{StaticResource myLBStyle}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Grid>
