@@ -23,7 +23,7 @@ namespace FitnessApp
         private void LoadUp()
         {
             GridMain.Children.Clear();
-            GridMain.Children.Add(new Fortschritt());
+            GridMain.Children.Add(new KalorienTracker());
         }
 
         public void ChangeGridMain()

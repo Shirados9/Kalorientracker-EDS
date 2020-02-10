@@ -156,7 +156,7 @@ namespace FitnessApp
 
             if (jsonLenght == 0)
                 return;
-
+            var helper = jsonLenght - numberOfEntries -1;
             for (int i = 0; i <= numberOfEntries - 1; i++)
             {
                 if (i >= jsonLenght)
@@ -165,7 +165,10 @@ namespace FitnessApp
                 if (jsonLenght <= numberOfEntries)
                     MyValues.Add(new ObservableValue(weight[i].TodaysWeight));
                 else
-                    MyValues.Add(new ObservableValue(weight[jsonLenght-numberOfEntries-i].TodaysWeight));
+                {
+
+                    MyValues.Add(new ObservableValue(weight[helper + i].TodaysWeight));
+                }
             }
         }
 
@@ -179,7 +182,7 @@ namespace FitnessApp
 
             if (calories.Count == 0)
                 return;
-
+            var helper = jsonLenght - numberOfEntries - 1;
             for (int i = 0; i <= numberOfEntries - 1; i++)
             {
                 if (i >= jsonLenght)
@@ -188,7 +191,7 @@ namespace FitnessApp
                 if (jsonLenght <= numberOfEntries)
                     MyValues.Add(new ObservableValue(calories[i].CaloriesDay));
                 else
-                    MyValues.Add(new ObservableValue(calories[jsonLenght - numberOfEntries - i].CaloriesDay));
+                    MyValues.Add(new ObservableValue(calories[helper + i].CaloriesDay));
             }
         }
     }

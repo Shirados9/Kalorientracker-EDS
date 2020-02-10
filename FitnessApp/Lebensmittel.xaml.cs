@@ -27,7 +27,7 @@ namespace FitnessApp
         /// </summary>
         private void ReadJson()
         {
-            Lebensmitteltabelle.Items.Clear();
+            Lebensmitteltabelle.ClearValue(ListView.ItemsSourceProperty);
             var groceryList = json.DeserializeLebensmittel();
             if (groceryList == null) return;
             
@@ -162,9 +162,6 @@ namespace FitnessApp
             kt.NumberValidationTextBox(null, e);
         }
 
-        private void GridViewColumn_MouseDown(object sender, MouseButtonEventArgs e)
-        {
 
-        }
     }
 }

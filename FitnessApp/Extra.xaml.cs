@@ -95,19 +95,33 @@ namespace FitnessApp
             }
         }
 
-        private void SubmitWeightAndMakros(object sender, RoutedEventArgs e)
+        private void SubmitWeight(object sender, RoutedEventArgs e)
         {
-            if (!String.IsNullOrEmpty(Gewicht.Text) && !String.IsNullOrEmpty(Protein.Text) && !String.IsNullOrEmpty(Carbs.Text) && !String.IsNullOrEmpty(Fat.Text) && !String.IsNullOrEmpty(Kcal.Text))
+            if (!String.IsNullOrEmpty(Gewicht.Text))
             {
                 WriteWeight();
-                WriteMakros();
-                EntrySuccessful.Text = "Erfolgreich eingetragen";
-                EntryNotSuccessful.Text = "";
+                WeightSuccessful.Text = "Erfolgreich Gewicht eingetragen";
+                WeightNotSuccessful.Text = "";
             }
             else
             {
-                EntrySuccessful.Text = "";
-                EntryNotSuccessful.Text = "Bitte Gewicht eingeben";
+                WeightSuccessful.Text = "";
+                WeightNotSuccessful.Text = "Bitte Gewicht eingeben";
+            }
+        }
+
+        private void SubmitMakros(object sender, RoutedEventArgs e)
+        {
+            if (!String.IsNullOrEmpty(Protein.Text) && !String.IsNullOrEmpty(Carbs.Text) && !String.IsNullOrEmpty(Fat.Text) && !String.IsNullOrEmpty(Kcal.Text))
+            {
+                WriteMakros();
+                MakroSuccessful.Text = "Erfolgreich Makros eingetragen";
+                MakroNotSuccessful.Text = "";
+            }
+            else
+            {
+               MakroSuccessful.Text = "";
+               MakroNotSuccessful.Text = "Bitte Makros eingeben";
             }
         }
 
@@ -118,7 +132,7 @@ namespace FitnessApp
 
             foreach (var item in weightList)
             {
-                if (item.Day == DateTime.Today.Date)
+                if (item.Day == DateTime.Today)
                 {
                     weightList[counter].TodaysWeight = double.Parse(Gewicht.Text);
                     json.Serializer(weightList);
@@ -137,6 +151,17 @@ namespace FitnessApp
         private void WriteMakros()
         {
             var makroList = json.DeserializeMakros();
+
+            if (makroList.Count == 0)
+            {
+                makroList.Add(new ZielMakros()
+                {
+                    CalGoal = double.Parse(Kcal.Text),
+                    ProteinGoal = double.Parse(Protein.Text),
+                    FatGoal = double.Parse(Fat.Text),
+                    CarbGoal = double.Parse(Carbs.Text)
+                });
+            }
 
             makroList[0].CalGoal = double.Parse(Kcal.Text);
             makroList[0].ProteinGoal = double.Parse(Protein.Text);
