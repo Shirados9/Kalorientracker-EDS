@@ -36,6 +36,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\clipart_exercise_icon_1_hw4_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net462\ControlzEx.dll</HintPath>
@@ -87,13 +90,13 @@
     <Compile Include="BeginnerWorkout.xaml.cs">
       <DependentUpon>BeginnerWorkout.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Class\Extratab.cs" />
+    <Compile Include="Class\GegesseneMakros.cs" />
     <Compile Include="Class\Meals.cs" />
-    <Compile Include="Class\SetFirstStartup.cs" />
     <Compile Include="Class\GewichtTag.cs" />
     <Compile Include="Class\Groceries.cs" />
     <Compile Include="Class\JsonDeSerializer.cs" />
     <Compile Include="Class\KalorienTag.cs" />
+    <Compile Include="Class\ZielMakros.cs" />
     <Compile Include="Ernährungsplan.xaml.cs">
       <DependentUpon>Ernährungsplan.xaml</DependentUpon>
     </Compile>
@@ -102,9 +105,6 @@
     </Compile>
     <Compile Include="Extra.xaml.cs">
       <DependentUpon>Extra.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FirstStartup.xaml.cs">
-      <DependentUpon>FirstStartup.xaml</DependentUpon>
     </Compile>
     <Compile Include="Fortschritt.xaml.cs">
       <DependentUpon>Fortschritt.xaml</DependentUpon>
@@ -132,10 +132,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Extra.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="FirstStartup.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -189,11 +185,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Data\Extras.json" />
-    <None Include="Data\FirstStartup.json" />
     <None Include="Data\Gewicht.json" />
+    <None Include="Data\GegesseneMakros.json" />
     <None Include="Data\Kalorien.json" />
     <None Include="Data\Lebensmittel.json" />
+    <None Include="Data\Makros.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -261,6 +257,9 @@
     <Resource Include="Images\suess-scharfe-reisbowl-hawaii.png" />
     <Resource Include="Images\thainudelsuppe-mit-haehnchen.png" />
     <Resource Include="Images\vollkornbrot-mit-quark-bananenscheiben.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\clipart_exercise_icon_1_hw4_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions />

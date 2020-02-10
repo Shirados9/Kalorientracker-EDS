@@ -12,12 +12,36 @@ namespace FitnessApp.Class
         /// Deserialize Json zu List<Groceries>
         /// </summary>
         /// <returns></returns>
-        public List<Groceries> Deserializer()
+        public List<Groceries> DeserializeLebensmittel()
         {
             var jsonData = System.IO.File.ReadAllText(GetPathJson("Lebensmittel.json"));
             var groceryList = JsonConvert.DeserializeObject<List<Groceries>>(jsonData)
                       ?? new List<Groceries>();
             return groceryList;
+        }
+
+        /// <summary>
+        /// Deserialize Json zu List<Groceries>
+        /// </summary>
+        /// <returns></returns>
+        public List<GegesseneMakros> DeserializeGegesseneMakros()
+        {
+            var jsonData = System.IO.File.ReadAllText(GetPathJson("GegesseneMakros.json"));
+            var gegesseneMakrosList = JsonConvert.DeserializeObject<List<GegesseneMakros>>(jsonData)
+                      ?? new List<GegesseneMakros>();
+            return gegesseneMakrosList;
+        }
+
+        /// <summary>
+        /// Deserialize Json zu List<ZielMakros>
+        /// </summary>
+        /// <returns></returns>
+        public List<ZielMakros> DeserializeMakros()
+        {
+            var jsonData = System.IO.File.ReadAllText(GetPathJson("Makros.json"));
+            var makrosList = JsonConvert.DeserializeObject<List<ZielMakros>>(jsonData)
+                      ?? new List<ZielMakros>();
+            return makrosList;
         }
 
         /// <summary>
@@ -44,26 +68,6 @@ namespace FitnessApp.Class
             return kalorienList;
         }
 
-        public List<Extratab> DeserializeExtratab()
-        {
-            var jsonData = System.IO.File.ReadAllText(GetPathJson("Extras.json"));
-            var extraList = JsonConvert.DeserializeObject<List<Extratab>>(jsonData)
-                ?? new List<Extratab>();
-            return extraList;
-        }
-
-        /// <summary>
-        /// Deserialize Json zu List<GewichtTag>
-        /// </summary>
-        /// <returns></returns>
-        public List<SetFirstStartup> DeserializeFirstStartup()
-        {
-            var jsonData = System.IO.File.ReadAllText(GetPathJson("FirstStartup.json"));
-            var firstStartup = JsonConvert.DeserializeObject<List<SetFirstStartup>>(jsonData)
-                      ?? new List<SetFirstStartup>();
-            return firstStartup;
-        }
-
         /// <summary>
         /// Serialize Json
         /// </summary>
@@ -73,6 +77,27 @@ namespace FitnessApp.Class
             //var jsonData = System.IO.File.ReadAllText(GetPathJson());
             var jsonData = JsonConvert.SerializeObject(groceryList);
             System.IO.File.WriteAllText(GetPathJson("Lebensmittel.json"), jsonData);
+        }
+
+        /// <summary>
+        /// Serialize Json
+        /// </summary>
+        /// <param name="gegesseneMakrosList"></param>
+        public void Serializer(List<GegesseneMakros> gegesseneMakrosList)
+        {
+            var jsonData = JsonConvert.SerializeObject(gegesseneMakrosList);
+            System.IO.File.WriteAllText(GetPathJson("GegesseneMakros.json"), jsonData);
+        }
+
+        /// <summary>
+        /// Serialize Json
+        /// </summary>
+        /// <param name="groceryList"></param>
+        public void Serializer(List<ZielMakros> makroList)
+        {
+            //var jsonData = System.IO.File.ReadAllText(GetPathJson());
+            var jsonData = JsonConvert.SerializeObject(makroList);
+            System.IO.File.WriteAllText(GetPathJson("Makros.json"), jsonData);
         }
 
         /// <summary>
@@ -95,28 +120,6 @@ namespace FitnessApp.Class
             //var jsonData = System.IO.File.ReadAllText(GetPathJson());
             var jsonData = JsonConvert.SerializeObject(kalorienList);
             System.IO.File.WriteAllText(GetPathJson("Kalorien.json"), jsonData);
-        }
-
-        /// <summary>
-        /// Serialize Json
-        /// </summary>
-        /// <param name="firstStartup"></param>
-        public void Serializer(List<SetFirstStartup> firstStartup)
-        {
-            //var jsonData = System.IO.File.ReadAllText(GetPathJson());
-            var jsonData = JsonConvert.SerializeObject(firstStartup);
-            System.IO.File.WriteAllText(GetPathJson("FirstStartup.json"), jsonData);
-        }
-
-        /// <summary>
-        /// Serialize Json
-        /// </summary>
-        /// <param name="kalorienList"></param>
-        public void Serializer(List<Extratab> extrasList)
-        {
-            //var jsonData = System.IO.File.ReadAllText(GetPathJson());
-            var jsonData = JsonConvert.SerializeObject(extrasList);
-            System.IO.File.WriteAllText(GetPathJson("Extras.json"), jsonData);
         }
 
         /// <summary>

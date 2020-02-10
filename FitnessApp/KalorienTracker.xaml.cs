@@ -17,24 +17,45 @@ namespace FitnessApp
     public partial class KalorienTracker : UserControl
     {
         readonly JsonDeSerializer json = new JsonDeSerializer();
-        readonly Fortschritt fortschritt = new Fortschritt();
 
         public KalorienTracker()
         {
             InitializeComponent();
-            CaloryGoal.Text = fortschritt.GetCaloriesZiel();
-            ReadJson();
+            LoadUp();
         }
 
-        private void calculateLeftover()
+        private void LoadUp()
+        {
+            ReadGroceryList();
+            ReadMakros();
+            CalculateLeftover();
+
+        }
+
+        private void CalculateLeftover()
         {
             LeftoverCalories.Text = (double.Parse(CaloryGoal.Text) - double.Parse(ConsumedCalories.Text)).ToString();
         }
 
-        private void ReadJson()
+        private void ReadMakros()
+        {
+            var makroList = json.DeserializeMakros();
+            var gegesseneMakroList = json.DeserializeGegesseneMakros();
+
+            CaloryGoal.Text = Math.Round(makroList[0].CalGoal, MidpointRounding.AwayFromZero).ToString();
+            CarbsToday.Text = Math.Round(gegesseneMakroList[0].EatenCarb, MidpointRounding.AwayFromZero).ToString();
+            FatsToday.Text = Math.Round(gegesseneMakroList[0].EatenFat, MidpointRounding.AwayFromZero).ToString();
+            ProteinsToday.Text = Math.Round(gegesseneMakroList[0].EatenProtein, MidpointRounding.AwayFromZero).ToString();
+
+            BerechneNaehrstoff(CarbsToday, null, makroList[0].CarbGoal, CarbBar);
+            BerechneNaehrstoff(FatsToday, null, makroList[0].FatGoal, FatBar);
+            BerechneNaehrstoff(ProteinsToday, null, makroList[0].ProteinGoal, ProteinBar);
+        }
+
+        private void ReadGroceryList()
         {
             KalorienTrackerListe.Items.Clear();
-            var groceryList = json.Deserializer();
+            var groceryList = json.DeserializeLebensmittel();
             if (groceryList == null) return;
 
             var listAdder = new List<Groceries>();
@@ -53,23 +74,24 @@ namespace FitnessApp
 
         private void CalculateCalories_Click(object sender, RoutedEventArgs e)
         {
-
+            var makroList = json.DeserializeMakros();
 
             this.FalscheEingabe.Visibility = Visibility.Hidden;
             if (AlleLeer())
             {
                 ConsumedCalories.Text = Convert.ToString(Math.Round(CalcCalories(), MidpointRounding.AwayFromZero));
-                BerechneNaehrstoff(ProteinsToday, ProteinBox, fortschritt.GetProteinZiel(), ProteinBar);
-                BerechneNaehrstoff(CarbsToday, CarbBox, fortschritt.GetCarbsZiel(), CarbBar);
-                BerechneNaehrstoff(FatsToday, FatBox, fortschritt.GetFatZiel(), FatBar);
-                calculateLeftover();
+                BerechneNaehrstoff(ProteinsToday, ProteinBox, makroList[0].ProteinGoal, ProteinBar);
+                BerechneNaehrstoff(CarbsToday, CarbBox, makroList[0].CarbGoal, CarbBar);
+                BerechneNaehrstoff(FatsToday, FatBox, makroList[0].FatGoal, FatBar);
+                CalculateLeftover();
 
-                ProteinBox.Clear(); 
+                ProteinBox.Clear();
                 CarbBox.Clear();
                 FatBox.Clear();
                 ManualCaloryBox.Clear();
 
                 WriteCaloryDayInJson();
+                WriteTodaysMakrosInJson();
             }
             else
             {
@@ -80,25 +102,56 @@ namespace FitnessApp
 
         private void WriteCaloryDayInJson()
         {
-            var KalorienTag = json.DeserializeKalorienTag();
-            int currentDay = DateTime.Today.Day;
+            var kalorienTag = json.DeserializeKalorienTag();
+            var currentDay = DateTime.Today;
 
-            foreach (var itemDay in KalorienTag)
+            foreach (var itemDay in kalorienTag)
             {
                 if (currentDay == itemDay.Day)
                 {
                     itemDay.CaloriesDay = double.Parse(ConsumedCalories.Text);
-                    json.Serializer(KalorienTag);
+                    json.Serializer(kalorienTag);
                     return;
-                }               
+                }
             }
-                KalorienTag.Add(new KalorienTag()
+            kalorienTag.Add(new KalorienTag()
+            {
+                Day = currentDay,
+                CaloriesDay = double.Parse(ConsumedCalories.Text)
+            });
+            json.Serializer(kalorienTag);
+        }
+
+        private void WriteTodaysMakrosInJson()
+        {
+            var gegesseneMakrosList = json.DeserializeGegesseneMakros();
+            var currentDay = DateTime.Today;
+
+            if (gegesseneMakrosList.Count == 0)
+            {
+                gegesseneMakrosList.Add(new GegesseneMakros()
                 {
-                    Day = DateTime.Today.Day,
-                    CaloriesDay = double.Parse(ConsumedCalories.Text)
+                    CurrentDay = DateTime.Today,
+                    EatenCarb = double.Parse(CarbsToday.Text),
+                    EatenFat = double.Parse(FatsToday.Text),
+                    EatenProtein = double.Parse(ProteinsToday.Text)
                 });
-            json.Serializer(KalorienTag);
-            return;
+            }
+            if (gegesseneMakrosList[0].CurrentDay == currentDay)
+            {
+                gegesseneMakrosList[0].EatenCarb = double.Parse(CarbsToday.Text);
+                gegesseneMakrosList[0].EatenFat = double.Parse(FatsToday.Text);
+                gegesseneMakrosList[0].EatenProtein = double.Parse(ProteinsToday.Text);
+            }
+            else
+            {
+                gegesseneMakrosList[0].EatenCarb = double.Parse(CarbsToday.Text);
+                gegesseneMakrosList[0].EatenFat = double.Parse(FatsToday.Text);
+                gegesseneMakrosList[0].EatenProtein = double.Parse(ProteinsToday.Text);
+                gegesseneMakrosList[0].CurrentDay = currentDay;
+            }
+
+            json.Serializer(gegesseneMakrosList);
         }
 
         /// <summary>
@@ -121,7 +174,7 @@ namespace FitnessApp
         /// <param name="e"></param>
         public void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
-            Regex regex = new Regex("[^0-9]+");
+            Regex regex = new Regex("[^0-9,-]+");
             e.Handled = regex.IsMatch(e.Text);
         }
 
@@ -166,14 +219,17 @@ namespace FitnessApp
         /// <param name="naehrstoffInput"></param>
         /// <param name="naehrstoffZiel"></param>
         /// <param name="bar"></param>
-        private void BerechneNaehrstoff(TextBlock naehrstoffOutput, TextBox naehrstoffInput, string naehrstoffZiel, ProgressBar bar)
+        private void BerechneNaehrstoff(TextBlock naehrstoffOutput, TextBox naehrstoffInput, double naehrstoffZiel, ProgressBar bar)
         {
+            double inputValue = 0;
+            
+            if (naehrstoffInput != null)
+                inputValue = double.Parse(naehrstoffInput.Text);
             double outputValue = double.Parse(naehrstoffOutput.Text);
-            double inputValue = double.Parse(naehrstoffInput.Text);
             double newOutput = outputValue + inputValue;
 
             naehrstoffOutput.Text = Convert.ToString(newOutput);
-            bar.Value = BerechneBarProgress(newOutput, Double.Parse(naehrstoffZiel));
+            bar.Value = BerechneBarProgress(newOutput, naehrstoffZiel);
             ProgressBarColor(bar);
         }
 
@@ -196,11 +252,11 @@ namespace FitnessApp
             {
                 bar.Foreground = Brushes.Green;
             }
-            else if (bar.Value < 100)
+            else if (bar.Value <= 100)
             {
                 bar.Foreground = Brushes.Orange;
             }
-            else if (bar.Value >= 100)
+            else if (bar.Value > 100)
             {
                 bar.Foreground = Brushes.Red;
             }

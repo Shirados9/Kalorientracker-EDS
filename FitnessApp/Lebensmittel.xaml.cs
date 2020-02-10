@@ -28,7 +28,7 @@ namespace FitnessApp
         private void ReadJson()
         {
             Lebensmitteltabelle.Items.Clear();
-            var groceryList = json.Deserializer();
+            var groceryList = json.DeserializeLebensmittel();
             if (groceryList == null) return;
             
             var listAdder = new List<Groceries>();
@@ -53,7 +53,7 @@ namespace FitnessApp
         private void AddGrocery_Click(object sender, RoutedEventArgs e)
         {
 
-            var groceryList = json.Deserializer();
+            var groceryList = json.DeserializeLebensmittel();
             if (ValidateDataGridInput())
             {
                 groceryList.Add(new Groceries()
@@ -81,7 +81,7 @@ namespace FitnessApp
         private void DeleteRow(object sender, RoutedEventArgs e)
         {
             int uid = int.Parse(((Button)e.Source).Uid);
-            var groceryList = json.Deserializer();
+            var groceryList = json.DeserializeLebensmittel();
 
             foreach (var item in groceryList)
             {

@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/putenpasta-in-zitronencreme.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("clipart_exercise_icon_1_hw4_icon.ico")]
 
 

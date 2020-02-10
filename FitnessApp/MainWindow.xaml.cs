@@ -17,24 +17,13 @@ namespace FitnessApp
         {
             InitializeComponent();
             StartDispatchTimer();
-            FirstStartUp();
+            LoadUp();
         }
 
-        private void FirstStartUp()
+        private void LoadUp()
         {
-            var json = new JsonDeSerializer();
-            var firstStartup = json.DeserializeFirstStartup();
-            if (firstStartup[0].FirstStartupIsSet == true)
-            {
-                GridMain.Children.Clear();
-                GridMain.Children.Add(new KalorienTracker());
-            }
-            else
-            {
-                ListViewMenu.SelectedItem = null;
-                GridMain.Children.Clear();
-                GridMain.Children.Add(new FirstStartup());
-            }
+            GridMain.Children.Clear();
+            GridMain.Children.Add(new Fortschritt());
         }
 
         public void ChangeGridMain()

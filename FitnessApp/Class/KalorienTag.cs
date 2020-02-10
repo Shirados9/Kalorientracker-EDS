@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 
 namespace FitnessApp.Class
 {
@@ -6,6 +6,6 @@ namespace FitnessApp.Class
     {
         public double CaloriesDay { get; set; }
 
-        public int Day { get; set; }
+        public DateTime Day { get; set; }
     }
 }

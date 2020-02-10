@@ -31,12 +31,6 @@ namespace FitnessApp
             BMI.Text = (double.Parse(Gewicht.Text) / (double.Parse(Große.Text) / 100 * (double.Parse(Große.Text)) / 100)).ToString("0.0");
         }
 
-        /* private double GroßeUmgerechnet(double GroßeM)
-         {
-
-             return GroßeM/100;
-         }*/
-
         private void KcalCalc()
         {
             Kcal.Text = (955.1 + (9.6 * double.Parse(Gewicht.Text)) + (1.8 * double.Parse(Große.Text)) - (4.7 * (double.Parse(Alter.Text)))).ToString("0");
@@ -47,90 +41,109 @@ namespace FitnessApp
             double FFM = double.Parse(Gewicht.Text) * (100 - (double.Parse(Fettanteil.Text))) / 100;
             FFMI.Text = (FFM / ((double.Parse(Große.Text) / 100) * (double.Parse(Große.Text) / 100)) + 6.3 * (1.8 - double.Parse(Große.Text) / 100)).ToString("0.00");
         }
+        private void ProteinCalc()
+        {
+
+            Protein.Text = (((double.Parse(Kcal.Text)) * ((double.Parse(Proteingoal.Text)) / 100)) / 4.1).ToString("0.0");
+        }
+        private void CarbsCalc()
+        {
+
+            Carbs.Text = (((double.Parse(Kcal.Text)) * ((double.Parse(Carbsgoal.Text)) / 100)) / 4.1).ToString("0.0");
+        }
+        private void FatCalc()
+        {
+
+            Fat.Text = (((double.Parse(Kcal.Text)) * ((double.Parse(Fatgoal.Text)) / 100)) / 9.3).ToString("0.0");
+        }
 
 
         private void GG_TextChanged(object sender, TextChangedEventArgs e)
         {
+            //Bedingungen abfangen, falls leere Textbox -> Rechnung nicht durchführen wenn leer
+            if (!String.IsNullOrEmpty(Alter.Text) && !String.IsNullOrEmpty(Große.Text) && !String.IsNullOrEmpty(Gewicht.Text))
+                KcalCalc();
             if (!String.IsNullOrEmpty(Gewicht.Text) && !String.IsNullOrEmpty(Große.Text))
-            {
                 BMICalc();
-                if (String.IsNullOrEmpty(Fettanteil.Text))
-                    Fettanteil.Text = "0";
-                {
-                    FFMICalc();
-                    if (!String.IsNullOrEmpty(Alter.Text) && !String.IsNullOrEmpty(Große.Text) && !String.IsNullOrEmpty(Gewicht.Text))
-                    {
-                        KcalCalc();
-                    }
-                }
-            }
-        }
-
-        private void SubmitStats(object sender, RoutedEventArgs e)
-        {
-            var extras = json.DeserializeExtratab();
-            int currentDay = DateTime.Today.Day;
-
-            foreach (var itemDay in extras)
-            {
-                if (currentDay == itemDay.Day)
-                {
-                    itemDay.BMI = double.Parse(BMI.Text);
-                    itemDay.FFMI = double.Parse(FFMI.Text);
-                    json.Serializer(extras);
-                    return;
-                }
-            }
-            extras.Add(new Extratab()
-            {
-                Day = DateTime.Today.Day,
-                BMI = double.Parse(BMI.Text),
-                FFMI = double.Parse(FFMI.Text)
-            });
-            json.Serializer(extras);
-            return;
-        }
-
-        private bool ValidateDataGridInput()
-        {
-            if (String.IsNullOrEmpty(Gewicht.Text))
-            {
-                EntrySuccessful.Text = "";
-                EntryNotSuccessful.Text = "Bitte Gewicht eingeben";
-                return false;
-            }
+            if (!String.IsNullOrEmpty(Große.Text) && !String.IsNullOrEmpty(Gewicht.Text) && !String.IsNullOrEmpty(Fettanteil.Text))
+                FFMICalc();
             else
+                return;
+        }
+
+        private void GG_TextChangedMakros(object sender, TextChangedEventArgs e)
+        {
+            if (String.IsNullOrEmpty(Carbsgoal.Text) || String.IsNullOrEmpty(Proteingoal.Text) || String.IsNullOrEmpty(Fatgoal.Text) || String.IsNullOrEmpty(Kcal.Text))
+                return;
+            if (CheckPercentage())
+            {
+                ProteinCalc();
+                CarbsCalc();
+                FatCalc();
+            }
+            else return;
+        }
+        private bool CheckPercentage()
+        {
+            if ((double.Parse(Proteingoal.Text) + double.Parse(Carbsgoal.Text) + double.Parse(Fatgoal.Text)) == 100)
             {
                 return true;
             }
+            else
+            {
+                return false;
+            }
         }
 
-        //private void AddWeight_Click(object sender, RoutedEventArgs e)
-        //{
+        private void SubmitWeightAndMakros(object sender, RoutedEventArgs e)
+        {
+            if (!String.IsNullOrEmpty(Gewicht.Text) && !String.IsNullOrEmpty(Protein.Text) && !String.IsNullOrEmpty(Carbs.Text) && !String.IsNullOrEmpty(Fat.Text) && !String.IsNullOrEmpty(Kcal.Text))
+            {
+                WriteWeight();
+                WriteMakros();
+                EntrySuccessful.Text = "Erfolgreich eingetragen";
+                EntryNotSuccessful.Text = "";
+            }
+            else
+            {
+                EntrySuccessful.Text = "";
+                EntryNotSuccessful.Text = "Bitte Gewicht eingeben";
+            }
+        }
 
-        //    var weightList = json.Deserializer();
-        //    if (ValidateDataGridInput())
-        //    {
-        //        weightList.Add(new GewichtTag()
-                
-        //            TodaysWeight = Gewicht.Text
-        //        );
-        //        json.Serializer(weightList);
-        //        ResetTextBoxes();
-        //        EntrySuccessful.Text = "Gewicht erfolgreich eingetragen";
-        //        ReadJson();
+        private void WriteWeight() 
+        {
+            var weightList = json.DeserializeGewichtTag();
+            int counter = 0;
 
-        //    }
-        //}
-        //private int GetFreeUid(List<GewichtTag>)
-        //{
-        //    int counter = 0;
-        //    foreach (var item in groceryList)
-        //    {
-        //        if (counter != item.Uid) return counter;
-        //        counter++;
-        //    }
-        //    return counter;
-        //}
+            foreach (var item in weightList)
+            {
+                if (item.Day == DateTime.Today.Date)
+                {
+                    weightList[counter].TodaysWeight = double.Parse(Gewicht.Text);
+                    json.Serializer(weightList);
+                    return;
+                }
+                counter++;
+            }
+            weightList.Add(new GewichtTag()
+            {
+                Day = DateTime.Today,
+                TodaysWeight = double.Parse(Gewicht.Text)
+            });
+            json.Serializer(weightList);
+        }
+
+        private void WriteMakros()
+        {
+            var makroList = json.DeserializeMakros();
+
+            makroList[0].CalGoal = double.Parse(Kcal.Text);
+            makroList[0].ProteinGoal = double.Parse(Protein.Text);
+            makroList[0].FatGoal = double.Parse(Fat.Text);
+            makroList[0].CarbGoal = double.Parse(Carbs.Text);
+            json.Serializer(makroList);
+        }
+
     }
 }

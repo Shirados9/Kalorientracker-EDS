@@ -1,15 +1,13 @@
-﻿ <UserControl x:Class="FitnessApp.Fortschritt"
+﻿<UserControl x:Class="FitnessApp.Fortschritt"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:FitnessApp"
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1200"
              Foreground="#5C99D6" Background="White" FontFamily="Verdana">
-
     <StackPanel>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -45,13 +43,7 @@
 
             <StackPanel Grid.Row="1" Orientation="Horizontal">
                 <TextBlock VerticalAlignment="Center" Margin="0 0 10 0"></TextBlock>
-                <!--<Button Click="AddPointOnClick">+</Button>-->
-                <!--<Button Click="InsertPointOnClick">/</Button>
-            <Button Click="RemovePointOnClick">-</Button>
-            <Button Click="MoveAllOnClick">MoveAll</Button>-->
                 <TextBlock Margin="0 0 10 0" VerticalAlignment="Center"></TextBlock>
-                <!--<Button Click="AddSeriesOnClick">+</Button>-->
-                <!-- <Button Click="RemoveSeriesOnClick">-</Button> -->
             </StackPanel>
 
 
@@ -62,12 +54,12 @@
                 <TextBox x:Name="CaloriesZiel" PreviewTextInput="NumberValidationTextBox" Text="2000"/>
             </StackPanel>
 
-            <lvc:CartesianChart Grid.Row="2" Series="{Binding SeriesCollection}" LegendLocation="None">
+            <lvc:CartesianChart x:Name="Chart" Grid.Row="2" Series="{Binding SeriesCollection}" LegendLocation="None">
                 <lvc:CartesianChart.DataTooltip>
-                    <lvc:DefaultTooltip Visibility="Hidden"/>
+                    <lvc:DefaultTooltip Visibility="Visible"/>
                 </lvc:CartesianChart.DataTooltip>
                 <lvc:CartesianChart.AxisX>
-                    <lvc:Axis Title="Tage" Labels="{Binding Days}">
+                    <lvc:Axis Title="Tage" Labels="{Binding Entries}">
                         <lvc:Axis.Separator>
                             <lvc:Separator IsEnabled="False" Step="1"></lvc:Separator>
                         </lvc:Axis.Separator>
@@ -79,10 +71,4 @@
             </lvc:CartesianChart>
         </Grid>
     </StackPanel>
-
-
-
-
-
-
 </UserControl>
