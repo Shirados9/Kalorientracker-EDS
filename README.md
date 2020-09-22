@@ -1,5 +1,2 @@
-# Kalorientracker-EDS
-
-Amazon-Skill der dabei hilft, seine Kalorien zu tracken.
-
-Erstellt für das Modul "Entwicklung digitaler Sprachassistenten" von 2 Kommilitonen und mir.
+# Kalorientracker-GUI
+Erstellt für das Modul "Graphische Benutzeroberflächen" von 2 Kommilitonen und mir.
